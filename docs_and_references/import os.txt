@@ -1,0 +1,175 @@
+import os
+import re
+import asyncio
+from typing import Any, List, Dict
+
+from lightrag import LightRAG, QueryParam
+from lightrag.utils import Tokenizer, TiktokenTokenizer
+from lightrag.llm.gemini import gemini_model_complete, gemini_embed
+
+
+# ============================================================
+# NOTE DÀNH CHO LLM TRONG QUÁ TRÌNH CHUNKING (LUẬT)
+# ============================================================
+LEGAL_NOTE = """
+LƯU Ý QUAN TRỌNG CHO LLM:
+- Đây là văn bản pháp luật. Không được diễn giải lại khi chunk.
+- Mỗi chunk phải giữ nguyên nội dung gốc 100%, không tự ý rút gọn.
+- Mỗi 'Điều' phải được giữ nguyên phần tiêu đề + nội dung ngay sau nó.
+- Nếu chunk quá dài và cần chia nhỏ → mỗi phần phải giữ lại tiêu đề Điều ở đầu.
+- Tuyệt đối không tách giữa các khoản theo kiểu làm mất tính pháp lý.
+"""
+
+
+# ============================================================
+# CUSTOM LEGAL CHUNKING + LOG
+# ============================================================
+def custom_legal_chunking(
+    tokenizer: Tokenizer,
+    content: str,
+    chunk_token_size: int = 4000,
+    chunk_overlap_token_size: int = 100,
+    split_by_character: str | None = None,
+    split_by_character_only: bool = False,
+) -> List[Dict[str, Any]]:
+
+    print("\n=== BẮT ĐẦU CHUNKING TÀI LIỆU PHÁP LUẬT ===")
+    print("NOTE:", LEGAL_NOTE)
+
+    # Regex mạnh nhận diện tất cả dạng “Điều x”
+    pattern = r"(?=Điều\s+\d+[\.: -])"
+
+    print("[LOG] Tách văn bản theo regex:", pattern)
+
+    raw_chunks = re.split(pattern, content)
+    results = []
+    chunk_index = 0
+
+    for raw in raw_chunks:
+        chunk = raw.strip()
+        if not chunk:
+            continue
+
+        # Skip NOTE trống
+        if len(chunk) < 3:
+            continue
+
+        print(f"\n--- CHUNK #{chunk_index} (Điều) ---")
+        print(chunk[:120].replace("\n", " ") + " ...")
+
+        tokens = tokenizer.encode(chunk)
+        token_count = len(tokens)
+
+        print(f"[LOG] Token count: {token_count}")
+
+        # -------------------------------------------------
+        # CASE 1: Chunk nhỏ → dùng nguyên
+        # -------------------------------------------------
+        if token_count <= chunk_token_size:
+            print("[LOG] ✔ Chunk đạt chuẩn, thêm vào danh sách.")
+            results.append({
+                "tokens": token_count,
+                "content": chunk,
+                "chunk_order_index": chunk_index,
+                "note": LEGAL_NOTE
+            })
+            chunk_index += 1
+            continue
+
+        # -------------------------------------------------
+        # CASE 2: Chunk quá lớn → SUB-CHUNK
+        # -------------------------------------------------
+        print("[WARNING] Điều quá dài, tiến hành sub-chunking!")
+
+        lines = chunk.split("\n")
+        header = lines[0]  # "Điều X..."
+        body = "\n".join(lines[1:]).strip()
+
+        temp = ""
+        current_tokens = []
+
+        for para in body.split("\n"):
+            test = (temp + "\n" + para).strip()
+            t = tokenizer.encode(test)
+
+            if len(t) > chunk_token_size:
+                # Save chunk cũ
+                print("[LOG] → Xuất sub-chunk")
+                results.append({
+                    "tokens": len(current_tokens),
+                    "content": f"{header}\n{temp.strip()}",
+                    "chunk_order_index": chunk_index,
+                    "note": LEGAL_NOTE
+                })
+                chunk_index += 1
+
+                temp = para
+                current_tokens = tokenizer.encode(para)
+            else:
+                temp = test
+                current_tokens = t
+
+        # Save sub-chunk cuối
+        print("[LOG] → Lưu sub-chunk cuối")
+        results.append({
+            "tokens": len(current_tokens),
+            "content": f"{header}\n{temp.strip()}",
+            "chunk_order_index": chunk_index,
+            "note": LEGAL_NOTE
+        })
+        chunk_index += 1
+
+    print("\n=== HOÀN TẤT CHUNKING ===")
+    print(f"Tổng số chunk: {len(results)}")
+
+    return results
+
+
+# ============================================================
+# MAIN RAG PIPELINE
+# ============================================================
+async def main():
+    working_dir = "./legal_rag_storage"
+    os.makedirs(working_dir, exist_ok=True)
+
+    if "GEMINI_API_KEY" not in os.environ:
+        os.environ["GEMINI_API_KEY"] = "AIzaSyANiQ9QY_kBl2d49oob98ILq95TNxObRYo"
+
+    rag = LightRAG(
+        working_dir=working_dir,
+        llm_model_func=gemini_model_complete,
+        llm_model_name="gemini-2.5-flash",
+        embedding_func=gemini_embed,
+        chunking_func=custom_legal_chunking
+    )
+
+    await rag.initialize_storages()
+
+    md_file_path = r"C:\Users\thuongjr\Downloads\luat.md"
+    print(f"\nĐọc file: {md_file_path}")
+
+    try:
+        with open(md_file_path, "r", encoding="utf-8") as f:
+            legal_text = f.read()
+    except Exception as e:
+        print(f"❌ Lỗi đọc file: {e}")
+        return
+
+    print("\n=== INSERT TÀI LIỆU VÀO LightRAG ===")
+    await rag.ainsert(LEGAL_NOTE + "\n\n" + legal_text)
+
+    print("\n=== TIẾN HÀNH TRUY VẤN ===")
+    query = "Đối tượng áp dụng là ai?"
+    print("Câu hỏi:", query)
+
+    result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
+
+    print("\n=== KẾT QUẢ TRẢ VỀ ===")
+    print(result)
+
+
+# ============================================================
+# RUN
+# ============================================================
+if __name__ == "__main__":
+    asyncio.run(main())

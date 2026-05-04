@@ -1,0 +1,18 @@
+# Bỏ qua môi trường ảo và thư mục cache của Python
+venv311/
+__pycache__/
+*.pyc
+
+# Bỏ qua file biến môi trường chứa API Key
+.env
+.env.local
+
+# Bỏ qua thư mục tạm thời
+temp_uploads/
+
+# (Tùy chọn) Bỏ qua index cũ nếu muốn container build lại index mới hoàn toàn
+# index_laws/
+
+# Các thư mục frontend không liên quan (nếu có)
+app/
+node_modules/

@@ -1,0 +1,53 @@
+# Môi trường ảo (Virtual Environment)
+venv/
+venv311/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Biến môi trường và API Keys (QUAN TRỌNG: KHÔNG PUSH LÊN GITHUB)
+.env
+.env.local
+.env.*
+
+# Dữ liệu tạm và Index của Vector DB
+temp_uploads/
+index_laws/
+*.faiss
+*.jsonl
+
+# Các thư mục chứa file test có tên quá dài gây lỗi "Filename too long" cho Git Windows
+sample_contracts/HỢP ĐỒNG THỎA THUẬN*
+sample_contracts/*_files/
+
+# File script tạm thời đã chạy xong
+cleanup.py
+
+# Cấu hình IDE / Hệ điều hành
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
