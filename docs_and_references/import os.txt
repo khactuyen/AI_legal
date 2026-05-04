@@ -133,7 +133,7 @@ async def main():
     os.makedirs(working_dir, exist_ok=True)
 
     if "GEMINI_API_KEY" not in os.environ:
-        os.environ["GEMINI_API_KEY"] = "AIzaSyANiQ9QY_kBl2d49oob98ILq95TNxObRYo"
+        os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY_HERE" # Đã xóa API Key bị lộ
 
     rag = LightRAG(
         working_dir=working_dir,
