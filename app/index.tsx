@@ -1,10 +1,5 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { GoogleGenAI } from "@google/genai";
-
-// Initialize Gemini API
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 // --- Types ---
 type Message = {
@@ -59,6 +54,51 @@ const PlusIcon = () => (
   </svg>
 );
 
+// Helper function to render text containing basic markdown formatting (bold, italic, lists)
+const renderMessageContent = (text: string) => {
+  if (!text) return null;
+
+  // Render the temporary status message cleanly
+  if (text.startsWith("*⏳") && text.endsWith("*")) {
+    return <em style={{ color: "#5F6368" }}>⏳ {text.slice(3, -1).trim()}</em>;
+  }
+
+  const lines = text.split("\n");
+  return lines.map((line, lineIdx) => {
+    // Check if the line is a bullet item (* or -)
+    const isBullet = line.trim().startsWith("* ") || line.trim().startsWith("- ");
+    let content = line;
+    if (isBullet) {
+      content = line.trim().replace(/^[\*\-]\s+/, "");
+    }
+
+    // Split by markdown bold (**text**) and italic (*text*)
+    const parts = content.split(/(\*\*.*?\*\*|\*.*?\*)/g);
+    const renderedLine = parts.map((part, partIdx) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return <strong key={partIdx}>{part.slice(2, -2)}</strong>;
+      } else if (part.startsWith("*") && part.endsWith("*")) {
+        return <em key={partIdx}>{part.slice(1, -1)}</em>;
+      }
+      return part;
+    });
+
+    if (isBullet) {
+      return (
+        <li key={lineIdx} style={{ marginLeft: "20px", marginBottom: "4px", listStyleType: "disc" }}>
+          {renderedLine}
+        </li>
+      );
+    }
+
+    return (
+      <div key={lineIdx} style={{ margin: "4px 0", minHeight: "1.2em" }}>
+        {renderedLine}
+      </div>
+    );
+  });
+};
+
 // --- Main Component ---
 function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -82,23 +122,30 @@ function App() {
     const file = event.target.files?.[0];
     if (!file) return;
 
-    // Simple text file reading for demo purposes
-    // In a real app, you'd use libraries for DOCX parsing on the client or server
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-      const text = e.target?.result as string;
-      setCurrentFile({
-        name: file.name,
-        content: text
+    setCurrentFile({ name: file.name, content: "Đã tải lên" });
+    setMessages(prev => [...prev, { role: "user", content: `(Tải lên file: ${file.name})` }]);
+    setIsLoading(true);
+    setShowUploadMenu(false);
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const response = await fetch("http://localhost:8000/analyze-contract", {
+        method: "POST",
+        body: formData
       });
-      
-      setMessages(prev => [...prev, {
-        role: "assistant",
-        content: `Đã nhận file **${file.name}**. Bạn cần tôi **Chấm điểm**, **Phân tích rủi ro** hay **Tóm tắt** tài liệu này?`
-      }]);
-      setShowUploadMenu(false);
-    };
-    reader.readAsText(file);
+
+      if (!response.ok) throw new Error("Lỗi phân tích file");
+      const data = await response.json();
+
+      setMessages(prev => [...prev, { role: "assistant", content: data.analysis || "Đã phân tích xong." }]);
+    } catch (error) {
+      console.error(error);
+      setMessages(prev => [...prev, { role: "assistant", content: "Lỗi kết nối tới máy chủ AI.", isError: true }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const clearSession = () => {
@@ -116,27 +163,75 @@ function App() {
     setIsLoading(true);
 
     try {
-      // Construct prompt with context
-      let finalPrompt = userText;
-      let systemInstruction = "Bạn là trợ lý pháp lý AI chuyên nghiệp (AI Legal Assistant). Bạn hỗ trợ soạn thảo hợp đồng, rà soát rủi ro và tư vấn luật (Lao động, Thuế, Dân sự, Doanh nghiệp) tại Việt Nam. Trả lời ngắn gọn, chính xác, có cấu trúc markdown đẹp mắt. Nếu được yêu cầu chấm điểm, hãy đưa ra thang điểm 100 và lý do.";
-
-      if (currentFile) {
-        systemInstruction += `\n\nCONTEXT DOCUMENT:\nFilename: ${currentFile.name}\nContent:\n${currentFile.content}\n\nNếu người dùng hỏi về 'tài liệu này' hoặc 'hợp đồng này', hãy dùng nội dung trên để trả lời.`;
+      let finalMessage = userText;
+      if (currentFile && !userText.includes(currentFile.name)) {
+          finalMessage = `[Về file ${currentFile.name}] ${userText}`;
       }
 
-      const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
-        contents: finalPrompt,
-        config: {
-          systemInstruction: systemInstruction,
-        }
+      const response = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: finalMessage })
       });
 
-      setMessages(prev => [...prev, { role: "assistant", content: response.text || "Không có phản hồi." }]);
+      if (!response.ok) throw new Error("API request failed");
+      if (!response.body) throw new Error("Không lấy được dữ liệu luồng");
+
+      // Khởi tạo tin nhắn trống của Bot
+      setMessages(prev => [...prev, { role: "assistant", content: "" }]);
+      
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let done = false;
+      let fullContent = "";
+
+      while (!done) {
+        const { value, done: isDone } = await reader.read();
+        done = isDone;
+        if (value) {
+          const chunkStr = decoder.decode(value, { stream: true });
+          const lines = chunkStr.split("\n").filter(l => l.trim() !== "");
+          
+          for (const line of lines) {
+            try {
+              const data = JSON.parse(line);
+              if (data.type === "status") {
+                // Hiển thị status tạm thời (chữ in nghiêng màu xám)
+                if (fullContent === "") {
+                  setMessages(prev => {
+                    const newArr = [...prev];
+                    newArr[newArr.length - 1].content = `*⏳ ${data.text}*`;
+                    return newArr;
+                  });
+                }
+              } else if (data.type === "content") {
+                fullContent += data.text;
+                // Đè lên status cũ và chạy chữ dần
+                setMessages(prev => {
+                  const newArr = [...prev];
+                  newArr[newArr.length - 1].content = fullContent;
+                  return newArr;
+                });
+              }
+            } catch (e) {
+              console.error("Lỗi parse dòng stream:", line, e);
+            }
+          }
+        }
+      }
 
     } catch (error) {
       console.error(error);
-      setMessages(prev => [...prev, { role: "assistant", content: "Xin lỗi, đã có lỗi xảy ra khi xử lý yêu cầu của bạn.", isError: true }]);
+      setMessages(prev => {
+        // Đè lỗi lên cái message trống nếu nó đang chạy dở
+        const newArr = [...prev];
+        if (newArr[newArr.length - 1].role === "assistant" && newArr[newArr.length - 1].content === "") {
+           newArr[newArr.length - 1].content = "Xin lỗi, máy chủ AI đang gặp sự cố.";
+           newArr[newArr.length - 1].isError = true;
+           return newArr;
+        }
+        return [...prev, { role: "assistant", content: "Xin lỗi, máy chủ AI đang gặp sự cố.", isError: true }];
+      });
     } finally {
       setIsLoading(false);
     }
@@ -474,11 +569,11 @@ function App() {
               {msg.role === 'assistant' ? <BotIcon /> : '👤'}
             </div>
             <div className="message-content">
-              {msg.content}
+              {renderMessageContent(msg.content)}
             </div>
           </div>
         ))}
-        {isLoading && (
+        {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
           <div className="message assistant">
              <div className="avatar assistant"><BotIcon /></div>
              <div className="message-content">
@@ -514,7 +609,7 @@ function App() {
               type="file" 
               ref={fileInputRef} 
               style={{ display: 'none' }} 
-              accept=".txt,.md,.csv,.json" // Limiting to text-readable types for client-side demo
+              accept=".txt,.md,.csv,.json,.docx" // Cho phép tải Word docx
               onChange={handleFileChange}
             />
             <button className="menu-item" onClick={() => fileInputRef.current?.click()}>
