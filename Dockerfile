@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy file requirements và cài đặt dependencies
-COPY requirements.txt .
+COPY chatbot/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy toàn bộ mã nguồn vào container
@@ -19,8 +19,8 @@ COPY . .
 # Xóa các thư mục tạm có thể bị lẫn vào trong quá trình build (tùy chọn)
 RUN rm -rf temp_uploads/*
 
-# Expose port 8501 cho Streamlit
-EXPOSE 8501
+# Expose port 8000 cho FastAPI Backend
+EXPOSE 8000
 
-# Lệnh chạy ứng dụng khi container khởi động
-CMD ["streamlit", "run", "app_ui.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# Lệnh chạy ứng dụng FastAPI khi container khởi động
+CMD ["uvicorn", "chatbot.api:app", "--host", "0.0.0.0", "--port", "8000"]

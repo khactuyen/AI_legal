@@ -1,0 +1,72 @@
+[
+  {
+    "id": "QA_001",
+    "question": "Công ty TNHH 1 thành viên có được phát hành cổ phần không?",
+    "expected_answer_keywords": ["không được phát hành cổ phần", "trừ trường hợp chuyển đổi", "công ty cổ phần"],
+    "required_laws": ["Luật Doanh nghiệp 2020", "Điều 74"],
+    "difficulty": "Dễ"
+  },
+  {
+    "id": "QA_002",
+    "question": "Người lao động làm việc bao lâu thì được nghỉ phép năm?",
+    "expected_answer_keywords": ["12 tháng", "đủ 12 tháng", "12 ngày làm việc"],
+    "required_laws": ["Bộ luật Lao động 2019", "Điều 113"],
+    "difficulty": "Dễ"
+  },
+  {
+    "id": "QA_003",
+    "question": "Giám đốc công ty cổ phần có bắt buộc phải là người Việt Nam không?",
+    "expected_answer_keywords": ["không bắt buộc", "không có quy định", "người đại diện theo pháp luật"],
+    "required_laws": ["Luật Doanh nghiệp 2020", "Điều 162"],
+    "difficulty": "Trung bình"
+  },
+  {
+    "id": "QA_004",
+    "question": "Nếu sa thải nhân viên nữ đang mang thai thì công ty bị phạt bao nhiêu tiền?",
+    "expected_answer_keywords": ["đơn phương chấm dứt hợp đồng", "phạt tiền", "10.000.000", "20.000.000", "bồi thường"],
+    "required_laws": ["Bộ luật Lao động 2019", "Điều 37", "Nghị định 12/2022/NĐ-CP"],
+    "difficulty": "Khó"
+  },
+  {
+    "id": "QA_005",
+    "question": "Mức thuế thu nhập doanh nghiệp chuẩn hiện tại là bao nhiêu?",
+    "expected_answer_keywords": ["20%", "hai mươi phần trăm"],
+    "required_laws": ["Luật Thuế thu nhập doanh nghiệp", "Điều 10"],
+    "difficulty": "Dễ"
+  },
+  {
+    "id": "QA_006",
+    "question": "Thử việc tối đa bao nhiêu ngày đối với công việc yêu cầu bằng đại học?",
+    "expected_answer_keywords": ["60 ngày", "sáu mươi ngày", "cao đẳng trở lên"],
+    "required_laws": ["Bộ luật Lao động 2019", "Điều 27"],
+    "difficulty": "Trung bình"
+  },
+  {
+    "id": "QA_007",
+    "question": "Một người có thể làm giám đốc cho 2 công ty cổ phần khác nhau được không?",
+    "expected_answer_keywords": ["được phép", "trừ trường hợp", "doanh nghiệp nhà nước"],
+    "required_laws": ["Luật Doanh nghiệp 2020", "Điều 162"],
+    "difficulty": "Trung bình"
+  },
+  {
+    "id": "QA_008",
+    "question": "Doanh nghiệp có bắt buộc phải thưởng Tết tháng 13 cho nhân viên không?",
+    "expected_answer_keywords": ["không bắt buộc", "tùy thuộc", "kết quả sản xuất kinh doanh", "quy chế", "hợp đồng lao động"],
+    "required_laws": ["Bộ luật Lao động 2019", "Điều 104"],
+    "difficulty": "Trung bình"
+  },
+  {
+    "id": "QA_009",
+    "question": "Ký hợp đồng lao động điện tử (gửi qua email có chữ ký số) có hợp pháp không?",
+    "expected_answer_keywords": ["hợp pháp", "thông điệp dữ liệu", "có giá trị như văn bản"],
+    "required_laws": ["Bộ luật Lao động 2019", "Điều 14", "Luật Giao dịch điện tử"],
+    "difficulty": "Trung bình"
+  },
+  {
+    "id": "QA_010",
+    "question": "Vốn điều lệ tối thiểu để mở công ty TNHH công nghệ phần mềm là bao nhiêu?",
+    "expected_answer_keywords": ["không quy định mức tối thiểu", "không có mức tối thiểu", "tùy doanh nghiệp quyết định"],
+    "required_laws": ["Luật Doanh nghiệp 2020"],
+    "difficulty": "Khó"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "Luat_Doanh_Nghiep_2020": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/Luat-Doanh-Nghiep-2020",
+    "effective_date": "2021-01-01"
+  },
+  "Luat_Doanh_Nghiep_2014": {
+    "status": "EXPIRED",
+    "superseded_by": "12345",
+    "url": "https://vbpl.vn/Luat-Doanh-Nghiep-2014",
+    "effective_date": "2015-07-01"
+  },
+  "12345": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=12345",
+    "effective_date": "2026-01-01"
+  }
+}
