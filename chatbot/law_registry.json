@@ -16,5 +16,547 @@
     "superseded_by": null,
     "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=12345",
     "effective_date": "2026-01-01"
+  },
+  "61/2020/qh14": {
+    "status": "EXPIRED",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/142867",
+    "effective_date": "2021-01-01",
+    "law_number": "61/2020/QH14",
+    "title": "Luật đầu tư số 61/2020/QH14"
+  },
+  "luat dau tu -61-2020-qh14": {
+    "status": "EXPIRED",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/142867",
+    "effective_date": "2021-01-01",
+    "law_number": "61/2020/QH14",
+    "title": "Luật đầu tư số 61/2020/QH14"
+  },
+  "67/2014/qh13": {
+    "status": "EXPIRED",
+    "superseded_by": "61/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "90/2015/qh13": {
+    "status": "EXPIRED",
+    "superseded_by": "61/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "03/2016/qh14": {
+    "status": "EXPIRED",
+    "superseded_by": "61/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "04/2017/qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/128706",
+    "effective_date": "2018-01-01",
+    "law_number": "04/2017/QH14",
+    "title": "Luật hỗ trợ doanh nghiệp nhỏ và vừa số 04/2017/QH14"
+  },
+  "28/2018/qh14": {
+    "status": "EXPIRED",
+    "superseded_by": "61/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "42/2019/qh14": {
+    "status": "EXPIRED",
+    "superseded_by": "61/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "59/2020/qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/142881",
+    "effective_date": "2021-01-01",
+    "law_number": "59/2020/QH14",
+    "title": "Luật doanh nghiệp số 59/2020/QH14"
+  },
+  "luat doanh nghiep-59-2020-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/142881",
+    "effective_date": "2021-01-01",
+    "law_number": "59/2020/QH14",
+    "title": "Luật doanh nghiệp số 59/2020/QH14"
+  },
+  "luật doanh nghiệp số 68/2014/qh13": {
+    "status": "EXPIRED",
+    "superseded_by": "59/2020/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "90/2025/qh15": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/179382",
+    "effective_date": "2025-07-01",
+    "law_number": "90/2025/QH15",
+    "title": "Luật Sửa đổi, bổ sung một số điều của Luật Đấu thầu, Luật Đầu tư theo phương thức đối tác công tư, Luật Hải quan, Luật Thuế giá trị gia tăng, Luật Thuế xuất khẩu, thuế nhập khẩu, Luật Đầu tư, Luật Đầu tư công, Luật Quản lý, sử dụng tài sản công số 90/2025/QH15"
+  },
+  "luat thue gia tri gia tang -90-2025-qh15": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/179382",
+    "effective_date": "2025-07-01",
+    "law_number": "90/2025/QH15",
+    "title": "Luật Sửa đổi, bổ sung một số điều của Luật Đấu thầu, Luật Đầu tư theo phương thức đối tác công tư, Luật Hải quan, Luật Thuế giá trị gia tăng, Luật Thuế xuất khẩu, thuế nhập khẩu, Luật Đầu tư, Luật Đầu tư công, Luật Quản lý, sử dụng tài sản công số 90/2025/QH15"
+  },
+  "45/2019/qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/139264",
+    "effective_date": "2021-01-01",
+    "law_number": "45/2019/QH14",
+    "title": "Bộ Luật lao động số 45/2019/QH14"
+  },
+  "luật lao động  45-2019-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/139264",
+    "effective_date": "2021-01-01",
+    "law_number": "45/2019/QH14",
+    "title": "Bộ Luật lao động số 45/2019/QH14"
+  },
+  "10/2012/qh13": {
+    "status": "EXPIRED",
+    "superseded_by": "45/2019/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "38/2019/qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/136036",
+    "effective_date": "2019-07-01",
+    "law_number": "38/2019/QH14",
+    "title": "Luật Quản lý thuế số 38/2019/QH14"
+  },
+  "luật quan li thue -38-2019-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/136036",
+    "effective_date": "2019-07-01",
+    "law_number": "38/2019/QH14",
+    "title": "Luật Quản lý thuế số 38/2019/QH14"
+  },
+  "luật quản lý thuế số 78/2006/qh11": {
+    "status": "EXPIRED",
+    "superseded_by": "38/2019/QH14",
+    "url": "",
+    "effective_date": null
+  },
+  "03/2022/qh15": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/152951",
+    "effective_date": "2022-03-01",
+    "law_number": "03/2022/QH15",
+    "title": "Luật sửa đổi, bổ sung một số điều của Luật Đầu tư công, Luật Đầu tư theo phương thức đối tác công tư, Luật Đầu tư, Luật Nhà ở, Luật Đấu thầu, Luật Điện lực, Luật Doanh nghiệp, Luật Thuế tiêu thụ đặc biệt và Luật Thi hành án dân sự. số 03/2022/QH15"
+  },
+  "luật suadoibosung-03-2022-qh15": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/152951",
+    "effective_date": "2022-03-01",
+    "law_number": "03/2022/QH15",
+    "title": "Luật sửa đổi, bổ sung một số điều của Luật Đầu tư công, Luật Đầu tư theo phương thức đối tác công tư, Luật Đầu tư, Luật Nhà ở, Luật Đấu thầu, Luật Điện lực, Luật Doanh nghiệp, Luật Thuế tiêu thụ đặc biệt và Luật Thi hành án dân sự. số 03/2022/QH15"
+  },
+  "14/2008/qh12": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/12807",
+    "effective_date": "2009-01-01",
+    "law_number": "14/2008/QH12",
+    "title": "Luật Thuế thu nhập doanh nghiệp số 14/2008/QH12"
+  },
+  "thue thu nhap doanh nghiep 14-2008-qh12": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/12807",
+    "effective_date": "2009-01-01",
+    "law_number": "14/2008/QH12",
+    "title": "Luật Thuế thu nhập doanh nghiệp số 14/2008/QH12"
+  },
+  "thuế thu nhập doanh nghiệp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/12807",
+    "effective_date": "2009-01-01",
+    "law_number": "14/2008/QH12",
+    "title": "Luật Thuế thu nhập doanh nghiệp số 14/2008/QH12"
+  },
+  "36/2005/qh11": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/26117",
+    "effective_date": "2006-01-01",
+    "law_number": "36/2005/QH11",
+    "title": "Luật Thương mại số 36/2005/QH11"
+  },
+  "luat thuong mai 36_2005_qh11_2633": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/26117",
+    "effective_date": "2006-01-01",
+    "law_number": "36/2005/QH11",
+    "title": "Luật Thương mại số 36/2005/QH11"
+  },
+  "luật thương mại ngày 10 tháng 5 năm 1997": {
+    "status": "EXPIRED",
+    "superseded_by": "36/2005/QH11",
+    "url": "",
+    "effective_date": null
+  },
+  "04-2017-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/128706",
+    "effective_date": "2018-01-01",
+    "law_number": "04/2017/QH14",
+    "title": "Luật hỗ trợ doanh nghiệp nhỏ và vừa số 04/2017/QH14"
+  },
+  "10-nq/tw": {
+    "status": "EXPIRED",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/110083",
+    "effective_date": "1989-01-01",
+    "law_number": "57 - TC/CÐKT",
+    "title": "Thông tư số 57 - TC/CÐKT Bổ sung, sửa đổi và hướng dẫn thi hành chế độ kế toán hợp tác xã Nông nghiệp trong điều kiện thực hiện cơ chế khoán theo Nghị quyết số 10 - NQ/TW của Bộ Chính trị"
+  },
+  "10-nq-tw": {
+    "status": "EXPIRED",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/110083",
+    "effective_date": "1989-01-01",
+    "law_number": "57 - TC/CÐKT",
+    "title": "Thông tư số 57 - TC/CÐKT Bổ sung, sửa đổi và hướng dẫn thi hành chế độ kế toán hợp tác xã Nông nghiệp trong điều kiện thực hiện cơ chế khoán theo Nghị quyết số 10 - NQ/TW của Bộ Chính trị"
+  },
+  "198/2025/qh15": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/177591",
+    "effective_date": "2025-05-17",
+    "law_number": "198/2025/QH15",
+    "title": "Nghị quyết số 198/2025/QH15 Về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân"
+  },
+  "198-2025-qh15": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/177591",
+    "effective_date": "2025-05-17",
+    "law_number": "198/2025/QH15",
+    "title": "Nghị quyết số 198/2025/QH15 Về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân"
+  },
+  "07/2020/tt-bkhcn": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/159227",
+    "effective_date": "2022-02-12",
+    "law_number": "07/2020/TT-BKHCN",
+    "title": "Thông tư số 07/2020/TT-BKHCN Hướng dẫn việc thành lập cơ sở ươm tạo doanh nghiệp nhỏ và vừa, cơ sở kỹ thuật hỗ trợ doanh nghiệp nhỏ và vừa, khu làm việc chung hỗ trợ doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo"
+  },
+  "07-2020-tt-bkhcn": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/159227",
+    "effective_date": "2022-02-12",
+    "law_number": "07/2020/TT-BKHCN",
+    "title": "Thông tư số 07/2020/TT-BKHCN Hướng dẫn việc thành lập cơ sở ươm tạo doanh nghiệp nhỏ và vừa, cơ sở kỹ thuật hỗ trợ doanh nghiệp nhỏ và vừa, khu làm việc chung hỗ trợ doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo"
+  },
+  "133/2016/tt-btc": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/113560",
+    "effective_date": "2017-01-01",
+    "law_number": "133/2016/TT-BTC",
+    "title": "Thông tư số 133/2016/TT-BTC Hướng dẫn Chế độ kế toán doanh nghiệp nhỏ và vừa"
+  },
+  "133-2016-tt-btc": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/113560",
+    "effective_date": "2017-01-01",
+    "law_number": "133/2016/TT-BTC",
+    "title": "Thông tư số 133/2016/TT-BTC Hướng dẫn Chế độ kế toán doanh nghiệp nhỏ và vừa"
+  },
+  "52/2023/tt-btc": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/163729",
+    "effective_date": "2023-09-23",
+    "law_number": "52/2023/TT-BTC",
+    "title": "Thông tư số 52/2023/TT-BTC Hướng dẫn cơ chế sử dụng kinh phí ngân sách nhà nước chi thường xuyên hỗ trợ doanh nghiệp nhỏ và vừa theo quy định tại Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ"
+  },
+  "52-2023-tt-btc": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/163729",
+    "effective_date": "2023-09-23",
+    "law_number": "52/2023/TT-BTC",
+    "title": "Thông tư số 52/2023/TT-BTC Hướng dẫn cơ chế sử dụng kinh phí ngân sách nhà nước chi thường xuyên hỗ trợ doanh nghiệp nhỏ và vừa theo quy định tại Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ"
+  },
+  "59-2020-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/142881",
+    "effective_date": "2021-01-01",
+    "law_number": "59/2020/QH14",
+    "title": "Luật doanh nghiệp số 59/2020/QH14"
+  },
+  "38-2019-qh14": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/136036",
+    "effective_date": "2019-07-01",
+    "law_number": "38/2019/QH14",
+    "title": "Luật Quản lý thuế số 38/2019/QH14"
+  },
+  "80/2021/nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/163729",
+    "effective_date": "2023-09-23",
+    "law_number": "52/2023/TT-BTC",
+    "title": "Thông tư số 52/2023/TT-BTC Hướng dẫn cơ chế sử dụng kinh phí ngân sách nhà nước chi thường xuyên hỗ trợ doanh nghiệp nhỏ và vừa theo quy định tại Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ"
+  },
+  "80-2021-nd-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/163729",
+    "effective_date": "2023-09-23",
+    "law_number": "52/2023/TT-BTC",
+    "title": "Thông tư số 52/2023/TT-BTC Hướng dẫn cơ chế sử dụng kinh phí ngân sách nhà nước chi thường xuyên hỗ trợ doanh nghiệp nhỏ và vừa theo quy định tại Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ"
+  },
+  "55/2019/nđ-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/135887",
+    "effective_date": "2019-08-16",
+    "law_number": "55/2019/NĐ-CP",
+    "title": "Nghị định số 55/2019/NĐ-CP Về hỗ trợ pháp lý cho doanh nghiệp nhỏ và vừa"
+  },
+  "55-2019-nd-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/135887",
+    "effective_date": "2019-08-16",
+    "law_number": "55/2019/NĐ-CP",
+    "title": "Nghị định số 55/2019/NĐ-CP Về hỗ trợ pháp lý cho doanh nghiệp nhỏ và vừa"
+  },
+  "57/2018/nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/132862",
+    "effective_date": "2019-01-01",
+    "law_number": "157/2018/NĐ-CP",
+    "title": "Nghị định số 157/2018/NĐ-CP Quy định mức lương tối thiểu vùng đối với người lao động làm việc theo hợp đồng lao động"
+  },
+  "57-2018-nd-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/132862",
+    "effective_date": "2019-01-01",
+    "law_number": "157/2018/NĐ-CP",
+    "title": "Nghị định số 157/2018/NĐ-CP Quy định mức lương tối thiểu vùng đối với người lao động làm việc theo hợp đồng lao động"
+  },
+  "121/2025/nđ-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/178222",
+    "effective_date": "2025-07-01",
+    "law_number": "121/2025/NĐ-CP",
+    "title": "Nghị định số 121/2025/NĐ-CP Quy định về phân quyền, phân cấp trong lĩnh vực quản lý nhà nước của Bộ Tư pháp"
+  },
+  "121-2025-nd-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/178222",
+    "effective_date": "2025-07-01",
+    "law_number": "121/2025/NĐ-CP",
+    "title": "Nghị định số 121/2025/NĐ-CP Quy định về phân quyền, phân cấp trong lĩnh vực quản lý nhà nước của Bộ Tư pháp"
+  },
+  "84/qđ-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/87880",
+    "effective_date": "2008-07-24",
+    "law_number": "984/QĐ-TTg",
+    "title": "Quyết định số 984/QĐ-TTg Về việc cấp bằng Tổ quốc ghi công"
+  },
+  "84-qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/87880",
+    "effective_date": "2008-07-24",
+    "law_number": "984/QĐ-TTg",
+    "title": "Quyết định số 984/QĐ-TTg Về việc cấp bằng Tổ quốc ghi công"
+  },
+  "19/2018/qđ-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/130696",
+    "effective_date": "2018-06-05",
+    "law_number": "19/2018/QĐ-TTg",
+    "title": "Quyết định số 19/2018/QĐ-TTg Quy định tiêu chí, thẩm quyền, trình tự, thủ tục công nhận doanh nghiệp nông nghiệp ứng dụng công nghệ cao"
+  },
+  "19-2018-qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/130696",
+    "effective_date": "2018-06-05",
+    "law_number": "19/2018/QĐ-TTg",
+    "title": "Quyết định số 19/2018/QĐ-TTg Quy định tiêu chí, thẩm quyền, trình tự, thủ tục công nhận doanh nghiệp nông nghiệp ứng dụng công nghệ cao"
+  },
+  "111/2015/nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/186266",
+    "effective_date": "2026-02-16",
+    "law_number": "65/2025/TT-BCT",
+    "title": "Thông tư số 65/2025/TT-BCT Quy định chi tiết thi hành một số điều của Nghị định số 205/2025/NĐ-CP ngày 14 tháng 7 năm 2025 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 111/2015/NĐ-CP về phát triển công nghiệp hỗ trợ"
+  },
+  "111-2015-nd-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/186266",
+    "effective_date": "2026-02-16",
+    "law_number": "65/2025/TT-BCT",
+    "title": "Thông tư số 65/2025/TT-BCT Quy định chi tiết thi hành một số điều của Nghị định số 205/2025/NĐ-CP ngày 14 tháng 7 năm 2025 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 111/2015/NĐ-CP về phát triển công nghiệp hỗ trợ"
+  },
+  "10/2021/qđ-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/147261",
+    "effective_date": "2021-04-30",
+    "law_number": "10/2021/QĐ-TTg",
+    "title": "Quyết định số 10/2021/QĐ-TTg Quy định tiêu chí xác định doanh nghiệp công nghệ cao"
+  },
+  "10-2021-qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/147261",
+    "effective_date": "2021-04-30",
+    "law_number": "10/2021/QĐ-TTg",
+    "title": "Quyết định số 10/2021/QĐ-TTg Quy định tiêu chí xác định doanh nghiệp công nghệ cao"
+  },
+  "55/2010/qđ-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/25820",
+    "effective_date": "2010-10-26",
+    "law_number": "55/2010/QĐ-TTg",
+    "title": "Quyết định số 55/2010/QĐ-TTg Thẩm quyền, trình tự, thủ tục chứng nhận tổ chức, cá nhân hoạt động ứng dụng công nghệ cao, chứng nhận tổ chức, cá nhân nghiên cứu và phát triển công nghệ cao và công nhận doanh nghiệp công nghệ cao"
+  },
+  "55-2010-qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/25820",
+    "effective_date": "2010-10-26",
+    "law_number": "55/2010/QĐ-TTg",
+    "title": "Quyết định số 55/2010/QĐ-TTg Thẩm quyền, trình tự, thủ tục chứng nhận tổ chức, cá nhân hoạt động ứng dụng công nghệ cao, chứng nhận tổ chức, cá nhân nghiên cứu và phát triển công nghệ cao và công nhận doanh nghiệp công nghệ cao"
+  },
+  "18/2019/qđ-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/135131",
+    "effective_date": "2019-06-15",
+    "law_number": "18/2019/QĐ-TTg",
+    "title": "Quyết định số 18/2019/QĐ-TTg Quy định việc nhập khẩu máy móc, thiết bị, dây chuyền công nghệ đã qua sử dụng"
+  },
+  "18-2019-qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/135131",
+    "effective_date": "2019-06-15",
+    "law_number": "18/2019/QĐ-TTg",
+    "title": "Quyết định số 18/2019/QĐ-TTg Quy định việc nhập khẩu máy móc, thiết bị, dây chuyền công nghệ đã qua sử dụng"
+  },
+  "66/2024/nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/173910",
+    "effective_date": "2025-01-01",
+    "law_number": "166/2024/NĐ-CP",
+    "title": "Nghị định số 166/2024/NĐ-CP Quy định về điều kiện kinh doanh dịch vụ kiểm định xe cơ giới; tổ chức, hoạt động của cơ sở đăng kiểm; niên hạn sử dụng của xe cơ giới"
+  },
+  "66-2024-nd-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/173910",
+    "effective_date": "2025-01-01",
+    "law_number": "166/2024/NĐ-CP",
+    "title": "Nghị định số 166/2024/NĐ-CP Quy định về điều kiện kinh doanh dịch vụ kiểm định xe cơ giới; tổ chức, hoạt động của cơ sở đăng kiểm; niên hạn sử dụng của xe cơ giới"
+  },
+  "31/2021/nđ-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/153459",
+    "effective_date": "2022-02-15",
+    "law_number": "131/2021/NĐ-CP",
+    "title": "Nghị định số 131/2021/NĐ-CP Quy định chi tiết và biện pháp thi hành Pháp lệnh Ưu đãi người có công với cách mạng"
+  },
+  "nghị định huong dan luat dau tu -31-2021-nđ-cp": {
+    "status": "Hết hiệu lực một phần",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/153459",
+    "effective_date": "2022-02-15",
+    "law_number": "131/2021/NĐ-CP",
+    "title": "Nghị định số 131/2021/NĐ-CP Quy định chi tiết và biện pháp thi hành Pháp lệnh Ưu đãi người có công với cách mạng"
+  },
+  "123/2020/nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/178309",
+    "effective_date": "2025-06-01",
+    "law_number": "32/2025/TT-BTC",
+    "title": "Thông tư số 32/2025/TT-BTC Hướng dẫn thực hiện một số điều của Luật Quản lý thuế ngày 13 tháng 6 năm 2019, Nghị định số 123/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định về hóa đơn, chứng từ, Nghị định số 70/2025/NĐ-CP ngày 20 tháng 3 năm 2025 sửa đổi, bổ sung một số điều của Nghị định số 123/2020/NĐ-CP"
+  },
+  "nghị định quy dinh ve hoa don chung tu  -123-2020-nđ-cp": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/178309",
+    "effective_date": "2025-06-01",
+    "law_number": "32/2025/TT-BTC",
+    "title": "Thông tư số 32/2025/TT-BTC Hướng dẫn thực hiện một số điều của Luật Quản lý thuế ngày 13 tháng 6 năm 2019, Nghị định số 123/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định về hóa đơn, chứng từ, Nghị định số 70/2025/NĐ-CP ngày 20 tháng 3 năm 2025 sửa đổi, bổ sung một số điều của Nghị định số 123/2020/NĐ-CP"
+  },
+  "10/2021/qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/147261",
+    "effective_date": "2021-04-30",
+    "law_number": "10/2021/QĐ-TTg",
+    "title": "Quyết định số 10/2021/QĐ-TTg Quy định tiêu chí xác định doanh nghiệp công nghệ cao"
+  },
+  "18/2019/qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/135131",
+    "effective_date": "2019-06-15",
+    "law_number": "18/2019/QĐ-TTg",
+    "title": "Quyết định số 18/2019/QĐ-TTg Quy định việc nhập khẩu máy móc, thiết bị, dây chuyền công nghệ đã qua sử dụng"
+  },
+  "19/2018/qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/130696",
+    "effective_date": "2018-06-05",
+    "law_number": "19/2018/QĐ-TTg",
+    "title": "Quyết định số 19/2018/QĐ-TTg Quy định tiêu chí, thẩm quyền, trình tự, thủ tục công nhận doanh nghiệp nông nghiệp ứng dụng công nghệ cao"
+  },
+  "55/2010/qd-ttg": {
+    "status": "ACTIVE",
+    "superseded_by": null,
+    "url": "https://vbpl.vn/van-ban/chi-tiet/25820",
+    "effective_date": "2010-10-26",
+    "law_number": "55/2010/QĐ-TTg",
+    "title": "Quyết định số 55/2010/QĐ-TTg Thẩm quyền, trình tự, thủ tục chứng nhận tổ chức, cá nhân hoạt động ứng dụng công nghệ cao, chứng nhận tổ chức, cá nhân nghiên cứu và phát triển công nghệ cao và công nhận doanh nghiệp công nghệ cao"
   }
 }

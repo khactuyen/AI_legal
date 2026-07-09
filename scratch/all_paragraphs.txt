@@ -1,0 +1,682 @@
+Idx:   0 | Style: Title           | Bold: False | Text: 
+Idx:   1 | Style: Normal          | Bold: True | Text: ĐẠI HỌC DUY TÂN
+Idx:   2 | Style: Normal          | Bold: True | Text: TRƯỜNG KHOA HỌC MÁY TÍNH
+Idx:   3 | Style: Normal          | Bold: False | Text: --------------🙖🙐✰🙖🙐-------------
+Idx:   4 | Style: Normal          | Bold: False | Text: 
+Idx:   5 | Style: Normal          | Bold: False | Text: 
+Idx:   6 | Style: Normal          | Bold: False | Text: 
+Idx:   7 | Style: Normal          | Bold: True | Text: ĐỒ ÁN CHUYÊN NGÀNH:
+Idx:   8 | Style: Normal          | Bold: True | Text: KHOA HỌC DỮ LIỆU
+Idx:   9 | Style: Normal          | Bold: False | Text: Đề tài:
+Idx:  10 | Style: Normal          | Bold: True | Text: XÂY DỰNG HỆ THỐNG PHÁT HIỆN VÀ PHÂN LOẠI BỆNH TRÊN LÁ CÂY SỬ DỤNG DEEP LEARNING
+Idx:  11 | Style: Normal          | Bold: False | Text: GVHD: Trịnh Quang Tin
+Idx:  12 | Style: Normal          | Bold: False | Text: Lớp: DS 455 I
+Idx:  13 | Style: Normal          | Bold: False | Text: Nhóm thực hiện:
+Idx:  14 | Style: Normal          | Bold: False | Text: Lê Văn Ngọc - 28211305680
+Idx:  15 | Style: Normal          | Bold: False | Text: Trần Thanh Thiên - 28211339724
+Idx:  16 | Style: Normal          | Bold: False | Text: Lê Minh - 28211353719
+Idx:  17 | Style: Normal          | Bold: False | Text: Trần Công Nghĩa - 28211350284
+Idx:  18 | Style: Normal          | Bold: False | Text: Nguyễn Văn Vương - 28211450388
+Idx:  19 | Style: Normal          | Bold: False | Text: 
+Idx:  20 | Style: Normal          | Bold: True | Text: Đà Nẵng, tháng 10 năm 2024
+Idx:  21 | Style: Normal          | Bold: True | Text: MỤC LỤC
+Idx:  22 | Style: Normal          | Bold: False | Text: 
+Idx:  23 | Style: Normal          | Bold: False | Text: 
+Idx:  24 | Style: Normal          | Bold: True | Text: MỤC LỤC HÌNH ẢNH
+Idx:  25 | Style: Normal          | Bold: False | Text: Hình 1: Minh họa quá trình tích chập trong mạng nơron tích chập (CNN)
+Idx:  26 | Style: Normal          | Bold: False | Text: Hình 2: Minh họa quá trình Max Pooling
+Idx:  27 | Style: Normal          | Bold: False | Text: Hình 3: Minh họa mô hình Transfer Learning
+Idx:  28 | Style: Normal          | Bold: False | Text: Hình 4: Kết quả khi chạy hàm gri_preview() với nhãn “Powdery” trong tập dữ liệu train
+Idx:  29 | Style: Normal          | Bold: False | Text: Hình 5: Kết quả khi chạy hàm imageSizeStactisisics() với tập train
+Idx:  30 | Style: Normal          | Bold: False | Text: Hình 6: Kết quả khi chạy hàm imageSizeStactisisics() với tập Vanlidation
+Idx:  31 | Style: Normal          | Bold: False | Text: Hình 7: Kết quả khi chạy hàm imageSizeStactisisics() với tập Test
+Idx:  32 | Style: Normal          | Bold: False | Text: Hình 8: Kết quả Minimum và maximun pixel value
+Idx:  33 | Style: Normal          | Bold: False | Text: Hình 9: Kết quả sau khi chuẩn hóa giá trị pixel
+Idx:  34 | Style: Normal          | Bold: False | Text: Hình 10: Kết quả Validation Loss và Validation Accuracy
+Idx:  35 | Style: Normal          | Bold: False | Text: Hình 11: Kết quả hàm predict_with_cv2
+Idx:  36 | Style: Normal          | Bold: False | Text: Hình 12: Giao diện chính chương trình
+Idx:  37 | Style: Normal          | Bold: False | Text: Hình 13: Hình ảnh giao diện trang About
+Idx:  38 | Style: Normal          | Bold: False | Text: Hình 14: Hình ảnh giao diện trang Disease Recongnition
+Idx:  39 | Style: Normal          | Bold: False | Text: Hình 15: Hình ảnh giao diện trang Live Camera
+Idx:  40 | Style: Normal          | Bold: False | Text: Hình 16: Hình ảnh kết quả dự đoán
+Idx:  41 | Style: Normal          | Bold: False | Text: Hình 17: Hình ảnh được tải lên dự đoán
+Idx:  42 | Style: Normal          | Bold: False | Text: 
+Idx:  43 | Style: Normal          | Bold: True | Text: LỜI NHẬN XÉT CỦA THẦY/CÔ
+Idx:  44 | Style: Normal          | Bold: True | Text: ………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+Idx:  45 | Style: Normal          | Bold: False | Text: 
+Idx:  46 | Style: Normal          | Bold: False | Text: 
+Idx:  47 | Style: Normal          | Bold: True | Text: LỜI CẢM ƠN
+Idx:  48 | Style: Normal          | Bold: False | Text: 
+Idx:  49 | Style: Normal          | Bold: False | Text: Trước hết, em xin gửi lời cảm ơn chân thành và sâu sắc đến quý thầy, cô đã tận tình giảng dạy, truyền đạt những kiến thức quý báu trong suốt quá trình học tập. Sự tận tâm, nhiệt huyết và chỉ dẫn tận tình của quý thầy, cô là nguồn động lực to lớn giúp em hoàn thành báo cáo này.
+Idx:  50 | Style: Normal          | Bold: False | Text: Đặc biệt, em xin trân trọng cảm ơn Trịnh Quang Tin đã trực tiếp hướng dẫn, định hướng và góp ý cho em trong suốt quá trình thực hiện đề tài. Những lời chỉ dẫn quý báu từ thầy/cô đã giúp em mở rộng kiến thức, rèn luyện kỹ năng và có thêm nhiều kinh nghiệm thực tiễn.
+Idx:  51 | Style: Normal          | Bold: False | Text: Cuối cùng, em xin kính chúc quý thầy, cô luôn mạnh khỏe, nhiều niềm vui và thành công trong sự nghiệp trồng người cao quý.
+Idx:  52 | Style: Normal          | Bold: True | Text: CHƯƠNG 1: MỞ ĐẦU
+Idx:  53 | Style: Normal          | Bold: False | Text: LÝ DO CHỌN ĐỀ TÀI
+Idx:  54 | Style: Normal          | Bold: False | Text: Trong bối cảnh nông nghiệp vẫn là một ngành kinh tế then chốt ở Việt Nam, vấn đề sâu bệnh hại trên cây trồng luôn là mối quan tâm hàng đầu của người nông dân và các nhà nghiên cứu. Thực tế cho thấy, dịch bệnh trên cây trồng có thể gây thiệt hại lớn về năng suất, chất lượng nông sản và kéo theo nhiều hệ lụy về kinh tế – xã hội. Hiện nay, việc phát hiện và phân loại bệnh trên lá cây chủ yếu dựa vào kinh nghiệm của nông dân hoặc sự tư vấn từ các chuyên gia. Tuy nhiên, phương pháp này còn nhiều hạn chế như tốn thời gian, chi phí, đồng thời dễ dẫn đến sai sót do yếu tố chủ quan. Điều này đặt ra yêu cầu cần có những giải pháp ứng dụng công nghệ nhằm hỗ trợ phát hiện bệnh nhanh chóng, chính xác và kịp thời.
+Idx:  55 | Style: Normal          | Bold: False | Text: Trong những năm gần đây, trí tuệ nhân tạo, đặc biệt là lĩnh vực Deep Learning, đã có những bước tiến vượt bậc và chứng minh được hiệu quả trong nhiều ứng dụng thực tế, nhất là trong xử lý ảnh và nhận diện đối tượng. Việc áp dụng Deep Learning để xây dựng hệ thống phát hiện và phân loại bệnh trên lá cây không chỉ phù hợp với xu thế phát triển của công nghệ mà còn mang tính mới mẻ, sáng tạo. Hệ thống này có khả năng tự động học hỏi, cải thiện độ chính xác theo thời gian và có thể mở rộng ứng dụng cho nhiều loại cây trồng khác nhau.
+Idx:  56 | Style: Normal          | Bold: False | Text: Bên cạnh đó, đề tài mang ý nghĩa khoa học và thực tiễn sâu sắc. Về mặt khoa học, nó góp phần phát triển hướng nghiên cứu kết hợp giữa trí tuệ nhân tạo và nông nghiệp thông minh. Về mặt xã hội, nó giúp giảm chi phí sản xuất, nâng cao năng suất cây trồng, đồng thời hạn chế việc lạm dụng thuốc trừ sâu, qua đó góp phần bảo vệ sức khỏe con người và môi trường.
+Idx:  57 | Style: Normal          | Bold: False | Text: Chính vì những lý do trên, nhóm chúng em quyết định lựa chọn đề tài “Xây dựng hệ thống phát hiện và phân loại bệnh trên lá cây sử dụng Deep Learning” với mong muốn ứng dụng công nghệ hiện đại để giải quyết một bài toán thực tiễn, đồng thời đóng góp vào sự phát triển của nền nông nghiệp bền vững và thông minh trong tương lai.
+Idx:  58 | Style: Normal          | Bold: False | Text: MỤC ĐÍCH VÀ Ý NGHĨA CỦA ĐỀ TÀI
+Idx:  59 | Style: Normal          | Bold: False | Text: Mục đích
+Idx:  60 | Style: Normal          | Bold: False | Text: Tự động phát hiện bệnh trên lá cây: Giúp nông dân và nhà nghiên cứu nhận diện nhanh chóng các loại bệnh thường gặp trên cây trồng thông qua hình ảnh lá.
+Idx:  61 | Style: Normal          | Bold: False | Text: Phân loại chính xác các loại bệnh: Ứng dụng các mô hình Deep Learning (CNN, Transfer Learning, v.v.) để phân biệt và xác định loại bệnh, từ đó hỗ trợ đưa ra giải pháp xử lý phù hợp.
+Idx:  62 | Style: Normal          | Bold: False | Text: Tiết kiệm thời gian và chi phí: Giảm sự phụ thuộc vào chuyên gia nông nghiệp và hạn chế việc phải xét nghiệm tốn kém trong phòng thí nghiệm.
+Idx:  63 | Style: Normal          | Bold: False | Text: Nâng cao năng suất nông nghiệp: Hạn chế thiệt hại do dịch bệnh, từ đó góp phần ổn định sản lượng và chất lượng cây trồng.
+Idx:  64 | Style: Normal          | Bold: False | Text: Ý nghĩa
+Idx:  65 | Style: Normal          | Bold: False | Text: Ý nghĩa khoa học
+Idx:  66 | Style: Normal          | Bold: False | Text: Đóng góp vào lĩnh vực trí tuệ nhân tạo ứng dụng trong nông nghiệp chính xác (smart agriculture). Đây là minh chứng cho việc kết hợp công nghệ hiện đại với sản xuất nông nghiệp truyền thống.
+Idx:  67 | Style: Normal          | Bold: False | Text: Ý nghĩa thực tiễn
+Idx:  68 | Style: Normal          | Bold: False | Text: Giúp người nông dân, hợp tác xã và doanh nghiệp nông nghiệp phát hiện bệnh sớm và đưa ra biện pháp phòng trừ kịp thời.
+Idx:  69 | Style: Normal          | Bold: False | Text: Giảm thiểu việc lạm dụng thuốc bảo vệ thực vật, từ đó góp phần bảo vệ môi trường và sức khỏe con người.
+Idx:  70 | Style: Normal          | Bold: False | Text: Có thể mở rộng thành ứng dụng di động hoặc hệ thống thông minh hỗ trợ tư vấn nông nghiệp ngay tại ruộng.
+Idx:  71 | Style: Normal          | Bold: False | Text: Ý nghĩa kinh tế - xã hội
+Idx:  72 | Style: Normal          | Bold: False | Text: Giúp tăng hiệu quả sản xuất, giảm tổn thất mùa vụ.
+Idx:  73 | Style: Normal          | Bold: False | Text: Thúc đẩy chuyển đổi số trong nông nghiệp, phù hợp với xu hướng Nông nghiệp 4.0.
+Idx:  74 | Style: Normal          | Bold: False | Text: ĐỐI TƯỢNG NGHIÊN CỨU
+Idx:  75 | Style: Normal          | Bold: False | Text: Đối tượng nghiên cứu của đề tài là hình ảnh lá cây (leaf images) với các trạng thái khác nhau, bao gồm:
+Idx:  76 | Style: Normal          | Bold: False | Text: Lá khỏe mạnh (không có bệnh).
+Idx:  77 | Style: Normal          | Bold: False | Text: Lá bị bệnh (do nấm, vi khuẩn, virus gây ra).
+Idx:  78 | Style: Normal          | Bold: False | Text: Mỗi hình ảnh lá cây sẽ được xem như một mẫu dữ liệu đầu vào của hệ thống. Các đặc trưng (features) về màu sắc, hình dạng, hoa văn trên bề mặt lá sẽ được mô hình Deep Learning học để phát hiện và phân loại tình trạng của lá.
+Idx:  79 | Style: Normal          | Bold: False | Text: PHẠM VI NGHIÊN CỨU
+Idx:  80 | Style: Normal          | Bold: False | Text: Phạm vi dữ liệu
+Idx:  81 | Style: Normal          | Bold: False | Text: Dữ liệu đầu vào chủ yếu là ảnh chụp lá cây dưới dạng ảnh Màu.
+Idx:  82 | Style: Normal          | Bold: False | Text: Nghiên cứu tập trung ở một số loại cây trồng nhất định (ví dụ: cây lúa, cây cà chua, khoai tây, ngô, hoặc các cây ăn quả được chọn lọc).
+Idx:  83 | Style: Normal          | Bold: False | Text: Chỉ phân tích tình trạng lá ở mức hình ảnh, chưa xem xét các yếu tố khác như đất, thời tiết, côn trùng gây hại.
+Idx:  84 | Style: Normal          | Bold: False | Text: Phạm vi kĩ thuật
+Idx:  85 | Style: Normal          | Bold: False | Text: Ứng dụng các kỹ thuật xử lý ảnh và Deep Learning để phân loại ảnh thành lá khỏe mạnh hoặc lá bị bệnh theo từng loại bệnh.
+Idx:  86 | Style: Normal          | Bold: False | Text: Hệ thống được xây dựng và thử nghiệm trên dữ liệu huấn luyện và kiểm thử, chưa triển khai quy mô công nghiệp ngoài thực tế.
+Idx:  87 | Style: Normal          | Bold: False | Text: Phạm vi nghiên cứu tập trung vào độ chính xác của mô hình và khả năng ứng dụng trên dữ liệu ảnh, có thể triển khai bước đầu trên nền tảng web hoặc di động.
+Idx:  88 | Style: Normal          | Bold: False | Text: Giới hạn nghiên cứu
+Idx:  89 | Style: Normal          | Bold: False | Text: Chưa xem xét toàn diện tất cả loại cây trồng, mà chỉ giới hạn trong một số cây được chọn.
+Idx:  90 | Style: Normal          | Bold: False | Text: Kết quả phụ thuộc vào chất lượng và số lượng dữ liệu ảnh.
+Idx:  91 | Style: Normal          | Bold: False | Text: Chưa tích hợp các yếu tố nông học khác (môi trường, dinh dưỡng, thời tiết).
+Idx:  92 | Style: Normal          | Bold: False | Text: PHƯƠNG PHÁP NGHIÊN CỨU
+Idx:  93 | Style: Normal          | Bold: False | Text: Nghiên cứu cơ sở lý thuyết
+Idx:  94 | Style: Normal          | Bold: False | Text: Tìm hiểu về các loại bệnh phổ biến trên lá cây và đặc điểm nhận dạng qua hình ảnh.
+Idx:  95 | Style: Normal          | Bold: False | Text: Nghiên cứu các kiến trúc mạng nơ-ron tích chập (CNN) và các mô hình học sâu hiện đại trong xử lý ảnh.
+Idx:  96 | Style: Normal          | Bold: False | Text: Tham khảo các nghiên cứu trước đây, các bộ dữ liệu chuẩn (như PlantVillage), cũng như các ứng dụng thực tế trong nông nghiệp thông minh
+Idx:  97 | Style: Normal          | Bold: False | Text: Thu nhập và xử lý dữ liệu
+Idx:  98 | Style: Normal          | Bold: False | Text: Thu thập dữ liệu hình ảnh: sử dụng bộ dữ liệu công khai (PlantVillage).
+Idx:  99 | Style: Normal          | Bold: False | Text: Tiền xử lý dữ liệu:
+Idx: 100 | Style: Normal          | Bold: False | Text: Chuẩn hóa kích thước ảnh.
+Idx: 101 | Style: Normal          | Bold: False | Text: Từ ảnh màu sang ảnh xám.
+Idx: 102 | Style: Normal          | Bold: False | Text: Loại bỏ ảnh bị mờ, kém chất lượng.
+Idx: 103 | Style: Normal          | Bold: False | Text: Tăng cường dữ liệu (Data Augmentation: xoay, lật, thay đổi độ sáng...) để cải thiện khả năng tổng quát của mô hình.
+Idx: 104 | Style: Normal          | Bold: False | Text: Gán nhãn dữ liệu theo tình trạng: lá khỏe mạnh / lá bệnh và phân loại cụ thể từng bệnh.
+Idx: 105 | Style: Normal          | Bold: False | Text: Xây dựng mô hình Deep Learning
+Idx: 106 | Style: Normal          | Bold: False | Text: Thiết kế mô hình CNN từ đầu và sử dụng Transfer Learning với các mô hình sẵn có như ResNet, Unet.
+Idx: 107 | Style: Normal          | Bold: False | Text: Chia dữ liệu thành tập huấn luyện, kiểm thử và đánh giá.
+Idx: 108 | Style: Normal          | Bold: False | Text: Huấn luyện mô hình trên GPU/TPU để tăng tốc độ tính toán.
+Idx: 109 | Style: Normal          | Bold: False | Text: Đánh giá và so sánh mô hình
+Idx: 110 | Style: Normal          | Bold: False | Text: Sử dụng các thước đo: Accuracy, Precision, Recall, F1-score, Confusion Matrix để đánh giá chất lượng mô hình.
+Idx: 111 | Style: Normal          | Bold: False | Text: So sánh hiệu quả giữa các mô hình khác nhau (CNN cơ bản, Transfer Learning, Ensemble).
+Idx: 112 | Style: Normal          | Bold: False | Text: -Tiến hành kiểm thử trên dữ liệu thực tế (chưa từng xuất hiện trong tập huấn luyện) để đánh giá khả năng ứng dụng
+Idx: 113 | Style: Normal          | Bold: False | Text: Xây dựng ứng dụng minh họa
+Idx: 114 | Style: Normal          | Bold: False | Text: Tích hợp mô hình đã huấn luyện vào một ứng dụng web hoặc mobile demo.
+Idx: 115 | Style: Normal          | Bold: False | Text: Cho phép người dùng tải ảnh lá cây lên và nhận kết quả dự đoán (khỏe mạnh hoặc loại bệnh cụ thể)
+Idx: 116 | Style: Normal          | Bold: False | Text: Phân tích kết quả và đề xuất hướng phát triển
+Idx: 117 | Style: Normal          | Bold: False | Text: Đưa ra nhận xét về ưu, nhược điểm của mô hình.
+Idx: 118 | Style: Normal          | Bold: False | Text: Đề xuất hướng cải tiến trong tương lai: mở rộng cho nhiều loại cây hơn, kết hợp với IoT và cảm biến nông nghiệp, triển khai thực tế cho nông dân.
+Idx: 119 | Style: Normal          | Bold: False | Text: ĐỐI TƯỢNG SỬ DỤNG
+Idx: 120 | Style: Normal          | Bold: False | Text: Hệ thống được xây dựng hướng đến các nhóm người dùng sau:
+Idx: 121 | Style: Normal          | Bold: False | Text: Người nông dân: Có thể sử dụng ứng dụng để nhanh chóng phát hiện bệnh trên cây trồng tại ruộng, giúp tiết kiệm chi phí và thời gian.
+Idx: 122 | Style: Normal          | Bold: False | Text: Hợp tác xã và doanh nghiệp nông nghiệp: Quản lý diện tích canh tác lớn, hệ thống hỗ trợ giám sát sức khỏe cây trồng ở quy mô lớn.
+Idx: 123 | Style: Normal          | Bold: False | Text: Nhà nghiên cứu và kỹ sư nông nghiệp: Có thêm công cụ hỗ trợ phân tích, đánh giá và theo dõi tình trạng bệnh hại.
+Idx: 124 | Style: Normal          | Bold: False | Text: Sinh viên, giảng viên: Tham khảo và ứng dụng trong học tập, nghiên cứu các đề tài về nông nghiệp thông minh, trí tuệ nhân tạo.
+Idx: 125 | Style: Normal          | Bold: False | Text: CẤU TRÚC ĐỒ ÁN
+Idx: 126 | Style: Normal          | Bold: False | Text: Đồ án được tổ chức thành các chương như sau:
+Idx: 127 | Style: Normal          | Bold: False | Text: Chương1: Mở đầu
+Idx: 128 | Style: Normal          | Bold: False | Text: Trình bày lý do chọn đề tài, mục đích và ý nghĩa, phạm vi nghiên cứu, phương pháp nghiên cứu và cấu trúc của báo cáo.
+Idx: 129 | Style: Normal          | Bold: False | Text: Chương 2: Cơ sở lý thuyết
+Idx: 130 | Style: Normal          | Bold: False | Text: Giới thiệu tổng quan về bệnh trên lá cây, các phương pháp xử lý ảnh, kiến trúc mạng CNN và Transfer Learning, cùng với các nghiên cứu liên quan trước đây.
+Idx: 131 | Style: Normal          | Bold: False | Text: Chương 3: Thiết kế và xây dựng hệ thống
+Idx: 132 | Style: Normal          | Bold: False | Text: Trình bày quy trình xây dựng hệ thống gồm: thu thập và xử lý dữ liệu, lựa chọn mô hình Deep Learning, thiết kế pipeline huấn luyện và kiến trúc tổng thể của hệ thống.
+Idx: 133 | Style: Normal          | Bold: False | Text: Chương 4: Kết luận và hướng phát triển
+Idx: 134 | Style: Normal          | Bold: False | Text: Tóm tắt các kết quả đạt được, đánh giá tổng thể đề tài, đồng thời đề xuất hướng nghiên cứu tiếp theo như mở rộng dữ liệu, ứng dụng IoT, triển khai thực tế.
+Idx: 135 | Style: Normal          | Bold: False | Text: 
+Idx: 136 | Style: Heading 1       | Bold: True | Text: CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+Idx: 137 | Style: Normal          | Bold: False | Text: TỔNG QUAN CÁC BỆNH TRÊN LÁ CÂY
+Idx: 138 | Style: Normal          | Bold: False | Text: Khái niệm bệnh hại thực vật
+Idx: 139 | Style: Normal          | Bold: False | Text: Bệnh hại thực vật là trạng thái sinh lý bất thường của cây trồng do tác nhân sinh học (nấm, vi khuẩn, virus, tuyến trùng…) hoặc tác nhân phi sinh học (điều kiện môi trường, đất, dinh dưỡng) gây ra. Khi cây mắc bệnh, quá trình quang hợp và trao đổi chất bị rối loạn, làm giảm khả năng sinh trưởng, phát triển và năng suất.
+Idx: 140 | Style: Normal          | Bold: False | Text: Các tác nhân gây bệnh
+Idx: 141 | Style: Normal          | Bold: False | Text: Nấm: Gây ra các bệnh phổ biến như đạo ôn lúa, mốc sương trên khoai tây, phấn trắng trên dưa chuột…
+Idx: 142 | Style: Normal          | Bold: False | Text: Vi khuẩn: Gây bệnh cháy lá, đốm lá, héo xanh vi khuẩn. Virus: Gây bệnh khảm lá, vàng lá xoăn, đốm vòng.
+Idx: 143 | Style: Normal          | Bold: False | Text: Tác nhân khác: Thiếu dinh dưỡng, ô nhiễm, tác động cơ học cũng có thể tạo ra triệu chứng tương tự bệnh hại.
+Idx: 144 | Style: Normal          | Bold: False | Text: Một số bệnh trên lá cây
+Idx: 145 | Style: Normal          | Bold: False | Text: Cây lúa
+Idx: 146 | Style: Normal          | Bold: False | Text: Đạo ôn (do nấm Magnaporthe oryzae): Xuất hiện vết đốm hình thoi, màu xám hoặc nâu, thường lan rộng nhanh trong điều kiện ẩm ướt.
+Idx: 147 | Style: Normal          | Bold: False | Text: Bạc lá (do vi khuẩn Xanthomonas oryzae): Lá bị cháy khô từ chóp lá hoặc mép lá, lan dần xuống phía dưới.
+Idx: 148 | Style: Normal          | Bold: False | Text: Cây cà chua
+Idx: 149 | Style: Normal          | Bold: False | Text: Bệnh mốc sương (do nấm Phytophthora infestans): Vết bệnh màu xanh xám, sau chuyển nâu, có viền mờ, dễ lan nhanh khi trời ẩm.
+Idx: 150 | Style: Normal          | Bold: False | Text: Bệnh xoăn lá vàng (do virus TYLCV): Lá bị xoăn, biến dạng, vàng và cây còi cọc.
+Idx: 151 | Style: Normal          | Bold: False | Text: Cây khoai tây
+Idx: 152 | Style: Normal          | Bold: False | Text: Mốc sương (do Phytophthora infestans): Tương tự trên cà chua, gây cháy lá, giảm năng suất nghiêm trọng.
+Idx: 153 | Style: Normal          | Bold: False | Text: Héo vi khuẩn (do Ralstonia solanacearum): Lá héo rũ, mạch dẫn nâu sẫm, lây lan qua đất và nước tưới.
+Idx: 154 | Style: Normal          | Bold: False | Text: Cây dưa chuột
+Idx: 155 | Style: Normal          | Bold: False | Text: Phấn trắng (do nấm Erysiphe cichoracearum): Vết bệnh là các mảng bột trắng phủ trên bề mặt lá.
+Idx: 156 | Style: Normal          | Bold: False | Text: Bệnh khảm lá (do virus CMV): Lá biến dạng, xuất hiện vân khảm xanh vàng xen kẽ.
+Idx: 157 | Style: Normal          | Bold: False | Text: Cây ngô (bắp)
+Idx: 158 | Style: Normal          | Bold: False | Text: Đốm lá nhỏ (do nấm Bipolaris maydis): Vết đốm hình bầu dục hoặc chữ nhật màu nâu.
+Idx: 159 | Style: Normal          | Bold: False | Text: Khô vằn lá (do Rhizoctonia solani): Vết bệnh có hình tròn đồng tâm, dễ lan theo hàng ngô.
+Idx: 160 | Style: Normal          | Bold: False | Text: PHƯƠNG PHÁP XỬ LÝ ẢNH TRONG NHẬN DIỆN BỆNH
+Idx: 161 | Style: Normal          | Bold: False | Text: Xử l ảnh (Image Processing) là bước quan trọng trong các hệ thống học sâu nhằm chuẩn bị dữ liệu đầu vào cho mô hình. Đối với các bài toán phân loại ảnh, đặc biệt là nhân diện bệnh trên lá cây, dữ liệu ảnh thường có nhiếu kích thước, chất lượng và điều kiện chụp khác nhau. Vì vậy, việc tiền xử lý ảnh giúp mô hình học tốt hợn, tăng độ chính xác và giảm hiện tượng overfitting.
+Idx: 162 | Style: Normal          | Bold: False | Text: Các bước xử lý ảnh cơ bản
+Idx: 163 | Style: Normal          | Bold: False | Text: Tiền xử lý ảnh (Pre-processing):
+Idx: 164 | Style: Normal          | Bold: False | Text: Chuẩn hóa kích thước (resize ảnh về cùng độ phân giải, ví dụ 256×256 pixel).
+Idx: 165 | Style: Normal          | Bold: False | Text: Cân bằng sáng (brightness normalization) để giảm ảnh hưởng của điều kiện chiếu sáng.
+Idx: 166 | Style: Normal          | Bold: False | Text: Lọc nhiễu (noise filtering) nhằm loại bỏ các chi tiết không cần thiết.
+Idx: 167 | Style: Normal          | Bold: False | Text: Phân đoạn ảnh (Segmentation):
+Idx: 168 | Style: Normal          | Bold: False | Text: Xác định vùng chứa lá cây.
+Idx: 169 | Style: Normal          | Bold: False | Text: Loại bỏ nền (background) để tránh ảnh hưởng đến việc trích xuất đặc trưng.
+Idx: 170 | Style: Normal          | Bold: False | Text: Trích xuất đặc trưng (Feature Extraction):
+Idx: 171 | Style: Normal          | Bold: False | Text: Màu sắc (color).
+Idx: 172 | Style: Normal          | Bold: False | Text: Hình dạng (shape).
+Idx: 173 | Style: Normal          | Bold: False | Text: Kết cấu bề mặt (texture).
+Idx: 174 | Style: Normal          | Bold: False | Text: Các đặc trưng này là đầu vào cho mô hình phân loại.
+Idx: 175 | Style: Normal          | Bold: False | Text: Phương pháp truyền thống
+Idx: 176 | Style: Normal          | Bold: False | Text: Trong nhiều nghiên cứu trước đây, các đặc trưng thủ công (hand-crafted features) được trích xuất từ ảnh, ví dụ như:
+Idx: 177 | Style: Normal          | Bold: False | Text: Histogram màu (Color Histogram).
+Idx: 178 | Style: Normal          | Bold: False | Text: Hình dạng lá (Shape Features).
+Idx: 179 | Style: Normal          | Bold: False | Text: Kết cấu bề mặt (Texture Features, GLCM).
+Idx: 180 | Style: Normal          | Bold: False | Text: Sau đó, các đặc trưng này được đưa vào các thuật toán học máy để phân loại, như:
+Idx: 181 | Style: Normal          | Bold: False | Text: SVM (Support Vector Machine).
+Idx: 182 | Style: Normal          | Bold: False | Text: KNN (K-Nearest Neighbors).
+Idx: 183 | Style: Normal          | Bold: False | Text: Random Forest.
+Idx: 184 | Style: Normal          | Bold: False | Text: Phương pháp này có ưu điểm dễ triển khai, phù hợp với dữ liệu nhỏ.
+Idx: 185 | Style: Normal          | Bold: False | Text: Hạn chế của phương pháp truyền thống :
+Idx: 186 | Style: Normal          | Bold: False | Text: Phụ thuộc nhiều vào kỹ thuật trích chọn đặc trưng thủ công.
+Idx: 187 | Style: Normal          | Bold: False | Text: Thiếu tính tổng quát khi áp dụng cho nhiều loại cây trồng hoặc nhiều điều kiện môi trường khác nhau.
+Idx: 188 | Style: Normal          | Bold: False | Text: Hiệu quả không cao khi áp dụng trên bộ dữ liệu lớn và đa dạng.
+Idx: 189 | Style: Normal          | Bold: False | Text: Khó mở rộng sang các bài toán có mức độ phức tạp cao.
+Idx: 190 | Style: Normal          | Bold: False | Text: MẠNG NƠ-RON TÍCH CHẬP (CONVOLUTIONAL NEURAL NETWORK - CNN)
+Idx: 191 | Style: Normal          | Bold: False | Text: Giới thiệu về CNN
+Idx: 192 | Style: Normal          | Bold: False | Text: Khái niệm
+Idx: 193 | Style: Normal          | Bold: False | Text: CNN (Convolutional Neural Network – Mạng nơ-ron tích chập) là một loại mạng nơ-ron nhân tạo chuyên biệt, được thiết kế để xử lý dữ liệu có cấu trúc dạng lưới, điển hình là hình ảnh (dạng ma trận pixel).
+Idx: 194 | Style: Normal          | Bold: False | Text: CNN mô phỏng cơ chế hoạt động của thị giác sinh học – cách não bộ động vật xử lý thông tin hình ảnh.
+Idx: 195 | Style: Normal          | Bold: False | Text: Nguồn gốc và lịch sử phát triển
+Idx: 196 | Style: Normal          | Bold: False | Text: 1959 – 1962:
+Idx: 197 | Style: Normal          | Bold: False | Text: Nhà thần kinh học David Hubel và Torsten Wiesel nghiên cứu não mèo, phát hiện ra các tế bào thần kinh trong vỏ não thị giác phản ứng với các đặc trưng hình ảnh cụ thể (cạnh, góc, hướng).
+Idx: 198 | Style: Normal          | Bold: False | Text: Đây là cơ sở sinh học cho ý tưởng về mạng tích chập.
+Idx: 199 | Style: Normal          | Bold: False | Text: 1980 – Neocognitron:
+Idx: 200 | Style: Normal          | Bold: False | Text: Kunihiko Fukushima đề xuất mô hình Neocognitron, một loại mạng nhiều tầng có cơ chế giống CNN.
+Idx: 201 | Style: Normal          | Bold: False | Text: Đây được xem là tiền thân của CNN hiện đại.
+Idx: 202 | Style: Normal          | Bold: False | Text: 1989 – Yann LeCun:
+Idx: 203 | Style: Normal          | Bold: False | Text: Kết hợp mạng nơ-ron tích chập với thuật toán lan truyền ngược (backpropagation).
+Idx: 204 | Style: Normal          | Bold: False | Text: Dẫn đến sự ra đời của LeNet-5 (1998), một trong những CNN đầu tiên thành công, ứng dụng trong nhận dạng chữ viết tay (ví dụ: mã bưu điện).
+Idx: 205 | Style: Normal          | Bold: False | Text: 2012 – AlexNet:
+Idx: 206 | Style: Normal          | Bold: False | Text: Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton giới thiệu mô hình AlexNet, chiến thắng cuộc thi ImageNet Large Scale Visual Recognition Challenge (ILSVRC 2012).
+Idx: 207 | Style: Normal          | Bold: False | Text: AlexNet vượt trội so với các phương pháp trước nhờ: GPU, ReLU, Dropout, Data Augmentation.
+Idx: 208 | Style: Normal          | Bold: False | Text: Đây là cột mốc khởi đầu cho “kỷ nguyên Deep Learning” hiện đại.
+Idx: 209 | Style: Normal          | Bold: False | Text: Sau 2012:
+Idx: 210 | Style: Normal          | Bold: False | Text: Hàng loạt kiến trúc CNN mạnh mẽ xuất hiện: VGGNet (2014), GoogLeNet/Inception (2014), ResNet (2015)
+Idx: 211 | Style: Normal          | Bold: False | Text: CNN dần trở thành công nghệ cốt lõi trong thị giác máy tính và nhiều lĩnh vực khác.
+Idx: 212 | Style: Normal          | Bold: False | Text: Ưu điểm
+Idx: 213 | Style: Normal          | Bold: False | Text: Tự động trích xuất đặc trưng (features) từ dữ liệu mà không cần thiết kế thủ công.
+Idx: 214 | Style: Normal          | Bold: False | Text: Giảm số lượng tham số nhờ phép tích chập (convolution) và gộp (pooling).
+Idx: 215 | Style: Normal          | Bold: False | Text: Hiệu quả cao trong các bài toán nhận dạng ảnh, xử lý video, thị giác máy tính, và cả NLP (xử lý ngôn ngữ tự nhiên).
+Idx: 216 | Style: Normal          | Bold: False | Text: Kiến trúc tổng quát của CNN
+Idx: 217 | Style: Normal          | Bold: False | Text: Lớp tích chập – Convolution Layer
+Idx: 218 | Style: Normal          | Bold: False | Text: Tích chập là lớp đầu tiên để trích xuất các tính năng từ hình ảnh đầu vào. Tích chập duy trì mối quan hệ giữa các pixel bằng cách tìm hiểu các tính năng hình ảnh bằng cách sử dụng các ô vương nhỏ của dữ liệu đầu vào. Nó là 1 phép toán có 2 đầu vào như ma trận hình ảnh và 1 bộ lọc hoặc hạt nhân.
+Idx: 219 | Style: Normal          | Bold: False | Text: 
+Idx: 220 | Style: Normal          | Bold: False | Text: Hình 1: Minh họa quá trình tích chập trong mạng nơron tích chập (CNN)
+Idx: 221 | Style: Normal          | Bold: False | Text: Lớp gộp – Pooling Layer
+Idx: 222 | Style: Normal          | Bold: False | Text: Lớp pooling giúp giảm số lượng tham số và tính toán trong mạng CNN khi xử lý hình ảnh có kích thước lớn. Quá trình pooling, còn được gọi là lấy mẫu con hoặc giảm mẫu, giúp thu nhỏ kích thước của mỗi feature map nhưng vẫn giữ lại những đặc trưng quan trọng. Có nhiều phương pháp pooling khác nhau, bao gồm:
+Idx: 223 | Style: Normal          | Bold: False | Text: Max Pooling: Lấy giá trị lớn nhất trong vùng lọc, giúp giữ lại đặc trưng nổi bật nhất.
+Idx: 224 | Style: Normal          | Bold: False | Text: Average Pooling: Tính trung bình các giá trị trong vùng lọc, giúp làm mượt thông tin.
+Idx: 225 | Style: Normal          | Bold: False | Text: Sum Pooling: Tính tổng tất cả các giá trị trong vùng lọc, ít phổ biến hơn nhưng vẫn được sử dụng trong một số mô hình đặc biệt.
+Idx: 226 | Style: Normal          | Bold: False | Text: 
+Idx: 227 | Style: Normal          | Bold: False | Text: Hình 2: Minh họa quá trình Max Pooling
+Idx: 228 | Style: Normal          | Bold: False | Text: Lớp Fully Connected
+Idx: 229 | Style: Normal          | Bold: False | Text: Sau khi ảnh đi qua nhiều lớp tích chập (convolutional layers) và lớp pooling, mô hình đã học được các đặc trưng quan trọng. Tensor đầu ra của lớp cuối cùng sẽ được làm phẳng (flatten) thành một vector một chiều và đưa vào một lớp kết nối đầy đủ (Fully Connected Layer - FC). Lớp FC có nhiệm vụ kết hợp các đặc trưng đã học để xây dựng mô hình và tạo ra dự đoán.
+Idx: 230 | Style: Normal          | Bold: False | Text: Đầu ra của lớp này sẽ có số lượng neuron tương ứng với số lớp đầu ra mong muốn (ví dụ: số nhãn trong bài toán phân loại). Cuối cùng, sử dụng hàm kích hoạt như Softmax hoặc Sigmoid để thực hiện phân loại.
+Idx: 231 | Style: Normal          | Bold: False | Text: Các kiến trúc CNN kinh điển
+Idx: 232 | Style: Normal          | Bold: False | Text: LeNet-5 (1998)
+Idx: 233 | Style: Normal          | Bold: False | Text: Tác giả: Yann LeCun và cộng sự
+Idx: 234 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 235 | Style: Normal          | Bold: False | Text: Bao gồm 7 lớp, với sự kết hợp giữa convolution, subsampling (pooling) và fully connected layer.
+Idx: 236 | Style: Normal          | Bold: False | Text: Kích thước ảnh đầu vào thường là 32×32.
+Idx: 237 | Style: Normal          | Bold: False | Text: Ứng dụng: Nhận dạng chữ số viết tay (chẳng hạn bộ dữ liệu MNIST).
+Idx: 238 | Style: Normal          | Bold: False | Text: Ý nghĩa: Là mô hình CNN đầu tiên được áp dụng thành công trong thực tế, đặt nền móng cho các kiến trúc sau này.
+Idx: 239 | Style: Normal          | Bold: False | Text: AlexNet (2012)
+Idx: 240 | Style: Normal          | Bold: False | Text: Tác giả: Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton.
+Idx: 241 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 242 | Style: Normal          | Bold: False | Text: Sâu hơn LeNet, gồm 8 lớp (5 convolution, 3 fully connected).
+Idx: 243 | Style: Normal          | Bold: False | Text: Lần đầu sử dụng ReLU thay vì sigmoid/tanh, giúp tăng tốc huấn luyện.
+Idx: 244 | Style: Normal          | Bold: False | Text: Ứng dụng Dropout để giảm overfitting.
+Idx: 245 | Style: Normal          | Bold: False | Text: Huấn luyện trên GPU, tận dụng sức mạnh phần cứng.
+Idx: 246 | Style: Normal          | Bold: False | Text: Ứng dụng: Tham gia và chiến thắng cuộc thi ImageNet 2012, vượt trội hơn mô hình truyền thống.
+Idx: 247 | Style: Normal          | Bold: False | Text: Ý nghĩa: Được coi là cột mốc khởi đầu cho kỷ nguyên Deep Learning hiện đại.
+Idx: 248 | Style: Normal          | Bold: False | Text: VGGNet (2014)
+Idx: 249 | Style: Normal          | Bold: False | Text: Tác giả: Nhóm nghiên cứu tại Đại học Oxford (Visual Geometry Group).
+Idx: 250 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 251 | Style: Normal          | Bold: False | Text: Mạng rất sâu: từ 16 đến 19 lớp.
+Idx: 252 | Style: Normal          | Bold: False | Text: Sử dụng bộ lọc convolution nhỏ 3×3 xếp chồng liên tiếp thay vì kernel lớn.
+Idx: 253 | Style: Normal          | Bold: False | Text: Thiết kế đơn giản nhưng hiệu quả, cho phép mạng học đặc trưng phức tạp hơn
+Idx: 254 | Style: Normal          | Bold: False | Text: Ứng dụng: Được sử dụng rộng rãi trong nghiên cứu và làm backbone cho nhiều mô hình sau này.
+Idx: 255 | Style: Normal          | Bold: False | Text: Ý nghĩa: Chứng minh rằng mạng càng sâu thì khả năng học đặc trưng càng tốt, miễn là được thiết kế hợp lý.
+Idx: 256 | Style: Normal          | Bold: False | Text: ResNet (2015)
+Idx: 257 | Style: Normal          | Bold: False | Text: Tác giả: Microsoft Research.
+Idx: 258 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 259 | Style: Normal          | Bold: False | Text: Giới thiệu cơ chế Residual Learning (kết nối tắt – skip connection).
+Idx: 260 | Style: Normal          | Bold: False | Text: Giúp huấn luyện các mạng cực sâu (tới hàng trăm, thậm chí hàng nghìn lớp) mà không gặp vấn đề gradient vanish/explode.
+Idx: 261 | Style: Normal          | Bold: False | Text: ResNet-50, ResNet-101, ResNet-152 là các biến thể phổ biến.
+Idx: 262 | Style: Normal          | Bold: False | Text: Ứng dụng: Làm backbone trong hầu hết các hệ thống thị giác máy tính hiện đại.
+Idx: 263 | Style: Normal          | Bold: False | Text: Ý nghĩa: Mở đường cho việc huấn luyện mạng siêu sâu, trở thành tiêu chuẩn trong nhiều ứng dụng.
+Idx: 264 | Style: Normal          | Bold: False | Text: EfficientNet (2019) và MobileNet
+Idx: 265 | Style: Normal          | Bold: False | Text: EficientNet (Google AI):
+Idx: 266 | Style: Normal          | Bold: False | Text: Giới thiệu phương pháp compound scaling (tăng đồng thời chiều sâu, chiều rộng và độ phân giải một cách cân bằng).
+Idx: 267 | Style: Normal          | Bold: False | Text: Đạt hiệu quả vượt trội: ít tham số hơn nhưng độ chính xác cao hơn.
+Idx: 268 | Style: Normal          | Bold: False | Text: MobileNet (Google) :
+Idx: 269 | Style: Normal          | Bold: False | Text: Thiết kế tối ưu cho thiết bị di động và nhúng.
+Idx: 270 | Style: Normal          | Bold: False | Text: Sử dụng Depthwise Separable Convolution để giảm số lượng tham số và tính toán.
+Idx: 271 | Style: Normal          | Bold: False | Text: Ứng dụng: Đặc biệt hữu ích trong các lĩnh vực nông nghiệp thông minh, IoT, AI trên thiết bị biên (edge AI), nơi tài nguyên tính toán hạn chế nhưng vẫn cần độ chính xác cao.
+Idx: 272 | Style: Normal          | Bold: False | Text: TRANSFER LEARNING
+Idx: 273 | Style: Normal          | Bold: False | Text: Khái niệm
+Idx: 274 | Style: Normal          | Bold: False | Text: Transfer Learning (học chuyển giao) là kỹ thuật tận dụng kiến thức từ các mô hình đã được huấn luyện trước trên tập dữ liệu quy mô lớn (ví dụ: ImageNet với hơn 14 triệu ảnh) để áp dụng cho một bài toán mới có dữ liệu ít hơn. Thay vì huấn luyện toàn bộ mô hình từ đầu
+Idx: 275 | Style: Normal          | Bold: False | Text: 
+Idx: 276 | Style: Normal          | Bold: False | Text: Hình 3: Minh họa mô hình Transfer Learning
+Idx: 277 | Style: Normal          | Bold: False | Text: Các bước trong quy trình Transfer Learning cơ bản
+Idx: 278 | Style: Normal          | Bold: False | Text: Lựa chọn mô hình đã huấn luyện sẵn (Pre-trained Model)
+Idx: 279 | Style: Normal          | Bold: False | Text: Việc đầu tiên trong Transfer Learning là chọn một mô hình đã được huấn luyện phù hợp. Đây là các mô hình đã được xây dựng và đào tạo trên những tập dữ liệu lớn, do các nhà nghiên cứu hoặc công ty công nghệ phát triển. Khi lựa chọn, cần cân nhắc:
+Idx: 280 | Style: Normal          | Bold: False | Text: Cấu trúc mô hình: Chọn mô hình phù hợp với dạng dữ liệu bạn đang xử lý (ví dụ: sử dụng CNN cho hình ảnh, RNN cho chuỗi văn bản).
+Idx: 281 | Style: Normal          | Bold: False | Text: Tập dữ liệu ban đầu: Kiểm tra xem mô hình đã huấn luyện trên dữ liệu nào và liệu dữ liệu đó có liên quan đến bài toán của bạn không.
+Idx: 282 | Style: Normal          | Bold: False | Text: Tài nguyên tính toán: Đảm bảo mô hình không quá phức tạp so với khả năng xử lý của hệ thống bạn đang sử dụng.
+Idx: 283 | Style: Normal          | Bold: False | Text: Đóng băng các lớp (Freezing Layers)
+Idx: 284 | Style: Normal          | Bold: False | Text: Sau khi chọn mô hình phù hợp, bước tiếp theo là “đóng băng” các lớp đầu tiên của mô hình. Những lớp này đã học được các đặc điểm cơ bản từ dữ liệu ban đầu, như hình dạng, đường viền hoặc kết cấu. Việc giữ nguyên các lớp này có nghĩa là bạn không cần huấn luyện lại chúng, giúp tiết kiệm thời gian và công sức. Sau đó, bạn chỉ cần tập trung vào huấn luyện các lớp mới ở cuối mô hình để phù hợp hơn với bài toán mà bạn đang xử lý. Phương pháp này giúp tái sử dụng hiệu quả kiến thức đã có mà không cần bắt đầu từ đầu.
+Idx: 285 | Style: Normal          | Bold: False | Text: Thêm các lớp mới
+Idx: 286 | Style: Normal          | Bold: False | Text: Tiếp theo, bạn sẽ thêm các lớp mới vào phần cuối của mô hình. Các lớp này được thiết kế để học các đặc trưng phù hợp với bài toán hiện tại. Tùy vào mức độ phức tạp của bài toán, bạn có thể điều chỉnh số lượng và cấu trúc của những lớp này sao cho hiệu quả.
+Idx: 287 | Style: Normal          | Bold: False | Text: Huấn luyện lại
+Idx: 288 | Style: Normal          | Bold: False | Text: Bước cuối cùng là huấn luyện lại mô hình trên tập dữ liệu của nhiệm vụ mới. Quá trình này được gọi là fine-tuning, tập trung vào việc cập nhật các lớp mới và một phần nhỏ các lớp cuối cùng của mô hình gốc. Để bảo toàn kiến thức cũ, tốc độ học thường được cài đặt ở mức thấp hơn so với khi xây dựng mô hình từ đầu.
+Idx: 289 | Style: Normal          | Bold: False | Text: Ưu nhược điểm
+Idx: 290 | Style: Normal          | Bold: False | Text: Ưu điểm
+Idx: 291 | Style: Normal          | Bold: False | Text: Giảm chi phí tính toán:
+Idx: 292 | Style: Normal          | Bold: False | Text: Transfer Learning giúp giảm thiểu chi phí tính toán khi xây dựng mô hình cho bài toán mới. Bằng cách tận dụng lại các mô hình đã huấn luyện trước đó, phương pháp này giảm đáng kể thời gian huấn luyện, lượng dữ liệu cần thiết, và các tài nguyên tính toán khác. Ví dụ, chúng ta có thể cần ít epochs (số lần đi qua dữ liệu) hơn để đạt được tốc độ học mong muốn, từ đó đẩy nhanh và đơn giản hóa quá trình huấn luyện mô hình.
+Idx: 293 | Style: Normal          | Bold: False | Text: Hiệu quả với dữ liệu nhỏ:
+Idx: 294 | Style: Normal          | Bold: False | Text: Transfer Learning đặc biệt hữu ích khi đối mặt với khó khăn về thu thập dữ liệu lớn. Các mô hình ngôn ngữ lớn (LLMs) thường đòi hỏi lượng dữ liệu huấn luyện khổng lồ để đạt hiệu suất tối ưu. Việc tạo ra đủ dữ liệu gán nhãn thủ công có thể tốn nhiều thời gian và chi phí, nhưng Transfer Learning giúp giảm đáng kể yêu cầu này.
+Idx: 295 | Style: Normal          | Bold: False | Text: Tăng khả năng tổng quát hóa:
+Idx: 296 | Style: Normal          | Bold: False | Text: Transfer Learning không chỉ giúp tối ưu mô hình mà còn cải thiện khả năng tổng quát hóa. Bởi quá trình này liên quan đến việc huấn luyện lại mô hình hiện có với dữ liệu mới, mô hình sau khi huấn luyện lại sẽ tích lũy kiến thức từ nhiều tập dữ liệu. Nhờ đó, nó có thể hoạt động tốt hơn trên nhiều loại dữ liệu so với mô hình ban đầu chỉ được huấn luyện trên một loại dữ liệu, giúp giảm hiện tượng overfitting.
+Idx: 297 | Style: Normal          | Bold: False | Text: Cải thiện accuracy và tốc độ hội tụ:
+Idx: 298 | Style: Normal          | Bold: False | Text: Sử dụng Transfer Learning mang lại điểm khởi đầu accuracy tốt hơn, tốc độ tăng accuracy nhanh hơn, và đường tiệm cận của độ chính xác tối ưu cao hơn. Mô hình có thể đạt được độ chính xác cao với ít epochs huấn luyện hơn so với huấn luyện từ đầu.
+Idx: 299 | Style: Normal          | Bold: False | Text: Nhược điểm
+Idx: 300 | Style: Normal          | Bold: False | Text: Nguy cơ chuyển giao tiêu cực (negative transfer):
+Idx: 301 | Style: Normal          | Bold: False | Text: Transfer Learning hoạt động tốt nhất khi ba điều kiện được đáp ứng: các nhiệm vụ học tập tương tự nhau, phân phối dữ liệu nguồn và đích không quá khác biệt, và mô hình tương tự có thể áp dụng cho cả hai nhiệm vụ. Khi các điều kiện này không được đáp ứng, Transfer Learning có thể ảnh hưởng tiêu cực đến hiệu suất mô hình, gọi là chuyển giao tiêu cực.
+Idx: 302 | Style: Normal          | Bold: False | Text: Thiếu tiêu chuẩn đánh giá sự tương đồng:
+Idx: 303 | Style: Normal          | Bold: False | Text: Hiện tại không có tiêu chuẩn phổ biến để xác định độ tương đồng giữa các nhiệm vụ cho Transfer Learning. Mặc dù có một số nghiên cứu đề xuất các phương pháp đánh giá khác nhau để dự đoán sự tương đồng giữa các tập dữ liệu và nhiệm vụ học máy, nhưng vẫn chưa có tiêu chí chung được chấp nhận rộng rãi.
+Idx: 304 | Style: Normal          | Bold: False | Text: Giới hạn về domain:
+Idx: 305 | Style: Normal          | Bold: False | Text: Transfer Learning chỉ nên áp dụng giữa hai mô hình có cùng domain. Nếu pretrained-model và mô hình cần huấn luyện không có chung domain về dữ liệu, các đặc trưng học được từ bộ feature extractor của mô hình gốc sẽ không thực sự hữu ích trong việc phân loại của mô hình mới.
+Idx: 306 | Style: Normal          | Bold: False | Text: Phụ thuộc vào chất lượng của pretrained-model:
+Idx: 307 | Style: Normal          | Bold: False | Text: Pretrained-model phải là mô hình có chất lượng tốt và được huấn luyện trên tập dữ liệu lớn hơn tập dữ liệu của mô hình cần xây dựng. Nếu không, các đặc trưng học được từ mô hình gốc sẽ không đủ tổng quát để giúp ích cho việc phân loại dữ liệu của mô hình mới.
+Idx: 308 | Style: Normal          | Bold: False | Text: Không thay thế được kỹ thuật xử lý dữ liệu:
+Idx: 309 | Style: Normal          | Bold: False | Text: Việc chuyển giao kiến thức từ một miền này sang miền khác không thể bù đắp cho tác động tiêu cực của dữ liệu chất lượng kém. Các kỹ thuật tiền xử lý và kỹ thuật đặc trưng, như tăng cường dữ liệu và trích xuất đặc trưng, vẫn cần thiết khi sử dụng Transfer Learning.
+Idx: 310 | Style: Normal          | Bold: False | Text: Một số mô hình Transfer learning phổ biến
+Idx: 311 | Style: Normal          | Bold: False | Text: VGG16 và VGG19
+Idx: 312 | Style: Normal          | Bold: False | Text: Nguồn gốc: Được giới thiệu bởi nhóm Oxford’s Visual Geometry Group (VGG) trong ImageNet Challenge 2014.
+Idx: 313 | Style: Normal          | Bold: False | Text: Cấu trúc:
+Idx: 314 | Style: Normal          | Bold: False | Text: VGG16 gồm 16 lớp có trọng số (13 convolution + 3 fully connected).
+Idx: 315 | Style: Normal          | Bold: False | Text: VGG19 tương tự nhưng sâu hơn với 19 lớp.
+Idx: 316 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 317 | Style: Normal          | Bold: False | Text: Sử dụng các kernel 3×3 nhỏ xếp chồng để tăng chiều sâu thay vì kernel lớn.
+Idx: 318 | Style: Normal          | Bold: False | Text: Dễ hiểu, cấu trúc đồng nhất.
+Idx: 319 | Style: Normal          | Bold: False | Text: Ứng dụng: Phổ biến cho các bài toán phân loại ảnh y tế, phát hiện bệnh lá cây (leaf disease detection) nhờ tính ổn định và khả năng học đặc trưng tốt.
+Idx: 320 | Style: Normal          | Bold: False | Text: ResNet (ResNet50, ResNet101)
+Idx: 321 | Style: Normal          | Bold: False | Text: Nguồn gốc: Microsoft Research, đạt giải ILSVRC 2015.
+Idx: 322 | Style: Normal          | Bold: False | Text: Cấu trúc:
+Idx: 323 | Style: Normal          | Bold: False | Text: ResNet50 gồm 50 lớp; ResNet101 gồm 101 lớp.
+Idx: 324 | Style: Normal          | Bold: False | Text: Sử dụng cơ chế Residual Learning với skip connections để giải quyết vấn đề vanishing gradient.
+Idx: 325 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 326 | Style: Normal          | Bold: False | Text: Huấn luyện được mạng rất sâu mà không bị suy giảm hiệu suất.
+Idx: 327 | Style: Normal          | Bold: False | Text: Phù hợp cho các bài toán yêu cầu mô hình mạnh mẽ, dữ liệu lớn.
+Idx: 328 | Style: Normal          | Bold: False | Text: Ứng dụng: Rất phổ biến trong y tế (phân loại X-quang, MRI) và nông nghiệp (phát hiện nhiều loại bệnh cây trồng).
+Idx: 329 | Style: Normal          | Bold: False | Text: InceptionV3
+Idx: 330 | Style: Normal          | Bold: False | Text: Nguồn gốc: GoogleNet/Inception, cải tiến và giới thiệu năm 2015.
+Idx: 331 | Style: Normal          | Bold: False | Text: Cấu trúc:
+Idx: 332 | Style: Normal          | Bold: False | Text: Sử dụng Inception module: trong cùng một khối, kết hợp nhiều convolution với kích thước kernel khác nhau (1×1, 3×3, 5×5).
+Idx: 333 | Style: Normal          | Bold: False | Text: Giúp trích xuất đặc trưng đa chiều.
+Idx: 334 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 335 | Style: Normal          | Bold: False | Text: Giảm chi phí tính toán nhờ convolution 1×1.
+Idx: 336 | Style: Normal          | Bold: False | Text: Mạnh mẽ nhưng ít tham số hơn VGG.
+Idx: 337 | Style: Normal          | Bold: False | Text: Ứng dụng: Tốt cho phân loại ảnh có nhiều chi tiết phức tạp (lá cây bị bệnh với nhiều dạng vết khác nhau).
+Idx: 338 | Style: Normal          | Bold: False | Text: MobileNet
+Idx: 339 | Style: Normal          | Bold: False | Text: Nguồn gốc: Google, thiết kế cho thiết bị di động và IoT.
+Idx: 340 | Style: Normal          | Bold: False | Text: Cấu trúc: Dùng Depthwise Separable Convolution, tách quá trình học không gian và kênh, giúp giảm số tham số và FLOPs.
+Idx: 341 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 342 | Style: Normal          | Bold: False | Text: Nhẹ, nhanh, phù hợp cho môi trường hạn chế tài nguyên.
+Idx: 343 | Style: Normal          | Bold: False | Text: Độ chính xác có thể thấp hơn ResNet hoặc Inception, nhưng hiệu quả triển khai thực tế cao.
+Idx: 344 | Style: Normal          | Bold: False | Text: Ứng dụng: Phát hiện bệnh trên đồng ruộng với smartphone hoặc drone, nơi phần cứng hạn chế.
+Idx: 345 | Style: Normal          | Bold: False | Text: EffcientNet
+Idx: 346 | Style: Normal          | Bold: False | Text: Nguồn gốc: Google AI (2019).
+Idx: 347 | Style: Normal          | Bold: False | Text: Ý tưởng: Thay vì chỉ tăng độ sâu hoặc chiều rộng, EfficientNet cân bằng đồng thời depth, width, resolution (Compound Scaling).
+Idx: 348 | Style: Normal          | Bold: False | Text: Đặc điểm:
+Idx: 349 | Style: Normal          | Bold: False | Text: Hiệu năng rất cao so với số tham số.
+Idx: 350 | Style: Normal          | Bold: False | Text: Có nhiều biến thể (B0 đến B7), tùy chọn cân bằng giữa độ chính xác và chi phí tính toán.
+Idx: 351 | Style: Normal          | Bold: False | Text: Ứng dụng: Rất phù hợp cho bài toán nông nghiệp cần độ chính xác cao nhưng vẫn triển khai trên hệ thống hạn chế tài nguyên.
+Idx: 352 | Style: Normal          | Bold: False | Text: CÁC NGHIÊN CỨU LIÊN QUAN
+Idx: 353 | Style: Normal          | Bold: False | Text: Nhiều nghiên cứu đã ứng dụng Deep Learning vào nhận diện bệnh lá cây:
+Idx: 354 | Style: Normal          | Bold: False | Text: Mohanty et al. (2016): Sử dụng CNN trên bộ dữ liệu PlantVillage với hơn 50.000 ảnh, đạt độ chính xác trên 99% trong phân loại bệnh.
+Idx: 355 | Style: Normal          | Bold: False | Text: Ferentinos (2018): Áp dụng CNN để phân loại 58 bệnh trên 25 loại cây trồng, đạt độ chính xác trung bình 99,5%.
+Idx: 356 | Style: Normal          | Bold: False | Text: Các nghiên cứu ở Việt Nam: Một số đề tài trong lĩnh vực nông nghiệp thông minh đã thử nghiệm nhận diện bệnh lúa, cà chua, khoai tây bằng CNN kết hợp Transfer Learning, đạt độ chính xác từ 90% – 97%.
+Idx: 357 | Style: Normal          | Bold: False | Text: Những nghiên cứu trên cho thấy tiềm năng to lớn của Deep Learning, đồng thời cũng khẳng định nhu cầu mở rộng ứng dụng sang các loại cây trồng và điều kiện thực tế tại Việt Nam.
+Idx: 358 | Style: Heading 1       | Bold: True | Text: CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
+Idx: 359 | Style: Normal          | Bold: False | Text: BỘ DỮ LIỆU
+Idx: 360 | Style: Normal          | Bold: False | Text: Data được tải từ Kaggle:
+Idx: 361 | Style: Normal          | Bold: False | Text: Bộ dữ liệu tên là “Plant disease recognition dataset” của user "rashikrahmanpritom"
+Idx: 362 | Style: Normal          | Bold: False | Text: Bao gồm 3 nhãn (labels):
+Idx: 363 | Style: Normal          | Bold: False | Text: Healthy
+Idx: 364 | Style: Normal          | Bold: False | Text: Powdery
+Idx: 365 | Style: Normal          | Bold: False | Text: Rust
+Idx: 366 | Style: Normal          | Bold: False | Text: Tổng số ảnh: khoảng 1530 ảnh RBG được chia thành các tập huấn luyện (train) và kiểm thử (test).
+Idx: 367 | Style: Normal          | Bold: False | Text: Kích thước data là khoảng ~ 1 GB.
+Idx: 368 | Style: Normal          | Bold: False | Text: CÔNG CỤ VÀ THƯ VIỆN SỬ DỤNG
+Idx: 369 | Style: Normal          | Bold: False | Text: Xử lý dữ liệu
+Idx: 370 | Style: Normal          | Bold: False | Text: pandas: bảng (DataFrame).
+Idx: 371 | Style: Normal          | Bold: False | Text: numpy: toán ma trận.
+Idx: 372 | Style: Normal          | Bold: False | Text: os, random, collections, concurrent.futures: file, ngẫu nhiên, cấu trúc dữ liệu, đa luồng.
+Idx: 373 | Style: Normal          | Bold: False | Text: Trực quan hóa
+Idx: 374 | Style: Normal          | Bold: False | Text: plotly (express, graph_objs, …): vẽ biểu đồ.
+Idx: 375 | Style: Normal          | Bold: False | Text: IPython.display: hiển thị notebook.
+Idx: 376 | Style: Normal          | Bold: False | Text: Thống kê
+Idx: 377 | Style: Normal          | Bold: False | Text: scipy.stats, statsmodels, math: kiểm định & mô hình thống kê.
+Idx: 378 | Style: Normal          | Bold: False | Text: Tiền xử lý dữ liệu
+Idx: 379 | Style: Normal          | Bold: False | Text: sklearn.preprocessing: scaler, encoder, transform.
+Idx: 380 | Style: Normal          | Bold: False | Text: ColumnTransformer, BaseEstimator, TransformerMixin: pipeline & custom transformer.
+Idx: 381 | Style: Normal          | Bold: False | Text: Chọn đặc trưng
+Idx: 382 | Style: Normal          | Bold: False | Text: RFECV, SelectKBest, chi2, f_classif, f_regression, mutual_info
+Idx: 383 | Style: Normal          | Bold: False | Text: Chia dữ liệu và Cross Validation
+Idx: 384 | Style: Normal          | Bold: False | Text: train_test_split, KFold, StratifiedKFold, TimeSeriesSplit, Repeated*: chia tập & cross-validation.
+Idx: 385 | Style: Normal          | Bold: False | Text: Đánh giá mô hình
+Idx: 386 | Style: Normal          | Bold: False | Text: metrics: MSE, MAE, R² (hồi quy), accuracy, precision, recall, f1, AUC (phân loại).
+Idx: 387 | Style: Normal          | Bold: False | Text: Mô hình Machine Learning
+Idx: 388 | Style: Normal          | Bold: False | Text: Hồi quy: Ridge, Lasso, ElasticNet, RF, GB, XGB, LGBM, CatBoost.
+Idx: 389 | Style: Normal          | Bold: False | Text: Phân loại: Logistic, SVM, RF, GB, XGB, LGBM, CatBoost.
+Idx: 390 | Style: Normal          | Bold: False | Text: Gom cụm: KMeans.
+Idx: 391 | Style: Normal          | Bold: False | Text: Fine-tuning
+Idx: 392 | Style: Normal          | Bold: False | Text: optuna: tối ưu hyperparameter.
+Idx: 393 | Style: Normal          | Bold: False | Text: Xử lý ảnh
+Idx: 394 | Style: Normal          | Bold: False | Text: PIL.Image: đọc/xử lý ảnh.
+Idx: 395 | Style: Normal          | Bold: False | Text: Deep Learning (Keras/TensorFlow)
+Idx: 396 | Style: Normal          | Bold: False | Text: Sequential, Dense, Activation: mô hình ANN.
+Idx: 397 | Style: Normal          | Bold: False | Text: Conv2D, MaxPooling2D, Flatten, Rescaling: CNN xử lý ảnh.
+Idx: 398 | Style: Normal          | Bold: False | Text: Dropout, BatchNormalization: chống overfitting.
+Idx: 399 | Style: Normal          | Bold: False | Text: EarlyStopping, ModelCheckpoint: callback huấn luyện.
+Idx: 400 | Style: Normal          | Bold: False | Text: load_model, tensorflow: lưu, chạy mô hình.
+Idx: 401 | Style: Normal          | Bold: False | Text: 
+Idx: 402 | Style: Normal          | Bold: False | Text: TRỰC QUAN HÓA DỮ LIỆU
+Idx: 403 | Style: Normal          | Bold: False | Text: Chuẩn bị dữ liệu
+Idx: 404 | Style: Normal          | Bold: False | Text: 
+Idx: 405 | Style: Normal          | Bold: False | Text: Lưu vị trí thư mục chứa dữ liệu ảnh, tương ứng với Train / Validation / Test.
+Idx: 406 | Style: Normal          | Bold: False | Text: train_dir: thư mục chứa dữ liệu huấn luyện (Training set). Dùng để mô hình học đặc trưng.
+Idx: 407 | Style: Normal          | Bold: False | Text: test_dir: thư mục chứa dữ liệu kiểm thử (Test set). Dùng để đánh giá mô hình sau khi train xong.
+Idx: 408 | Style: Normal          | Bold: False | Text: val_dir: thư mục chứa dữ liệu xác thực (Validation set). Dùng để theo dõi trong quá trình huấn luyện, điều chỉnh siêu tham số, ngăn overfitting.
+Idx: 409 | Style: Normal          | Bold: False | Text: 
+Idx: 410 | Style: Normal          | Bold: False | Text: Tạo đường dẫn con (sub-directory) cho từng lớp (class) của bộ dữ liệu ảnh. Trong bài toán nhận diện bệnh trên cây, dataset chia thành 3 class chính:
+Idx: 411 | Style: Normal          | Bold: False | Text: 
+Idx: 412 | Style: Normal          | Bold: False | Text: 
+Idx: 413 | Style: Normal          | Bold: False | Text: 
+Idx: 414 | Style: Normal          | Bold: False | Text: 
+Idx: 415 | Style: Normal          | Bold: False | Text: Chọn ngẫu nhiên 9 ảnh từ mỗi thư mục con (Healthy / Rust / Powdery) trong 3 tập dữ liệu: Train, Validation, Test
+Idx: 416 | Style: Normal          | Bold: False | Text: 
+Idx: 417 | Style: Normal          | Bold: False | Text: Trực quan hoá dữ liệu
+Idx: 418 | Style: Normal          | Bold: False | Text: 
+Idx: 419 | Style: Normal          | Bold: False | Text: Hàm image_preview () sẽ cho kết quả hiển thị một ảnh trên một ô (subplot) của lưới, đồng thời gắn tiêu đề và loại bỏ hệ trục tọa độ để hình ảnh được rõ ràng hơn.
+Idx: 420 | Style: Normal          | Bold: False | Text: Hàm gri_preview () có chức năng tạo lưới 3x3, lần lượt nạp và hiển thị 9 ảnh từ một lớp dữ liệu (Healthy, Rust, Powdery). Hàm này cho phép trực quan hóa tập hợp ảnh trong cùng một nhóm, từ đó hỗ trợ đánh giá tính đa dạng, chất lượng và đặc trưng trực quan của dữ liệu huấn luyện, kiểm định và kiểm thử.
+Idx: 421 | Style: Normal          | Bold: False | Text: 
+Idx: 422 | Style: Normal          | Bold: False | Text: 
+Idx: 423 | Style: Normal          | Bold: False | Text: Hình 4: Kết quả khi chạy hàm gri_preview() với nhãn “Powdery” trong tập dữ liệu train
+Idx: 424 | Style: Normal          | Bold: False | Text: 
+Idx: 425 | Style: Normal          | Bold: False | Text: XỬ LÝ DỮ LIỆU
+Idx: 426 | Style: Normal          | Bold: False | Text: Tiền xử lý dữ liệu
+Idx: 427 | Style: Normal          | Bold: False | Text: 
+Idx: 428 | Style: Normal          | Bold: False | Text: os.listdir(path) sẽ trả về danh sách tên file trong thư mục path. Ba biến này chứa danh sách file ảnh trong thư mục train. Hàm display_dir_images_cont sẽ nhận đường dẫn thư mục cho 3 lớp ảnh: healthy, rust, powdery và dùng os.listdir() đếm số file trong mỗi thư mục sau đó in ra kết quả với tên bộ dữ liệu (title).
+Idx: 429 | Style: Normal          | Bold: False | Text: 
+Idx: 430 | Style: Normal          | Bold: False | Text: Hàm visualize(image_sizes, category) : nhận danh sách image_sizes (các cặp (width, height)) và tên tập dữ liệu (Train, Validation, Test) và dùng matplotlib để vẽ histogram, trục X là kích thước ảnh (W×H), trục Y là tần suất xuất hiện. Hàm này giúp dễ dàng thấy dataset có ảnh kích thước đồng nhất hay lẫn lộn nhiều size.
+Idx: 431 | Style: Normal          | Bold: False | Text: 
+Idx: 432 | Style: Normal          | Bold: False | Text: Hàm imageSizeStactisisics():
+Idx: 433 | Style: Normal          | Bold: False | Text: Duyệt qua toàn bộ thư mục con trong directory.
+Idx: 434 | Style: Normal          | Bold: False | Text: Xử lý file .jpg và .png.
+Idx: 435 | Style: Normal          | Bold: False | Text: Dùng PIL.Image.open để mở ảnh, lấy kích thước (width, height) thêm vào image_sizes.
+Idx: 436 | Style: Normal          | Bold: False | Text: In tổng số ảnh trong tập dữ liệu.
+Idx: 437 | Style: Normal          | Bold: False | Text: Dùng Counter để đếm tần suất từng kích thước ảnh.
+Idx: 438 | Style: Normal          | Bold: False | Text: In ra 10 kích thước phổ biến nhất và số lượng ảnh tương ứng.
+Idx: 439 | Style: Normal          | Bold: False | Text: 
+Idx: 440 | Style: Normal          | Bold: False | Text: Hình 5: Kết quả khi chạy hàm imageSizeStactisisics() với tập train
+Idx: 441 | Style: Normal          | Bold: False | Text: 
+Idx: 442 | Style: Normal          | Bold: False | Text: 
+Idx: 443 | Style: Normal          | Bold: False | Text: Hình 6: Kết quả khi chạy hàm imageSizeStactisisics() với tập Vanlidation
+Idx: 444 | Style: Normal          | Bold: False | Text: 
+Idx: 445 | Style: Normal          | Bold: False | Text: Hình 7: Kết quả khi chạy hàm imageSizeStactisisics() với tập Test
+Idx: 446 | Style: Normal          | Bold: False | Text: Nhận xét :
+Idx: 447 | Style: Normal          | Bold: False | Text: Không đồng nhất kích thước ảnh.
+Idx: 448 | Style: Normal          | Bold: False | Text: Tổng cộng 1,383 ảnh chia thành Train/Validation/Test.
+Idx: 449 | Style: Normal          | Bold: False | Text: Kích thước phổ biến nhất trong cả 3 tập là 4000 × 2672 (chiếm hơn 38% tổng ảnh).
+Idx: 450 | Style: Normal          | Bold: False | Text: Có khá nhiều ảnh kích thước nhỏ hơn (đặc biệt là 512 × 512).
+Idx: 451 | Style: Normal          | Bold: False | Text: 
+Idx: 452 | Style: Normal          | Bold: False | Text: Thư viện TensorFlow cung cấp hàm image_dataset_from_directory() giúp đọc dữ liệu trực tiếp từ thư mục chứa ảnh, đồng thời gán nhãn tự động dựa trên cấu trúc thư mục.
+Idx: 453 | Style: Normal          | Bold: False | Text: Ý nghĩa tham số chính:
+Idx: 454 | Style: Normal          | Bold: False | Text: labels='inferred': gán nhãn tự động dựa trên thư mục chứa ảnh.
+Idx: 455 | Style: Normal          | Bold: False | Text: label_mode='categorical': nhãn được mã hóa one-hot, ví dụ [1, 0, 0].
+Idx: 456 | Style: Normal          | Bold: False | Text: batch_size=16: dữ liệu được đưa vào mô hình theo từng lô nhỏ để tối ưu tốc độ huấn luyện.
+Idx: 457 | Style: Normal          | Bold: False | Text: image_size=(256,256): chuẩn hóa kích thước ảnh, đảm bảo đầu vào của mô hình có cùng shape.
+Idx: 458 | Style: Normal          | Bold: False | Text: shuffle=True và seed=123: giúp quá trình trộn dữ liệu ngẫu nhiên nhưng vẫn có thể tái hiện.
+Idx: 459 | Style: Normal          | Bold: False | Text: crop_to_aspect_ratio=True: giữ nguyên tỷ lệ khung hình, tránh ảnh bị méo khi resize.
+Idx: 460 | Style: Normal          | Bold: False | Text: Tương ứng với tập dữ liệu test và validation , dataset trả về là một đối tượng tf.data.Dataset, chứa cặp (images, labels) với:
+Idx: 461 | Style: Normal          | Bold: False | Text: images: tensor có kích thước (batch_size, 256, 256, 3)
+Idx: 462 | Style: Normal          | Bold: False | Text: labels: tensor có kích thước (batch_size, 3)
+Idx: 463 | Style: Normal          | Bold: False | Text: Chuẩn hóa giá trị giá trị pixel trong tập Validation
+Idx: 464 | Style: Normal          | Bold: False | Text: 
+Idx: 465 | Style: Normal          | Bold: False | Text: Khởi tạo biến min_value là vô cực dương (số rất lớn) để khi so sánh thì bất kỳ giá trị nào cũng nhỏ hơn nó. Khởi tạo biến max_value là vô cực âm (số rất nhỏ) để khi so sánh thì bất kỳ giá trị nào cũng lớn hơn nó.
+Idx: 466 | Style: Normal          | Bold: False | Text: Sau khi duyệt qua tất cả batch, in ra giá trị pixel nhỏ nhất và lớn nhất của toàn bộ tập Validation.
+Idx: 467 | Style: Normal          | Bold: False | Text: 
+Idx: 468 | Style: Normal          | Bold: False | Text: Hình 8: Kết quả Minimum và maximun pixel value
+Idx: 469 | Style: Normal          | Bold: False | Text: Nhận xét: Điều này chứng tỏ ảnh vẫn đang ở dạng giá trị pixel gốc (8-bit) với khoảng [0, 255], chưa được chuẩn hóa về [0,1].
+Idx: 470 | Style: Normal          | Bold: False | Text: 
+Idx: 471 | Style: Normal          | Bold: False | Text: Để đảm bảo mô hình học hiệu quả và hội tụ nhanh hơn, dữ liệu được chuẩn hóa bằng lớp Rescaling trong Keras. Mỗi giá trị pixel được nhân với 1/255. Kết quả: toàn bộ ảnh đầu vào sau chuẩn hóa sẽ có giá trị nằm trong [0, 1], giúp giảm thiểu sai số số học và cải thiện quá trình huấn luyện của mạng nơ-ron.
+Idx: 472 | Style: Normal          | Bold: False | Text: 
+Idx: 473 | Style: Normal          | Bold: False | Text: Hình 9: Kết quả sau khi chuẩn hóa giá trị pixel
+Idx: 474 | Style: Normal          | Bold: False | Text: 
+Idx: 475 | Style: Normal          | Bold: False | Text: Tăng cường dữ liệu
+Idx: 476 | Style: Normal          | Bold: False | Text: 
+Idx: 477 | Style: Normal          | Bold: False | Text: Khối augmentation:
+Idx: 478 | Style: Normal          | Bold: False | Text: RandomFlip("horizontal_and_vertical")
+Idx: 479 | Style: Normal          | Bold: False | Text: Lật ngẫu nhiên ảnh theo chiều ngang hoặc chiều dọc.
+Idx: 480 | Style: Normal          | Bold: False | Text: Ví dụ: ảnh lá cây có thể được xoay ngang/dọc để mô hình không bị phụ thuộc vào hướng ảnh.
+Idx: 481 | Style: Normal          | Bold: False | Text: RandomRotation(0.3)
+Idx: 482 | Style: Normal          | Bold: False | Text: Xoay ảnh ngẫu nhiên trong khoảng ±0.3 radian (~ ±17 độ).
+Idx: 483 | Style: Normal          | Bold: False | Text: Giúp mô hình nhận diện đối tượng dù nó không ở đúng góc độ ban đầu.
+Idx: 484 | Style: Normal          | Bold: False | Text: RandomZoom(0.3)
+Idx: 485 | Style: Normal          | Bold: False | Text: Phóng to hoặc thu nhỏ ngẫu nhiên ảnh với tỷ lệ tối đa 30%.
+Idx: 486 | Style: Normal          | Bold: False | Text: Ví dụ: zoom gần vào lá bệnh hoặc thu nhỏ lại giúp mô hình học nhiều góc nhìn.
+Idx: 487 | Style: Normal          | Bold: False | Text: RandomContrast(0.2)
+Idx: 488 | Style: Normal          | Bold: False | Text: Thay đổi độ tương phản ngẫu nhiên ±20%.
+Idx: 489 | Style: Normal          | Bold: False | Text: Giúp mô hình học cách phân biệt bệnh ngay cả khi ảnh có ánh sáng không đồng đều.
+Idx: 490 | Style: Normal          | Bold: False | Text: Kết quả mỗi lần ảnh được đưa vào mô hình, nó sẽ được biến đổi ngẫu nhiên (xoay, thay đổi sáng, thay đổi tương phản). Điều này giúp mô hình:
+Idx: 491 | Style: Normal          | Bold: False | Text: Nhìn thấy nhiều phiên bản khác nhau của cùng một ảnh.
+Idx: 492 | Style: Normal          | Bold: False | Text: Tăng tính generalization khi dự đoán ảnh mới.
+Idx: 493 | Style: Normal          | Bold: False | Text: Giảm nguy cơ overfitting khi dữ liệu huấn luyện ít hoặc không đa dạng.
+Idx: 494 | Style: Normal          | Bold: False | Text: XÂY DỰNG MÔ HÌNH
+Idx: 495 | Style: Normal          | Bold: False | Text: Xây dựng mô hình CNN và biên dịch mô hình
+Idx: 496 | Style: Normal          | Bold: False | Text: Kiến trúc mô hình CNN
+Idx: 497 | Style: Normal          | Bold: False | Text: Data Augmentation tích hợp trong mô hình
+Idx: 498 | Style: Normal          | Bold: False | Text: Lật ngang/dọc, xoay ngẫu nhiên ±0.2 rad (~11 độ), zoom ±20%.
+Idx: 499 | Style: Normal          | Bold: False | Text: Mục đích: tạo thêm biến thể của ảnh trong quá trình training để giảm overfitting.
+Idx: 500 | Style: Normal          | Bold: False | Text: Block 1 (Trích xuất đặc trưng ban đầu)
+Idx: 501 | Style: Normal          | Bold: False | Text: Conv2D(32, 3x3): 32 bộ lọc trích xuất đặc trưng.
+Idx: 502 | Style: Normal          | Bold: False | Text: L2 regularization (0.001): giảm độ phức tạp của trọng số → chống overfitting.
+Idx: 503 | Style: Normal          | Bold: False | Text: BatchNormalization: chuẩn hóa giúp mô hình học ổn định hơn.
+Idx: 504 | Style: Normal          | Bold: False | Text: MaxPooling2D(2): giảm kích thước ảnh, giữ lại đặc trưng quan trọng.
+Idx: 505 | Style: Normal          | Bold: False | Text: Dropout(0.5): ngẫu nhiên bỏ 50% neuron trong quá trình huấn luyện.
+Idx: 506 | Style: Normal          | Bold: False | Text: Block 2 (Tăng chiều sâu đặc trưng)
+Idx: 507 | Style: Normal          | Bold: False | Text: Giống Block 1 nhưng số filters tăng lên 64.
+Idx: 508 | Style: Normal          | Bold: False | Text: Mạng học được nhiều đặc trưng phức tạp hơn (đường viền, hình dạng nhỏ).
+Idx: 509 | Style: Normal          | Bold: False | Text: Block 3 (Trích xuất đặc trưng cao cấp)
+Idx: 510 | Style: Normal          | Bold: False | Text: Số filters tăng lên 128, giúp học đặc trưng trừu tượng hơn (hình dạng phức tạp, hoa văn lá bệnh).
+Idx: 511 | Style: Normal          | Bold: False | Text: Dense layers (Phân loại)
+Idx: 512 | Style: Normal          | Bold: False | Text: Flatten: chuyển tensor 3D thành vector 1D.
+Idx: 513 | Style: Normal          | Bold: False | Text: Dense(256, relu): fully connected layer với 256 neuron.
+Idx: 514 | Style: Normal          | Bold: False | Text: BatchNormalization + Dropout(0.5): tiếp tục ổn định và chống overfitting.
+Idx: 515 | Style: Normal          | Bold: False | Text: Dense(num_classes, softmax): xuất xác suất cho từng lớp bệnh.
+Idx: 516 | Style: Normal          | Bold: False | Text: Biên dịch mô hình
+Idx: 517 | Style: Normal          | Bold: False | Text: Sau khi thiết kế kiến trúc, mô hình cần được biên dịch (compile) để xác định cách thức học và tiêu chí đánh giá.
+Idx: 518 | Style: Normal          | Bold: False | Text: 
+Idx: 519 | Style: Normal          | Bold: False | Text: Bộ tối ưu hóa (Optimizer)
+Idx: 520 | Style: Normal          | Bold: False | Text: RMSprop được lựa chọn làm thuật toán tối ưu. Đây là một biến thể của gradient descent có khả năng điều chỉnh learning rate động cho từng tham số, giúp quá trình huấn luyện ổn định hơn.
+Idx: 521 | Style: Normal          | Bold: False | Text: Learning rate = 0.0001 (1e-4): giá trị nhỏ nhằm tránh hiện tượng dao động và giúp mô hình hội tụ mượt mà, đặc biệt quan trọng khi mô hình có nhiều tầng và số tham số lớn.
+Idx: 522 | Style: Normal          | Bold: False | Text: Hàm mất mát (Loss Function)
+Idx: 523 | Style: Normal          | Bold: False | Text: Categorical Crossentropy được sử dụng vì bài toán là phân loại đa lớp (multiclass classification) với 3 nhãn đầu ra.
+Idx: 524 | Style: Normal          | Bold: False | Text: Hàm mất mát này đo lường sự khác biệt giữa phân phối xác suất dự đoán (softmax output) và nhãn thực tế (one-hot encoded labels).
+Idx: 525 | Style: Normal          | Bold: False | Text: Chỉ số đánh giá (Metrics)
+Idx: 526 | Style: Normal          | Bold: False | Text: Accuracy được lựa chọn làm thước đo đánh giá hiệu năng.
+Idx: 527 | Style: Normal          | Bold: False | Text: Accuracy biểu diễn tỷ lệ mẫu được dự đoán đúng trên tổng số mẫu, phù hợp với các bài toán phân loại có dữ liệu cân bằng.
+Idx: 528 | Style: Normal          | Bold: False | Text: Huấn luyện mô hình
+Idx: 529 | Style: Normal          | Bold: False | Text: Xác định Điểm dừng sớm và Điểm kiểm tra mô hình
+Idx: 530 | Style: Normal          | Bold: False | Text: Để nâng cao hiệu quả huấn luyện và tránh hiện tượng overfitting, chúng tôi sử dụng kỹ thuật phổ biến trong học sâu: Early Stopping, Model Checkpoint và ReduceLR
+Idx: 531 | Style: Normal          | Bold: False | Text: ReduceLROnPlateau:
+Idx: 532 | Style: Normal          | Bold: False | Text: Theo dõi: val_loss
+Idx: 533 | Style: Normal          | Bold: False | Text: factor=0.5: nếu không cải thiện, giảm learning rate xuống còn 50%.
+Idx: 534 | Style: Normal          | Bold: False | Text: patience=2: chờ 2 epoch liên tiếp không cải thiện trước khi giảm LR.
+Idx: 535 | Style: Normal          | Bold: False | Text: min_lr=1e-7: không giảm LR nhỏ hơn ngưỡng này.
+Idx: 536 | Style: Normal          | Bold: False | Text: Giúp mô hình “học tinh chỉnh” tốt hơn khi gần hội tụ.
+Idx: 537 | Style: Normal          | Bold: False | Text: EarlyStopping:
+Idx: 538 | Style: Normal          | Bold: False | Text: Theo dõi: val_loss.
+Idx: 539 | Style: Normal          | Bold: False | Text: 
+Idx: 540 | Style: Normal          | Bold: False | Text: restore_best_weights=True: sau khi dừng, mô hình sẽ quay lại trạng thái có trọng số tốt nhất.
+Idx: 541 | Style: Normal          | Bold: False | Text: Giúp tránh overfitting và tiết kiệm thời gian.
+Idx: 542 | Style: Normal          | Bold: False | Text: ModelCheckpoint:
+Idx: 543 | Style: Normal          | Bold: False | Text: File lưu: "best_model.keras".
+Idx: 544 | Style: Normal          | Bold: False | Text: save_best_only=True: chỉ lưu mô hình khi val_loss nhỏ nhất (mô hình tốt nhất).
+Idx: 545 | Style: Normal          | Bold: False | Text: monitor="val_loss": lấy tiêu chí là loss trên tập validation.
+Idx: 546 | Style: Normal          | Bold: False | Text: Giúp đảm bảo bạn luôn có phiên bản mô hình tốt nhất ngay cả khi training tiếp tục và mô hình bị kém đi.
+Idx: 547 | Style: Normal          | Bold: False | Text: Cơ chế giám sát huấn luyện bằng Callback tùy chỉnh
+Idx: 548 | Style: Normal          | Bold: False | Text: Trong quá trình huấn luyện, để theo dõi trực quan hiệu năng mô hình và đánh giá chất lượng dự đoán trên tập kiểm định (validation set), nghiên cứu này xây dựng hai callback tùy chỉnh: PlotLearning và ShowPrediction.
+Idx: 549 | Style: Normal          | Bold: False | Text: 
+Idx: 550 | Style: Normal          | Bold: False | Text: Mục đích: Vẽ biểu đồ thể hiện sự thay đổi của loss và accuracy trên cả tập huấn luyện và tập kiểm định sau mỗi epoch.
+Idx: 551 | Style: Normal          | Bold: False | Text: Cơ chế hoạt động: Callback lưu lại giá trị loss/accuracy tại mỗi epoch và cập nhật biểu đồ theo thời gian thực.
+Idx: 552 | Style: Normal          | Bold: False | Text: 
+Idx: 553 | Style: Normal          | Bold: False | Text: Mục đích: Hiển thị một số ảnh trong tập kiểm định cùng với nhãn thực tế và nhãn dự đoán sau mỗi epoch.
+Idx: 554 | Style: Normal          | Bold: False | Text: Cơ chế hoạt động:
+Idx: 555 | Style: Normal          | Bold: False | Text: Lấy một batch từ tập validation.
+Idx: 556 | Style: Normal          | Bold: False | Text: Mô hình dự đoán và so sánh với nhãn thật.
+Idx: 557 | Style: Normal          | Bold: False | Text: Hiển thị hình ảnh cùng nhãn “Predicted” và “True” để minh họa hiệu năng tại thời điểm đó.
+Idx: 558 | Style: Normal          | Bold: False | Text: Thực hiện train và test
+Idx: 559 | Style: Normal          | Bold: False | Text: Sau khi thiết lập kiến trúc, biên dịch, và gắn các callback, mô hình được đưa vào huấn luyện với dữ liệu đầu vào.
+Idx: 560 | Style: Normal          | Bold: False | Text: 
+Idx: 561 | Style: Normal          | Bold: False | Text: model_aug.fit(): chạy quá trình huấn luyện.
+Idx: 562 | Style: Normal          | Bold: False | Text: train: tập dữ liệu huấn luyện (có thể là tf.data.Dataset hoặc ImageDataGenerator).
+Idx: 563 | Style: Normal          | Bold: False | Text: validation_data: tập validation, dùng để theo dõi overfitting.
+Idx: 564 | Style: Normal          | Bold: False | Text: epochs=40: tối đa chạy 40 epoch. Nhưng nhờ có EarlyStopping, có thể dừng sớm trước khi đạt 40 epoch nếu mô hình không còn cải thiện.
+Idx: 565 | Style: Normal          | Bold: False | Text: callbacks=callbacks: sử dụng các callback đã định nghĩa:
+Idx: 566 | Style: Normal          | Bold: False | Text: 
+Idx: 567 | Style: Normal          | Bold: False | Text: 
+Idx: 568 | Style: Normal          | Bold: False | Text: 
+Idx: 569 | Style: Normal          | Bold: False | Text: Đánh giá mô hình
+Idx: 570 | Style: Normal          | Bold: False | Text: Sau khi hoàn tất huấn luyện, mô hình được tải lại từ file lưu trữ best_model2.keras để đánh giá trên tập validation nhằm kiểm chứng khả năng tổng quát.
+Idx: 571 | Style: Normal          | Bold: False | Text: 
+Idx: 572 | Style: Normal          | Bold: False | Text: load_model: nạp mô hình đã lưu với trọng số tối ưu nhất.
+Idx: 573 | Style: Normal          | Bold: False | Text: model.predict : sinh vector xác suất dự đoán cho mỗi ảnh trong tập validation.
+Idx: 574 | Style: Normal          | Bold: False | Text: model.evaluate : trả về giá trị loss và accuracy trên tập validation.
+Idx: 575 | Style: Normal          | Bold: False | Text: 
+Idx: 576 | Style: Normal          | Bold: False | Text: Hình 10: Kết quả Validation Loss và Validation Accuracy
+Idx: 577 | Style: Normal          | Bold: False | Text: Để kiểm chứng khả năng ứng dụng mô hình trên dữ liệu ngoài tập huấn luyện, hàm predict_uploaded_image được xây dựng
+Idx: 578 | Style: Normal          | Bold: False | Text: 
+Idx: 579 | Style: Normal          | Bold: False | Text: Hàm predict_uploaded_image sử dụng thư viện PIL (Python Imaging Library) để nạp và xử lý ảnh, sau đó dự đoán lớp ảnh thông qua mô hình đã huấn luyện.
+Idx: 580 | Style: Normal          | Bold: False | Text: Chuyển ảnh sang định dạng RGB: đảm bảo ảnh có đủ 3 kênh màu để mô hình xử lý.
+Idx: 581 | Style: Normal          | Bold: False | Text: Resize về 256×256: khớp với kích thước đầu vào của CNN đã huấn luyện.
+Idx: 582 | Style: Normal          | Bold: False | Text: Chuẩn hóa pixel: chia cho 255 để giá trị nằm trong khoảng [0,1], giúp mô hình hội tụ nhanh và hiệu quả hơn.
+Idx: 583 | Style: Normal          | Bold: False | Text: Thêm batch dimension: np.expand_dims() biến dữ liệu ảnh thành batch có kích thước (1, 256, 256, 3).
+Idx: 584 | Style: Normal          | Bold: False | Text: Dự đoán:
+Idx: 585 | Style: Normal          | Bold: False | Text: model.predict(img_array) trả về một vector xác suất cho từng lớp.
+Idx: 586 | Style: Normal          | Bold: False | Text: np.argmax(preds, axis=1) chọn lớp có xác suất cao nhất.
+Idx: 587 | Style: Normal          | Bold: False | Text: Trả về kết quả: tên lớp dự đoán và in kết quả trên màn hình.
+Idx: 588 | Style: Normal          | Bold: False | Text: 
+Idx: 589 | Style: Normal          | Bold: False | Text: Hàm predict_with_cv2 sử dụng thư viện OpenCV để nạp ảnh và hiển thị ảnh cùng với kết quả dự đoán. Đây là một biến thể của predict_uploaded_image nhưng bổ sung khả năng trực quan hóa.
+Idx: 590 | Style: Normal          | Bold: False | Text: 
+Idx: 591 | Style: Normal          | Bold: False | Text: Hình 11: Kết quả hàm predict_with_cv2
+Idx: 592 | Style: Normal          | Bold: False | Text: XÂY DỰNG CHƯƠNG TRÌNH DỰ ĐOÁN
+Idx: 593 | Style: Normal          | Bold: False | Text: Load mô hình
+Idx: 594 | Style: Normal          | Bold: False | Text: 
+Idx: 595 | Style: Normal          | Bold: False | Text: st.cache_resource: lưu trữ mô hình trong bộ nhớ cache để không tải lại mỗi khi refresh app. Mô hình huấn luyện sẵn được load từ "best_model.keras".
+Idx: 596 | Style: Normal          | Bold: False | Text: Hàm dự đoán
+Idx: 597 | Style: Normal          | Bold: False | Text: Dự đoán ảnh upload / chụp
+Idx: 598 | Style: Normal          | Bold: False | Text: 
+Idx: 599 | Style: Normal          | Bold: False | Text: Hàm này là một pipeline tiền xử lý ảnh và dự đoán lớp cho mô hình học sâu, dùng OpenCV để đọc và xử lý ảnh, Pillow để đọc file upload, và trả về kết quả dự đoán một cách rõ ràng.
+Idx: 600 | Style: Normal          | Bold: False | Text: Dự đoán ảnh từ camera
+Idx: 601 | Style: Normal          | Bold: False | Text: 
+Idx: 602 | Style: Normal          | Bold: False | Text: Hàm predict_frame sẽ nhận một frame (ảnh dạng mảng NumPy, thường lấy từ webcam), một mô hình và danh sách tên lớp (class_names) để:
+Idx: 603 | Style: Normal          | Bold: False | Text: Tiền xử lý ảnh,
+Idx: 604 | Style: Normal          | Bold: False | Text: Dự đoán lớp ảnh bằng mô hình,
+Idx: 605 | Style: Normal          | Bold: False | Text: Trả về nhãn dự đoán và xác suất.
+Idx: 606 | Style: Normal          | Bold: False | Text: Streamlit App
+Idx: 607 | Style: Normal          | Bold: False | Text: Home: Giới thiệu hệ thống.
+Idx: 608 | Style: Normal          | Bold: False | Text: 
+Idx: 609 | Style: Normal          | Bold: False | Text: st.sidebar.title("Dashboard"): tạo tiêu đề trên thanh sidebar.
+Idx: 610 | Style: Normal          | Bold: False | Text: st.sidebar.selectbox(...): tạo menu để người dùng chọn trang (Home, About, Disease Recognition, Live Camera).
+Idx: 611 | Style: Normal          | Bold: False | Text: app_mode lưu tên trang được chọn.
+Idx: 612 | Style: Normal          | Bold: False | Text: About: Thông tin dataset.
+Idx: 613 | Style: Normal          | Bold: False | Text: 
+Idx: 614 | Style: Normal          | Bold: False | Text: Hiển thị thông tin về dataset:
+Idx: 615 | Style: Normal          | Bold: False | Text: ~87K ảnh RGB của lá cây khỏe mạnh và bị bệnh,
+Idx: 616 | Style: Normal          | Bold: False | Text: 38 lớp
+Idx: 617 | Style: Normal          | Bold: False | Text: Phân chia dữ liệu train/validation/test.
+Idx: 618 | Style: Normal          | Bold: False | Text: Disease Recognition: Upload hoặc capture ảnh → dự đoán.
+Idx: 619 | Style: Normal          | Bold: False | Text: 
+Idx: 620 | Style: Normal          | Bold: False | Text: Cho phép người dùng upload ảnh từ máy tính hoặc chụp ảnh trực tiếp bằng camera sau đó đưa ra dự đoán.
+Idx: 621 | Style: Normal          | Bold: False | Text: Live Camera: Bật webcam để dự đoán real-time.
+Idx: 622 | Style: Normal          | Bold: False | Text: 
+Idx: 623 | Style: Normal          | Bold: False | Text: Checkbox “Start Live Camera” sẽ cho phép người dùng bật/tắt chế độ live camera. st.empty() tạo vùng trống để cập nhật video và dự đoán theo thời gian thực và Sử dụng OpenCV để mở webcam mặc định. Mỗi frame được gửi vào hàm predict_frame để dự đoán lớp bệnh.Kết quả dự đoán được hiển thị song song với video
+Idx: 624 | Style: Normal          | Bold: False | Text: 
+Idx: 625 | Style: Normal          | Bold: False | Text: DEMO CHƯƠNG TRÌNH
+Idx: 626 | Style: Normal          | Bold: False | Text: Hình ảnh giao diện người dùng
+Idx: 627 | Style: Normal          | Bold: False | Text: 
+Idx: 628 | Style: Normal          | Bold: False | Text: Hình 12: Giao diện chính chương trình
+Idx: 629 | Style: Normal          | Bold: False | Text: Menu chọn trang:
+Idx: 630 | Style: Normal          | Bold: False | Text: Home — Trang giới thiệu ứng dụng
+Idx: 631 | Style: Normal          | Bold: False | Text: About — Thông tin về dataset và dự án
+Idx: 632 | Style: Normal          | Bold: False | Text: Disease Recognition — Dự đoán bệnh từ ảnh tải lên hoặc chụp camera
+Idx: 633 | Style: Normal          | Bold: False | Text: Live Camera — Dự đoán bệnh trực tiếp từ camera
+Idx: 634 | Style: Normal          | Bold: False | Text: Khi người dùng chọn trang khác thì nội dung sẽ thay đổi tương ứng.
+Idx: 635 | Style: Normal          | Bold: False | Text: Trang About:
+Idx: 636 | Style: Normal          | Bold: False | Text: Hình 13: Hình ảnh giao diện trang About
+Idx: 637 | Style: Normal          | Bold: False | Text: 
+Idx: 638 | Style: Normal          | Bold: False | Text: Trang Disease Recognition:
+Idx: 639 | Style: Normal          | Bold: False | Text: 
+Idx: 640 | Style: Normal          | Bold: False | Text: Hình 14: Hình ảnh giao diện trang Disease Recongnition
+Idx: 641 | Style: Normal          | Bold: False | Text: Người dùng nhấn nút “Browse files” để tải ảnh lên sau đó trang sẽ xuất hiện nút “Predict” , người dùng nhấn nút để thực hiện dự đoán.
+Idx: 642 | Style: Normal          | Bold: False | Text: 
+Idx: 643 | Style: Normal          | Bold: False | Text: Trang Live Camera:
+Idx: 644 | Style: Normal          | Bold: False | Text: 
+Idx: 645 | Style: Normal          | Bold: False | Text: Hình 15: Hình ảnh giao diện trang Live Camera
+Idx: 646 | Style: Normal          | Bold: False | Text: Người dùng nhấn chọn vào checkbox “Start Live Camera” để bật webcam mặc định , sau đó chương trình sẽ cho ra kết quả dự đoán theo thời gian thực.
+Idx: 647 | Style: Normal          | Bold: False | Text: Thử nghiệm dự đoán
+Idx: 648 | Style: Normal          | Bold: False | Text: Dự đoán trên Disease Recognition:
+Idx: 649 | Style: Normal          | Bold: False | Text: 
+Idx: 650 | Style: Normal          | Bold: False | Text: Hình 16: Hình ảnh kết quả dự đoán
+Idx: 651 | Style: Normal          | Bold: False | Text: Kết quả cho thấy lá cây đang mắc bệnh powdery (phấn trắng) với tỉ lệ 99.99%
+Idx: 652 | Style: Normal          | Bold: False | Text: 
+Idx: 653 | Style: Normal          | Bold: False | Text: Nhấn “Show Image” đề xem ảnh được tải lên:
+Idx: 654 | Style: Normal          | Bold: False | Text: 
+Idx: 655 | Style: Normal          | Bold: False | Text: Hình 17: Hình ảnh được tải lên dự đoán
+Idx: 656 | Style: Normal          | Bold: False | Text: 
+Idx: 657 | Style: Heading 1       | Bold: True | Text: CHƯƠNG 4: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+Idx: 658 | Style: Normal          | Bold: False | Text: KẾT LUẬN
+Idx: 659 | Style: Normal          | Bold: False | Text: Trong đề tài này, chúng tôi đã nghiên cứu và triển khai một hệ thống phát hiện và phân loại bệnh trên lá cây sử dụng mô hình Convolutional Neural Network (CNN). Quá trình thực hiện bao gồm các bước: thu thập dữ liệu hình ảnh lá cây, tiền xử lý và augmentation dữ liệu, xây dựng kiến trúc mô hình CNN, huấn luyện và đánh giá mô hình.
+Idx: 660 | Style: Normal          | Bold: False | Text: Kết quả thực nghiệm cho thấy mô hình CNN đạt độ chính xác trên tập validation cao, chứng minh khả năng trích xuất đặc trưng hình ảnh và phân loại bệnh của mô hình. Hệ thống cũng đã được thử nghiệm với giao diện trực quan (Streamlit/OpenCV), cho phép người dùng tải ảnh hoặc sử dụng camera để nhận diện bệnh trên lá cây một cách nhanh chóng.
+Idx: 661 | Style: Normal          | Bold: False | Text: Như vậy, nghiên cứu này đã đáp ứng mục tiêu đặt ra: cung cấp một giải pháp tự động, chính xác, và dễ sử dụng để hỗ trợ nông dân và nhà nghiên cứu trong việc nhận diện bệnh trên cây trồng, góp phần tăng hiệu quả quản lý nông nghiệp và giảm thiểu tổn thất do bệnh gây ra.
+Idx: 662 | Style: Normal          | Bold: False | Text: HƯỚNG PHÁT TRIỂN
+Idx: 663 | Style: Normal          | Bold: False | Text: Mặc dù mô hình CNN đã đạt được kết quả khả quan, vẫn tồn tại một số hạn chế cần khắc phục và cải thiện trong các nghiên cứu tiếp theo:
+Idx: 664 | Style: Normal          | Bold: False | Text: Mở rộng dữ liệu huấn luyện: Thu thập thêm hình ảnh từ nhiều nguồn và điều kiện khác nhau (ánh sáng, góc chụp, độ tuổi lá) để tăng độ đa dạng và khả năng tổng quát của mô hình.
+Idx: 665 | Style: Normal          | Bold: False | Text: Cải tiến kiến trúc mô hình:Thử nghiệm các kiến trúc CNN tiên tiến hơn như ResNet, EfficientNet, MobileNet để cải thiện độ chính xác và tốc độ xử lý.
+Idx: 666 | Style: Normal          | Bold: False | Text: Tối ưu hóa hiệu năng: Sử dụng kỹ thuật giảm chiều dữ liệu như PCA hoặc pruning để giảm kích thước mô hình, giúp triển khai trên thiết bị di động hoặc IoT.
+Idx: 667 | Style: Normal          | Bold: False | Text: Triển khai hệ thống thực tế: Xây dựng ứng dụng mobile hoặc web tích hợp mô hình, cho phép nông dân dễ dàng chẩn đoán bệnh ngay tại ruộng.
+Idx: 668 | Style: Normal          | Bold: False | Text: Phát triển hệ thống đa chức năng: Mở rộng chức năng để nhận diện nhiều loại bệnh hơn, dự đoán mức độ nghiêm trọng và đưa ra biện pháp xử lý phù hợp.
+Idx: 669 | Style: Heading 1       | Bold: True | Text: TÀI LIỆU THAM KHẢO
+Idx: 670 | Style: Normal          | Bold: False | Text: Nguồn Tiếng Việt:
+Idx: 671 | Style: Normal          | Bold: False | Text: Viblo, [Deep Learning] Tìm hiểu về mạng tích chập (CNN). Link:https://viblo.asia/p/deep-learning-tim-hieu-ve-mang-tich-chap-cnn-maGK73bOKj2
+Idx: 672 | Style: Normal          | Bold: False | Text: Khanh’s blog, Bài 8 - Convolutional Neural Network. Link:https://phamdinhkhanh.github.io/2019/08/22/convolutional-neural-network.html
+Idx: 673 | Style: Normal          | Bold: False | Text: Viblo, EfficientNet: Cách tiếp cận mới về Model Scaling cho Convolutional Neural Networks.
+Idx: 674 | Style: Normal          | Bold: False | Text: Link:https://viblo.asia/p/efficientnet-cach-tiep-can-moi-ve-model-scaling-cho-convolutional-neural-networks-Qbq5QQzm5D8
+Idx: 675 | Style: Normal          | Bold: False | Text: Aspose Blog, Áp dụng Bộ lọc trung bình và Wiener cho hình ảnh trong Python.
+Idx: 676 | Style: Normal          | Bold: False | Text: Link:https://blog.aspose.com/vi/imaging/apply-median-wiener-filter-to-images-in-python/
+Idx: 677 | Style: Normal          | Bold: False | Text: Nguồn nước ngoài:
+Idx: 678 | Style: Normal          | Bold: False | Text: A Review of Convolutional Neural Networks.Link: Convolutional neural networks (CNNs): concepts and applications in pharmacogenomics - PMC
+Idx: 679 | Style: Normal          | Bold: False | Text: An Extensive Study of Convolutional Neural Networks. Link: An Extensive Study of Convolutional Neural Networks: Applications in Computer Vision for Improved Robotics Perceptions
+Idx: 680 | Style: Normal          | Bold: True | Text: BẢNG PHÂN CÔNG CÔNG VIỆC
+Idx: 681 | Style: Normal          | Bold: False | Text: 

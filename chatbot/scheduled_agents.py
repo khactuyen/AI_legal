@@ -6,7 +6,7 @@ from mailer import send_email_notification
 from sync_agent import run_sync_job
 
 logger = logging.getLogger("ScheduledAgents")
-DB_PATH = "feedback.db"
+from chatbot.config import DB_PATH
 ADMIN_EMAIL = "admin@company.com" # Sẽ thay bằng email quản trị cấu hình từ .env sau
 
 def calculate_tier_and_should_send(expiration_date_str: str, last_notified_at_str: str, current_tier: str) -> tuple[bool, str]:
@@ -72,31 +72,32 @@ def check_and_send_alerts():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     
-    cursor.execute("SELECT id, contract_name, partner_name, expiration_date, last_notified_at, notification_tier FROM company_contracts WHERE status = 'ACTIVE'")
-    contracts = cursor.fetchall()
-    
-    for row in contracts:
-        c_id, c_name, p_name, exp_date, last_notif, current_tier = row
+    try:
+        cursor.execute("SELECT id, contract_name, partner_name, expiration_date, last_notified_at, notification_tier FROM company_contracts WHERE status = 'ACTIVE'")
+        contracts = cursor.fetchall()
         
-        should_send, new_tier = calculate_tier_and_should_send(exp_date, last_notif, current_tier)
-        
-        if should_send:
-            subject = f"[CẢNH BÁO {new_tier}] Hợp đồng sắp hết hạn: {c_name}"
-            body = f"Kính gửi Ban Quản trị,\n\nHợp đồng '{c_name}' ký với đối tác '{p_name}' sẽ hết hạn vào ngày {exp_date}.\nCấp độ cảnh báo: {new_tier}\n\nVui lòng xem xét gia hạn sớm."
+        for row in contracts:
+            c_id, c_name, p_name, exp_date, last_notif, current_tier = row
             
-            # Gửi mail
-            success = send_email_notification(ADMIN_EMAIL, subject, body)
+            should_send, new_tier = calculate_tier_and_should_send(exp_date, last_notif, current_tier)
             
-            if success:
-                # Cập nhật UI Notification
-                cursor.execute("INSERT INTO notifications (title, message) VALUES (?, ?)", (subject, body))
+            if should_send:
+                subject = f"[CẢNH BÁO {new_tier}] Hợp đồng sắp hết hạn: {c_name}"
+                body = f"Kính gửi Ban Quản trị,\n\nHợp đồng '{c_name}' ký với đối tác '{p_name}' sẽ hết hạn vào ngày {exp_date}.\nCấp độ cảnh báo: {new_tier}\n\nVui lòng xem xét gia hạn sớm."
                 
-                # Cập nhật trạng thái
-                now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                cursor.execute("UPDATE company_contracts SET last_notified_at = ?, notification_tier = ? WHERE id = ?", (now_str, new_tier, c_id))
-                conn.commit()
+                # Gửi mail
+                success = send_email_notification(ADMIN_EMAIL, subject, body)
                 
-    conn.close()
+                if success:
+                    # Cập nhật UI Notification
+                    cursor.execute("INSERT INTO notifications (title, message) VALUES (?, ?)", (subject, body))
+                    
+                    # Cập nhật trạng thái
+                    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    cursor.execute("UPDATE company_contracts SET last_notified_at = ?, notification_tier = ? WHERE id = ?", (now_str, new_tier, c_id))
+                    conn.commit()
+    finally:
+        conn.close()
 
 def start_scheduler():
     scheduler = AsyncIOScheduler()

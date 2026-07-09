@@ -19,7 +19,7 @@ def send_email_notification(to_email: str, subject: str, body: str) -> bool:
     if not SMTP_USER or not SMTP_PASS:
         logger.warning("SMTP chưa được cấu hình. (Mock Email Mode)")
         logger.info(f"==== MOCK EMAIL TỚI: {to_email} ====\nSubject: {subject}\nBody:\n{body}\n==========================================")
-        return True # Trả về True để hệ thống tưởng là đã gửi thành công trong lúc demo
+        return False # Trả về False vì email chưa thực sự được gửi
 
     try:
         msg = MIMEMultipart()

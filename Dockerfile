@@ -4,9 +4,10 @@ FROM python:3.11-slim
 # Đặt thư mục làm việc trong container
 WORKDIR /app
 
-# Cài đặt các thư viện hệ thống cần thiết (nếu có)
+# Cài đặt các thư viện hệ thống cần thiết
 RUN apt-get update && apt-get install -y \
     build-essential \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy file requirements và cài đặt dependencies

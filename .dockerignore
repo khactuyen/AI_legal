@@ -1,5 +1,6 @@
 # Bỏ qua môi trường ảo và thư mục cache của Python
 venv311/
+chatbot/venv311/
 __pycache__/
 *.pyc
 

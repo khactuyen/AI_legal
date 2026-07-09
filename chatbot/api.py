@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, FileResponse
 from fastapi.security import APIKeyHeader
 from pydantic import BaseModel
+import sys
 import pathlib
 import shutil
 import logging
@@ -10,6 +11,11 @@ import os
 import sqlite3
 from datetime import datetime
 from dotenv import load_dotenv
+
+# Add the chatbot folder to Python path to allow imports of local modules (Chatbot, guardrails)
+chatbot_dir = str(pathlib.Path(__file__).parent)
+if chatbot_dir not in sys.path:
+    sys.path.insert(0, chatbot_dir)
 
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
@@ -24,9 +30,10 @@ logging.basicConfig(
 logger = logging.getLogger("api")
 
 # Import logic từ Chatbot.py
-from Chatbot import build_or_load_store, process_user_message_stream, analyze_contract_file
+from Chatbot import build_or_load_store, process_user_message_stream, analyze_contract_file, process_user_message_deep_stream
 from auto_template import fill_template
 from scheduled_agents import start_scheduler
+from guardrails import PromptGuardrail
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY", "legal-sme-secret-key-2026")
@@ -45,19 +52,29 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 @app.on_event("startup")
 async def startup_event():
+    global vector_store
+    try:
+        logger.info("Đang khởi tạo Hệ thống AI Legal Assistant...")
+        vector_store = build_or_load_store()
+        logger.info("Hệ thống đã sẵn sàng!")
+    except Exception as e:
+        logger.error(f"Lỗi khởi tạo hệ thống RAG: {e}", exc_info=True)
+        vector_store = None
     start_scheduler()
 
 # Khóa CORS để an toàn
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173", "http://localhost:8501", "http://127.0.0.1:3000"], 
+    allow_origins=[
+        "http://localhost:3000", "http://localhost:2000", "http://localhost:3007", "http://localhost:5173", "http://localhost:8501",
+        "http://127.0.0.1:3000", "http://127.0.0.1:2000", "http://127.0.0.1:3007"
+    ], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Khởi tạo SQLite Database cho Anti-Hallucination
-DB_PATH = "feedback.db"
+from chatbot.config import DB_PATH
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -159,13 +176,7 @@ def get_session_history_db(session_id: str, client_id: str):
 # Bộ nhớ ngắn hạn (Short-term memory)
 session_memory = {}
 
-try:
-    logger.info("Đang khởi tạo Hệ thống AI Legal Assistant...")
-    vector_store = build_or_load_store()
-    logger.info("Hệ thống đã sẵn sàng!")
-except Exception as e:
-    logger.error(f"Lỗi khởi tạo hệ thống RAG: {e}", exc_info=True)
-    vector_store = None
+vector_store = None
 
 class ChatRequest(BaseModel):
     message: str
@@ -179,6 +190,12 @@ def read_root():
 @app.post("/chat")
 @limiter.limit("15/minute")
 def chat_endpoint(request: Request, body: ChatRequest, api_key: str = Depends(verify_api_key)):
+    # Guardrail Layer 1: Chặn Jailbreak / Prompt Injection
+    is_safe, refusal_reason = PromptGuardrail.check(body.message)
+    if not is_safe:
+        logger.warning(f"[Guardrail] Blocked message from {body.client_id}: {body.message[:50]}...")
+        raise HTTPException(status_code=400, detail=refusal_reason)
+    
     if vector_store is None:
         logger.error("API gọi RAG nhưng system down.")
         raise HTTPException(status_code=500, detail="Hệ thống AI chưa sẵn sàng.")
@@ -203,6 +220,38 @@ def chat_endpoint(request: Request, body: ChatRequest, api_key: str = Depends(ve
     
     return StreamingResponse(
         process_user_message_stream(vector_store, body.message, safe_mode=True, history=history_for_ai, on_complete=save_to_history), 
+        media_type="text/event-stream"
+    )
+
+@app.post("/chat/deep")
+@limiter.limit("5/minute")
+def chat_deep_endpoint(request: Request, body: ChatRequest, api_key: str = Depends(verify_api_key)):
+    # Guardrail Layer 1: Chặn Jailbreak / Prompt Injection
+    is_safe, refusal_reason = PromptGuardrail.check(body.message)
+    if not is_safe:
+        logger.warning(f"[Guardrail] Blocked deep message from {body.client_id}: {body.message[:50]}...")
+        raise HTTPException(status_code=400, detail=refusal_reason)
+    
+    if vector_store is None:
+        logger.error("API gọi RAG nhưng system down.")
+        raise HTTPException(status_code=500, detail="Hệ thống AI chưa sẵn sàng.")
+    
+    session_id = body.session_id
+    client_id = body.client_id
+    
+    db_history = get_session_history_db(session_id, client_id)
+    history_for_ai = db_history[-10:] if len(db_history) > 10 else db_history
+    
+    create_or_update_session(session_id, client_id, body.message)
+    
+    def save_to_history(ai_response_text: str):
+        log_to_db(session_id, client_id, "user", body.message)
+        log_to_db(session_id, client_id, "assistant", ai_response_text)
+        
+    logger.info(f"Session '{session_id}' DEEP MODE | User request: {body.message[:50]}...")
+    
+    return StreamingResponse(
+        process_user_message_deep_stream(vector_store, body.message, safe_mode=True, history=history_for_ai, on_complete=save_to_history), 
         media_type="text/event-stream"
     )
 
@@ -290,6 +339,16 @@ def auto_template_endpoint(request: Request, body: AutoTemplateRequest, api_key:
         logger.error(f"Lỗi generate auto-template: {e}")
         raise HTTPException(status_code=500, detail="Lỗi xử lý template")
 
+@app.get("/download-template/{filename}")
+def download_template_endpoint(filename: str):
+    # Endpoint mở không cần API key để user có thể tải trực tiếp từ trình duyệt
+    base_dir = pathlib.Path(__file__).parent
+    file_path = base_dir / "templates" / filename
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="File not found")
+    return FileResponse(path=str(file_path), filename=filename, media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+
+
 @app.get("/notifications")
 def get_notifications(api_key: str = Depends(verify_api_key)):
     try:
@@ -337,6 +396,11 @@ async def analyze_contract_endpoint(request: Request, file: UploadFile = File(..
         return StreamingResponse(stream_generator(), media_type="text/event-stream")
         
     except Exception as e:
+        logger.error(f"Lỗi hệ thống với file {file.filename}: {str(e)}", exc_info=True)
+        if file_path.exists():
+            file_path.unlink()
+        raise HTTPException(status_code=500, detail="Lỗi hệ thống khi phân tích hợp đồng.")
+
         logger.error(f"Lỗi hệ thống với file {file.filename}: {str(e)}", exc_info=True)
         if file_path.exists():
             file_path.unlink()

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
 // --- Types ---
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 type Message = {
   role: "user" | "assistant";
   content: string;
@@ -81,7 +82,7 @@ const renderMessageContent = (text: string) => {
 
   let remainingText = text;
   let jsonNode = null;
-  
+
   try {
     const startIdx = text.indexOf("```json");
     if (startIdx !== -1) {
@@ -95,7 +96,7 @@ const renderMessageContent = (text: string) => {
           const bgColor = isSafe ? "#E6F4EA" : isWarning ? "#FEF7E0" : "#FCE8E6";
           const borderColor = isSafe ? "#34A853" : isWarning ? "#FBBC04" : "#EA4335";
           const textColor = isSafe ? "#137333" : isWarning ? "#B08D00" : "#C5221F";
-          
+
           jsonNode = (
             <div style={{ padding: "16px", margin: "16px 0", borderLeft: `5px solid ${borderColor}`, backgroundColor: bgColor, borderRadius: "10px", color: textColor, boxShadow: "0 2px 6px rgba(0,0,0,0.05)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
@@ -110,10 +111,10 @@ const renderMessageContent = (text: string) => {
         }
       }
     }
-  } catch (e) {}
+  } catch (e) { }
 
-  if (remainingText.startsWith("*⏳") && remainingText.endsWith("*")) {
-    return <em style={{ color: "#5F6368" }}>⏳ {remainingText.slice(3, -1).trim()}</em>;
+  if (remainingText.startsWith("*") && remainingText.endsWith("*") && remainingText.includes("Đang")) {
+    return <em style={{ color: "#5F6368" }}>{remainingText.slice(1, -1).trim()}</em>;
   }
 
   const lines = remainingText.split("\n");
@@ -132,11 +133,11 @@ const renderMessageContent = (text: string) => {
         // Render Markdown Links (e.g. for Templates)
         const match = part.match(/\[(.*?)\]\((.*?)\)/);
         if (match) {
-            return (
-                <a key={partIdx} href={match[2]} target="_blank" rel="noopener noreferrer" style={{ color: "#1967D2", textDecoration: "underline", fontWeight: "500" }}>
-                    📥 {match[1]}
-                </a>
-            );
+          return (
+            <a key={partIdx} href={match[2]} target="_blank" rel="noopener noreferrer" style={{ color: "#1967D2", textDecoration: "underline", fontWeight: "500" }}>
+              📥 {match[1]}
+            </a>
+          );
         }
       }
       return part;
@@ -170,9 +171,11 @@ function App() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingText, setLoadingText] = useState("Đang phân tích câu hỏi...");
   const [currentFile, setCurrentFile] = useState<FileData | null>(null);
   const [showUploadMenu, setShowUploadMenu] = useState(false);
-  
+  const [isDeepMode, setIsDeepMode] = useState(false);
+
   const [notifications, setNotifications] = useState<any[]>([]);
   const [showNotifications, setShowNotifications] = useState(false);
 
@@ -202,8 +205,8 @@ function App() {
   useEffect(() => {
     fetchSessions();
     const handleResize = () => {
-        if (window.innerWidth > 768) setIsSidebarOpen(true);
-        else setIsSidebarOpen(false);
+      if (window.innerWidth > 768) setIsSidebarOpen(true);
+      else setIsSidebarOpen(false);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -212,7 +215,7 @@ function App() {
   useEffect(() => {
     const fetchNotifs = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/notifications`, {
+        const res = await fetch(`${API_BASE_URL}/notifications`, {
           headers: { "X-API-Key": getApiKey() }
         });
         if (res.ok) {
@@ -234,7 +237,7 @@ function App() {
 
   const fetchSessions = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/sessions?client_id=${clientId}`, {
+      const res = await fetch(`${API_BASE_URL}/sessions?client_id=${clientId}`, {
         headers: { "X-API-Key": getApiKey() }
       });
       if (res.ok) {
@@ -251,8 +254,8 @@ function App() {
       setSessionId(sid);
       setMessages([]);
       if (window.innerWidth <= 768) setIsSidebarOpen(false);
-      
-      const res = await fetch(`http://localhost:8000/sessions/${sid}?client_id=${clientId}`, {
+
+      const res = await fetch(`${API_BASE_URL}/sessions/${sid}?client_id=${clientId}`, {
         headers: { "X-API-Key": getApiKey() }
       });
       if (res.ok) {
@@ -267,10 +270,14 @@ function App() {
   const deleteSession = async (e: React.MouseEvent, sid: string) => {
     e.stopPropagation();
     try {
-      await fetch(`http://localhost:8000/sessions/${sid}?client_id=${clientId}`, {
+      const response = await fetch(`${API_BASE_URL}/sessions/${sid}?client_id=${clientId}`, {
         method: "DELETE",
         headers: { "X-API-Key": getApiKey() }
       });
+      if (!response.ok) {
+        console.error("Failed to delete session");
+        return;
+      }
       if (sessionId === sid) createNewChat();
       fetchSessions();
     } catch (err) {
@@ -298,7 +305,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await fetch("http://localhost:8000/analyze-contract", {
+      const response = await fetch(`${API_BASE_URL}/analyze-contract`, {
         method: "POST",
         headers: { "X-API-Key": getApiKey() },
         body: formData
@@ -308,7 +315,7 @@ function App() {
       if (!response.body) throw new Error("Không lấy được dữ liệu luồng");
 
       setMessages(prev => [...prev, { role: "assistant", content: "" }]);
-      
+
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
@@ -320,7 +327,7 @@ function App() {
         if (value) {
           const chunkStr = decoder.decode(value, { stream: true });
           const lines = chunkStr.split("\n").filter(l => l.trim() !== "");
-          
+
           for (const line of lines) {
             try {
               const data = JSON.parse(line);
@@ -328,7 +335,7 @@ function App() {
                 if (fullContent === "") {
                   setMessages(prev => {
                     const newArr = [...prev];
-                    newArr[newArr.length - 1].content = `*⏳ ${data.text}*`;
+                    newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: `*⏳ ${data.text}*` };
                     return newArr;
                   });
                 }
@@ -336,7 +343,14 @@ function App() {
                 fullContent += data.text;
                 setMessages(prev => {
                   const newArr = [...prev];
-                  newArr[newArr.length - 1].content = fullContent;
+                  newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: fullContent };
+                  return newArr;
+                });
+              } else if (data.type === "replace_content") {
+                fullContent = data.text;
+                setMessages(prev => {
+                  const newArr = [...prev];
+                  newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: fullContent };
                   return newArr;
                 });
               }
@@ -352,9 +366,8 @@ function App() {
       setMessages(prev => {
         const newArr = [...prev];
         if (newArr[newArr.length - 1].role === "assistant" && newArr[newArr.length - 1].content === "") {
-           newArr[newArr.length - 1].content = "Lỗi kết nối tới máy chủ AI.";
-           newArr[newArr.length - 1].isError = true;
-           return newArr;
+          newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: "Lỗi kết nối tới máy chủ AI.", isError: true };
+          return newArr;
         }
         return [...prev, { role: "assistant", content: "Lỗi kết nối tới máy chủ AI.", isError: true }];
       });
@@ -370,18 +383,24 @@ function App() {
     setInput("");
     setMessages(prev => [...prev, { role: "user", content: userText }]);
     setIsLoading(true);
+    setLoadingText("Đang phân tích câu hỏi...");
+    
+    const loadingTimer = setTimeout(() => {
+      setLoadingText("Đang chuẩn bị câu trả lời...");
+    }, 2000);
 
     try {
       let finalMessage = userText;
       if (currentFile && !userText.includes(currentFile.name)) {
-          finalMessage = `[Về file ${currentFile.name}] ${userText}`;
+        finalMessage = `[Về file ${currentFile.name}] ${userText}`;
       }
 
-      const response = await fetch("http://localhost:8000/chat", {
+      const endpoint = isDeepMode ? `${API_BASE_URL}/chat/deep` : `${API_BASE_URL}/chat`;
+      const response = await fetch(endpoint, {
         method: "POST",
-        headers: { 
-            "Content-Type": "application/json",
-            "X-API-Key": getApiKey()
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-Key": getApiKey()
         },
         body: JSON.stringify({ message: finalMessage, session_id: sessionId, client_id: clientId })
       });
@@ -390,7 +409,7 @@ function App() {
       if (!response.body) throw new Error("Không lấy được dữ liệu luồng");
 
       setMessages(prev => [...prev, { role: "assistant", content: "" }]);
-      
+
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
@@ -402,7 +421,7 @@ function App() {
         if (value) {
           const chunkStr = decoder.decode(value, { stream: true });
           const lines = chunkStr.split("\n").filter(l => l.trim() !== "");
-          
+
           for (const line of lines) {
             try {
               const data = JSON.parse(line);
@@ -410,7 +429,7 @@ function App() {
                 if (fullContent === "") {
                   setMessages(prev => {
                     const newArr = [...prev];
-                    newArr[newArr.length - 1].content = `*⏳ ${data.text}*`;
+                    newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: `*${data.text}*` };
                     return newArr;
                   });
                 }
@@ -418,7 +437,14 @@ function App() {
                 fullContent += data.text;
                 setMessages(prev => {
                   const newArr = [...prev];
-                  newArr[newArr.length - 1].content = fullContent;
+                  newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: fullContent };
+                  return newArr;
+                });
+              } else if (data.type === "replace_content") {
+                fullContent = data.text;
+                setMessages(prev => {
+                  const newArr = [...prev];
+                  newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: fullContent };
                   return newArr;
                 });
               }
@@ -436,13 +462,13 @@ function App() {
       setMessages(prev => {
         const newArr = [...prev];
         if (newArr[newArr.length - 1].role === "assistant" && newArr[newArr.length - 1].content === "") {
-           newArr[newArr.length - 1].content = "Xin lỗi, máy chủ AI đang gặp sự cố.";
-           newArr[newArr.length - 1].isError = true;
-           return newArr;
+          newArr[newArr.length - 1] = { ...newArr[newArr.length - 1], content: "Xin lỗi, máy chủ AI đang gặp sự cố.", isError: true };
+          return newArr;
         }
         return [...prev, { role: "assistant", content: "Xin lỗi, máy chủ AI đang gặp sự cố.", isError: true }];
       });
     } finally {
+      clearTimeout(loadingTimer);
       setIsLoading(false);
     }
   };
@@ -889,26 +915,27 @@ function App() {
         @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes popUp { from { opacity: 0; transform: scale(0.8) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
         @keyframes slideRight { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
       `}</style>
 
       {/* Sidebar */}
       <div className="sidebar">
         <div className="sidebar-header">
-           <button className="new-chat-btn" onClick={createNewChat}>
-             <NewChatIcon /> Chat mới
-           </button>
+          <button className="new-chat-btn" onClick={createNewChat}>
+            <NewChatIcon /> Chat mới
+          </button>
         </div>
         <div className="session-list">
           {sessions.map((s) => (
-            <div 
-               key={s.session_id} 
-               className={`session-item ${s.session_id === sessionId ? 'active' : ''}`}
-               onClick={() => loadSession(s.session_id)}
+            <div
+              key={s.session_id}
+              className={`session-item ${s.session_id === sessionId ? 'active' : ''}`}
+              onClick={() => loadSession(s.session_id)}
             >
-               <span className="session-title">{s.title || "Trò chuyện mới"}</span>
-               <button className="delete-btn" onClick={(e) => deleteSession(e, s.session_id)}>
-                 <TrashIcon />
-               </button>
+              <span className="session-title">{s.title || "Trò chuyện mới"}</span>
+              <button className="delete-btn" onClick={(e) => deleteSession(e, s.session_id)}>
+                <TrashIcon />
+              </button>
             </div>
           ))}
         </div>
@@ -916,53 +943,53 @@ function App() {
 
       {/* Main Content */}
       <div className="app-container">
-        
+
         {/* Mobile Header */}
         <div className="top-nav">
-           <button className="menu-btn" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-             <MenuIcon />
-           </button>
-           <span style={{ fontWeight: 600, marginLeft: "10px", color: "#5F6368" }}>
-             Legal AI Assistant
-           </span>
-           <div style={{ marginLeft: "auto", position: "relative" }}>
-             <button onClick={() => setShowNotifications(!showNotifications)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.2rem", position: "relative" }}>
-               🔔
-               {notifications.length > 0 && <span style={{ position: "absolute", top: -5, right: -5, background: "red", color: "white", borderRadius: "50%", padding: "2px 6px", fontSize: "0.7rem", fontWeight: "bold" }}>{notifications.length}</span>}
-             </button>
-             {showNotifications && (
-               <div style={{ position: "absolute", top: 30, right: 0, width: 320, background: "white", border: "1px solid #ccc", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0,0,0,0.1)", zIndex: 1000, padding: "10px", maxHeight: "400px", overflowY: "auto" }}>
-                 <h4 style={{ margin: "0 0 10px 0", borderBottom: "1px solid #eee", paddingBottom: "5px" }}>Thông báo hệ thống (Scheduled Agents)</h4>
-                 {notifications.length === 0 ? <p style={{ fontSize: "0.9rem", color: "#666" }}>Không có thông báo nào</p> : notifications.map(n => (
-                   <div key={n.id} style={{ marginBottom: "10px", paddingBottom: "10px", borderBottom: "1px solid #eee", textAlign: "left" }}>
-                     <strong style={{ fontSize: "0.9rem", color: "#D93025" }}>{n.title}</strong>
-                     <p style={{ margin: "5px 0 0 0", fontSize: "0.85rem", color: "#333", lineHeight: 1.4 }}>{n.message}</p>
-                     <small style={{ color: "#999", display: "block", marginTop: "4px" }}>{new Date(n.timestamp).toLocaleString()}</small>
-                   </div>
-                 ))}
-               </div>
-             )}
-           </div>
+          <button className="menu-btn" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <MenuIcon />
+          </button>
+          <span style={{ fontWeight: 600, marginLeft: "10px", color: "#5F6368" }}>
+            Legal AI Assistant
+          </span>
+          <div style={{ marginLeft: "auto", position: "relative" }}>
+            <button onClick={() => setShowNotifications(!showNotifications)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.2rem", position: "relative" }}>
+              🔔
+              {notifications.length > 0 && <span style={{ position: "absolute", top: -5, right: -5, background: "red", color: "white", borderRadius: "50%", padding: "2px 6px", fontSize: "0.7rem", fontWeight: "bold" }}>{notifications.length}</span>}
+            </button>
+            {showNotifications && (
+              <div style={{ position: "absolute", top: 30, right: 0, width: 320, background: "white", border: "1px solid #ccc", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0,0,0,0.1)", zIndex: 1000, padding: "10px", maxHeight: "400px", overflowY: "auto" }}>
+                <h4 style={{ margin: "0 0 10px 0", borderBottom: "1px solid #eee", paddingBottom: "5px" }}>Thông báo hệ thống (Scheduled Agents)</h4>
+                {notifications.length === 0 ? <p style={{ fontSize: "0.9rem", color: "#666" }}>Không có thông báo nào</p> : notifications.map(n => (
+                  <div key={n.id} style={{ marginBottom: "10px", paddingBottom: "10px", borderBottom: "1px solid #eee", textAlign: "left" }}>
+                    <strong style={{ fontSize: "0.9rem", color: "#D93025" }}>{n.title}</strong>
+                    <p style={{ margin: "5px 0 0 0", fontSize: "0.85rem", color: "#333", lineHeight: 1.4 }}>{n.message}</p>
+                    <small style={{ color: "#999", display: "block", marginTop: "4px" }}>{new Date(n.timestamp).toLocaleString()}</small>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {messages.length === 0 && (
           <div className="welcome-screen">
             <div className="welcome-title">AI Legal Assistant</div>
             <div className="welcome-subtitle">Trợ lý pháp lý thông minh cho doanh nghiệp</div>
-            
+
             <div className="suggestion-grid">
               <button className="suggestion-card" onClick={() => sendMessage("Tôi cần xin giấy phép đăng ký kinh doanh")}>
                 <span style={{ fontSize: '2rem' }}>📝</span>
                 <strong>Thủ tục Đăng ký</strong>
                 <span style={{ fontSize: '0.8rem', color: '#666' }}>Hướng dẫn và Biểu mẫu</span>
               </button>
-              
+
               <button className="suggestion-card" onClick={() => sendMessage("Phân tích rủi ro cho hợp đồng mẫu này")}>
                 <span style={{ fontSize: '2rem' }}>🛡️</span>
                 <strong>Chấm điểm Hợp đồng</strong>
                 <span style={{ fontSize: '0.8rem', color: '#666' }}>Tìm rủi ro & gợi ý sửa đổi</span>
               </button>
-              
+
               <button className="suggestion-card" onClick={() => sendMessage("Quy định mới về thuế TNDN 2025 là gì?")}>
                 <span style={{ fontSize: '2rem' }}>⚖️</span>
                 <strong>Hỏi Luật Thuế</strong>
@@ -972,7 +999,7 @@ function App() {
           </div>
         )}
 
-        <div className="chat-area" onClick={() => { if(window.innerWidth <= 768) setIsSidebarOpen(false); }}>
+        <div className="chat-area" onClick={() => { if (window.innerWidth <= 768) setIsSidebarOpen(false); }}>
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.role} ${msg.isError ? 'error' : ''}`}>
               <div className={`avatar ${msg.role}`}>
@@ -987,10 +1014,10 @@ function App() {
           ))}
           {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
             <div className="message assistant">
-               <div className="avatar assistant"><BotIcon /></div>
-               <div className="message-content">
-                 <span style={{ display: 'inline-block', animation: 'pulse 1s infinite' }}>⏳ AI đang xử lý...</span>
-               </div>
+              <div className="avatar assistant"><BotIcon /></div>
+              <div className="message-content">
+                <span style={{ display: 'inline-block', animation: 'pulse 1s infinite' }}>{loadingText}</span>
+              </div>
             </div>
           )}
           <div ref={messagesEndRef} />
@@ -998,47 +1025,62 @@ function App() {
 
         {/* Input Area (Bottom Fixed) */}
         <div className="input-container">
-           <div className="input-wrapper">
-             
-             {/* Indicators */}
-             {currentFile && (
-                <div className="file-badge">
+          {/* Thêm Toggle Button cho Deep Mode ở trên thanh input */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px', paddingRight: '10px' }}>
+            <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', color: isDeepMode ? '#7b1fa2' : '#5f6368', background: isDeepMode ? '#f3e5f5' : '#f1f3f4', padding: '4px 12px', borderRadius: '16px', transition: 'all 0.3s ease' }}>
+              <input
+                type="checkbox"
+                checked={isDeepMode}
+                onChange={() => setIsDeepMode(!isDeepMode)}
+                style={{ display: 'none' }}
+              />
+              <span style={{ marginRight: '6px' }}>{isDeepMode ? '🧠 Chế độ Phân tích Sâu (Deep Mode)' : '⚡ Chế độ Nhanh (Fast Mode)'}</span>
+              <div style={{ width: '32px', height: '18px', background: isDeepMode ? '#ab47bc' : '#dadce0', borderRadius: '9px', position: 'relative', transition: 'background 0.3s' }}>
+                <div style={{ width: '14px', height: '14px', background: '#fff', borderRadius: '50%', position: 'absolute', top: '2px', left: isDeepMode ? '16px' : '2px', transition: 'left 0.3s', boxShadow: '0 1px 3px rgba(0,0,0,0.4)' }} />
+              </div>
+            </label>
+          </div>
+          <div className="input-wrapper">
+
+            {/* Indicators */}
+            {currentFile && (
+              <div className="file-badge">
                 <span>📄 {currentFile.name}</span>
                 <button onClick={() => setCurrentFile(null)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: '#1967D2', padding: 0 }}>✕</button>
+              </div>
+            )}
+
+            <div className="fab-container">
+              <button className="fab-main" onClick={() => setShowUploadMenu(!showUploadMenu)}>
+                <PlusIcon />
+              </button>
+              {showUploadMenu && (
+                <div className="fab-menu">
+                  <input type="file" ref={fileInputRef} style={{ display: 'none' }} accept=".txt,.md,.csv,.json,.docx,.doc,.pdf" onChange={handleFileChange} />
+                  <button className="menu-item" onClick={() => fileInputRef.current?.click()}><UploadIcon /> Tải lên tài liệu</button>
                 </div>
-             )}
+              )}
+            </div>
 
-             <div className="fab-container">
-                <button className="fab-main" onClick={() => setShowUploadMenu(!showUploadMenu)}>
-                    <PlusIcon />
-                </button>
-                {showUploadMenu && (
-                    <div className="fab-menu">
-                        <input type="file" ref={fileInputRef} style={{ display: 'none' }} accept=".txt,.md,.csv,.json,.docx,.doc,.pdf" onChange={handleFileChange} />
-                        <button className="menu-item" onClick={() => fileInputRef.current?.click()}><UploadIcon /> Tải lên tài liệu</button>
-                    </div>
-                )}
-             </div>
+            <div className="input-box">
+              <input
+                className="input-field"
+                placeholder={currentFile ? `Đang hỏi về: ${currentFile.name}...` : "Nhập câu hỏi pháp lý..."}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyPress}
+                disabled={isLoading}
+              />
+              <button className="send-btn" onClick={() => sendMessage()} disabled={!input.trim() || isLoading}>
+                <SendIcon />
+              </button>
+            </div>
 
-             <div className="input-box">
-                <input
-                    className="input-field"
-                    placeholder={currentFile ? `Đang hỏi về: ${currentFile.name}...` : "Nhập câu hỏi pháp lý..."}
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={handleKeyPress}
-                    disabled={isLoading}
-                />
-                <button className="send-btn" onClick={() => sendMessage()} disabled={!input.trim() || isLoading}>
-                    <SendIcon />
-                </button>
-             </div>
-
-             {/* Disclaimer */}
-             <div className="disclaimer">
-                AI Legal Assistant có thể mắc lỗi. Các lời khuyên chỉ mang tính chất tham khảo và không thay thế cho tư vấn từ Luật sư.
-             </div>
-           </div>
+            {/* Disclaimer */}
+            <div className="disclaimer">
+              AI Legal Assistant có thể mắc lỗi. Các lời khuyên chỉ mang tính chất tham khảo và không thay thế cho tư vấn từ Luật sư.
+            </div>
+          </div>
         </div>
 
       </div>
