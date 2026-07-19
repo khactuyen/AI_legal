@@ -1,0 +1,206 @@
+=== TỔNG HỢP NỘI DUNG HIỆN TẠI CỦA CÁC MẪU HỢP ĐỒNG ===
+
+Tên tệp: Hop_dong_bao_lanh.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG BẢO LÃNH]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_cam_co.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG CẦM CỐ TÀI SẢN]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_chuyen_giao_cong_nghe.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG CHUYỂN GIAO CÔNG NGHỆ]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_dai_ly.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG ĐẠI LÝ]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_dich_vu.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG DỊCH VỤ]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_gia_cong.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG GIA CÔNG]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_hop_tac_kinh_doanh_BCC.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG HỢP TÁC KINH DOANH (BCC)]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_lao_dong.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG LAO ĐỘNG]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_lien_ket.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG LIÊN KẾT KINH DOANH]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_mua_ban_hang_hoa.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG MUA BÁN HÀNG HÓA]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_nhuong_quyen_thuong_mai.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG NHƯỢNG QUYỀN THƯƠNG MẠI]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_so_huu_tri_tue.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG SỞ HỮU TRÍ TUỆ]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_the_chap.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG THẾ CHẤP TÀI SẢN]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_thue_nha.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG THUÊ NHÀ]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_tin_dung.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG TÍN DỤNG]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_uy_quyen.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG ỦY QUYỀN]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+
+Tên tệp: Hop_dong_vay_tien.docx
+  Tổng số đoạn văn: 23
+  Đoạn #0: [CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+---------------]
+  Đoạn #1: [HỢP ĐỒNG VAY TIỀN]
+  Đoạn #2: [Số: ....../HĐ]
+  Đoạn #3: [- Căn cứ Bộ luật Dân sự nước Cộng hòa xã hội chủ nghĩa Việt Nam hiện hành;
+- Căn cứ nhu cầu và khả năng thực tế của hai bên;]
+  Đoạn #4: [Hôm nay, ngày ...... tháng ...... năm ......, chúng tôi gồm:]
+--------------------------------------------------
+

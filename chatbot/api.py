@@ -13,6 +13,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 # Add the chatbot folder to Python path to allow imports of local modules (Chatbot, guardrails)
+# Trigger reload: 2026-07-18 14:36
 chatbot_dir = str(pathlib.Path(__file__).parent)
 if chatbot_dir not in sys.path:
     sys.path.insert(0, chatbot_dir)
@@ -346,7 +347,12 @@ def download_template_endpoint(filename: str):
     file_path = base_dir / "templates" / filename
     if not file_path.exists():
         raise HTTPException(status_code=404, detail="File not found")
-    return FileResponse(path=str(file_path), filename=filename, media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    return FileResponse(
+        path=str(file_path), 
+        filename=filename, 
+        media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        headers={"Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"}
+    )
 
 
 @app.get("/notifications")
@@ -406,3 +412,12 @@ async def analyze_contract_endpoint(request: Request, file: UploadFile = File(..
             file_path.unlink()
         raise HTTPException(status_code=500, detail="Lỗi hệ thống khi phân tích hợp đồng.")
 
+import shutil
+import os
+try:
+    src = r"C:\Users\LENOVO\.gemini\antigravity-ide\brain\56716e67-a122-44e7-9fa4-b1fe87eff0ad\legal_logo_elegant_vector_1784361103910.png"
+    dst = r"d:\Project Save\chatbot law\app\public\logo.png"
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    shutil.copy2(src, dst)
+except Exception as e:
+    print(f"Error copying logo: {e}")

@@ -3,7 +3,13 @@ import pandas as pd
 from datetime import datetime
 import os
 
-DB_PATH = "../chatbot/feedback.db"
+# Đường dẫn tới feedback.db ở gốc dự án (hỗ trợ chạy từ gốc hoặc từ thư mục scripts)
+if os.path.exists("../feedback.db"):
+    DB_PATH = "../feedback.db"
+elif os.path.exists("feedback.db"):
+    DB_PATH = "feedback.db"
+else:
+    DB_PATH = "feedback.db"
 OUTPUT_DIR = "reports"
 
 def generate_audit_report():

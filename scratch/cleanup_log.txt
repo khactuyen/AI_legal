@@ -1,0 +1,36 @@
+Bắt đầu dọn dẹp các tệp tin template...
+Đang xử lý: Hop_dong_bao_lanh.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_cam_co.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_chuyen_giao_cong_nghe.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_dai_ly.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_dich_vu.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_gia_cong.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_hop_tac_kinh_doanh_BCC.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_lao_dong.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_lien_ket.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_mua_ban_hang_hoa.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_nhuong_quyen_thuong_mai.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_so_huu_tri_tue.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_the_chap.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_thue_nha.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_tin_dung.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_uy_quyen.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Đang xử lý: Hop_dong_vay_tien.docx
+-> Không phát hiện đoạn văn rác ở đầu.
+Hoàn tất dọn dẹp các tệp tin template!

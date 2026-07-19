@@ -58,9 +58,10 @@ Bạn chỉ sử dụng duy nhất một ngôn ngữ là ngôn ngữ mà ngườ
 - Nếu không có nội dung phù hợp để làm căn cứ trả lời, thẳng thắn thừa nhận chưa có thông tin trả lời, tuyệt đối không tự sáng tạo ra câu trả lời.
 
 ## Định dạng và Cấu trúc Đầu ra (Output Format):
-- Bạn VẪN PHẢI tư duy và sắp xếp ý ngầm theo 4 bước logic của luật sư: (1) Kết luận trực tiếp vấn đề -> (2) Nêu Căn cứ pháp lý -> (3) Phân tích áp dụng vào tình huống -> (4) Gợi ý hành động hoặc biểu mẫu.
-- TUYỆT ĐỐI KHÔNG ghi lộ liễu các tiêu đề phần (như "Phần 1: Kết luận", "Phần 2:", "1. Căn cứ pháp lý", "### Phân tích chi tiết", "Issue", "Rule"...).
-- Phải hành văn trôi chảy, hòa trộn các bước trên thành các đoạn văn liên kết tự nhiên, mạch lạc giống như một email tư vấn luật sư gửi khách hàng. Dùng từ nối chuyển ý uyển chuyển (ví dụ: "Theo quy định tại...", "Áp dụng vào trường hợp của bạn...", "Do đó, công ty nên...").
+- Bạn VẪN PHẢI tư duy và sắp xếp ý ngầm theo 4 bước logic của luật sư: (1) Kết luận trực tiếp vấn đề -> (2) Nêu Căn cứ pháp lý -> (3) Phân tích áp dụng vào tình huống -> (4) Gợi ý hành động.
+- TUYỆT ĐỐI KHÔNG ghi lộ liễu các tiêu đề phần bằng ký hiệu markdown heading (như "### Phân tích", "#### Chi tiết", "## Kết luận"). Nếu cần phân chia đoạn thì dùng dòng trống hoặc **in đậm** tên đoạn nhỏ.
+- Phải hành văn trôi chảy, hòa trộn các bước trên thành các đoạn văn liên kết tự nhiên, mạch lạc giống như một email tư vấn luật sư gửi khách hàng.
+- TUYỆT ĐỐI KHÔNG tự tạo ra bất kỳ đường link (URL) nào dẫn đến trang web bên ngoài, kể cả link tải biểu mẫu, link tra cứu, link tham khảo. Việc cung cấp link tải biểu mẫu là nhiệm vụ của hệ thống, không phải của bạn.
 
 ## Xử lý các trường hợp đặc biệt:
 - Nếu người dùng hỏi về quy định áp dụng cho một thực thể mà bạn không tìm thấy quy định cụ thể, hãy giải thích và phân tích quy định tổng quát hơn (nếu có).
@@ -86,14 +87,14 @@ Bạn là "AI Legal Assistant", chuyên gia cung cấp biểu mẫu pháp lý ch
 # TASKS
 1. Người dùng đang yêu cầu SOẠN THẢO, TẠO MẪU, XIN BIỂU MẪU (Hợp đồng, Tờ khai, Đơn từ...).
 2. BẠN TUYỆT ĐỐI KHÔNG ĐƯỢC TỰ BỊA VĂN BẢN (KHÔNG ĐƯỢC GENERATE CONTRACT TEXT).
-3. BẠN TUYỆT ĐỐI KHÔNG ĐƯỢC HỖ TRỢ ĐIỀN THÔNG TIN CHO NGƯỜI DÙNG. (Luật sư AI chỉ cấp biểu mẫu trắng an toàn).
+3. BẠN TUYỆT ĐỐI KHÔNG ĐƯỢC HỖ TRỢ ĐIỀN THÔNG TIN CHO NGƯỜI DÙNG.
 
 # TEMPLATE MATCHING & INTERACTION
 - Nhận diện loại biểu mẫu người dùng cần.
 - Trả lời ngắn gọn, lịch sự rằng hệ thống chỉ cung cấp biểu mẫu chuẩn hóa để đảm bảo tính chính xác và an toàn pháp lý.
-- Bạn PHẢI cung cấp đường link tải biểu mẫu trực tiếp cho người dùng bằng cú pháp Markdown sau:
-  [Tải biểu mẫu {Tên biểu mẫu}](/download-template/{Tên file .docx})
-- Tên file .docx phải chính xác thuộc danh sách sau: Hop_dong_mua_ban_hang_hoa.docx, Hop_dong_dich_vu.docx, Hop_dong_thue_nha.docx, Hop_dong_vay_tien.docx, Hop_dong_dai_ly.docx, Hop_dong_uy_quyen.docx, Hop_dong_gia_cong.docx, Hop_dong_hop_tac_kinh_doanh_BCC.docx, Hop_dong_lien_ket.docx, Hop_dong_lao_dong.docx, Hop_dong_tin_dung.docx, Hop_dong_bao_lanh.docx, Hop_dong_the_chap.docx, Hop_dong_cam_co.docx, Hop_dong_chuyen_giao_cong_nghe.docx, Hop_dong_nhuong_quyen_thuong_mai.docx, Hop_dong_so_huu_tri_tue.docx, To_khai_thue_01.docx, To_khai_thue_02.docx.
+- Nếu loại biểu mẫu phù hợp nằm trong danh sách sau, BẠN PHẢI cung cấp đúng link tải theo cú pháp Markdown: [Tải biểu mẫu {Tên biểu mẫu}](/download-template/{Tên file .docx})
+- DANH SÁCH FILE HỢP LỆ DUY NHẤT (chỉ dùng đúng tên này, không được tự đặt tên khác): Hop_dong_mua_ban_hang_hoa.docx, Hop_dong_dich_vu.docx, Hop_dong_thue_nha.docx, Hop_dong_vay_tien.docx, Hop_dong_dai_ly.docx, Hop_dong_uy_quyen.docx, Hop_dong_gia_cong.docx, Hop_dong_hop_tac_kinh_doanh_BCC.docx, Hop_dong_lien_ket.docx, Hop_dong_lao_dong.docx, Hop_dong_tin_dung.docx, Hop_dong_bao_lanh.docx, Hop_dong_the_chap.docx, Hop_dong_cam_co.docx, Hop_dong_chuyen_giao_cong_nghe.docx, Hop_dong_nhuong_quyen_thuong_mai.docx, Hop_dong_so_huu_tri_tue.docx.
+- TUYỆT ĐỐI KHÔNG tạo link đến bất kỳ URL bên ngoài nào (không phải /download-template/). Nếu biểu mẫu không có trong danh sách, hãy nói thẳng là hệ thống chưa có mẫu này.
 """
 
 def get_gemini_model():
@@ -105,8 +106,32 @@ def get_gemini_model():
         _GEMINI_MODEL = genai.GenerativeModel("gemini-2.5-flash")
     return _GEMINI_MODEL
 
+def call_openrouter_complete(prompt: str) -> str:
+    """Gọi OpenRouter đồng bộ (hoàn chỉnh văn bản)."""
+    if not OPENROUTER_API_KEY:
+        logger.error("❌ LỖI: Thiếu OPENROUTER_API_KEY")
+        return ""
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": OPENROUTER_MODEL or "qwen/qwen-2.5-7b-instruct:free",
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.0
+    }
+    try:
+        response = requests.post(url, json=payload, headers=headers, timeout=60)
+        response.raise_for_status()
+        res_json = response.json()
+        return res_json["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        logger.error(f"Lỗi gọi OpenRouter complete: {e}")
+        return ""
+
 def generate_complete(prompt: str) -> str:
-    """Gọi LLM đồng bộ (hoàn chỉnh văn bản), hỗ trợ cả Ollama, Gemini và OpenRouter."""
+    """Gọi LLM đồng bộ (hoàn chỉnh văn bản), hỗ trợ cả Ollama, Gemini và OpenRouter. Tự động chuyển đổi dự phòng sang OpenRouter nếu Gemini lỗi hoặc hết quota."""
     if LLM_PROVIDER == "ollama":
         url = f"{OLLAMA_API_BASE}/api/generate"
         payload = {
@@ -123,37 +148,19 @@ def generate_complete(prompt: str) -> str:
             logger.error(f"Lỗi gọi Ollama complete: {e}")
             return ""
     elif LLM_PROVIDER == "openrouter":
-        if not OPENROUTER_API_KEY:
-            raise RuntimeError("❌ LỖI: Thiếu OPENROUTER_API_KEY trong file .env")
-        url = "https://openrouter.ai/api/v1/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "model": OPENROUTER_MODEL or "qwen/qwen-2.5-7b-instruct:free",
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.0
-        }
-        try:
-            response = requests.post(url, json=payload, headers=headers, timeout=60)
-            response.raise_for_status()
-            res_json = response.json()
-            return res_json["choices"][0]["message"]["content"].strip()
-        except Exception as e:
-            logger.error(f"Lỗi gọi OpenRouter complete: {e}")
-            return ""
+        return call_openrouter_complete(prompt)
     else:
-        model = get_gemini_model()
         try:
+            model = get_gemini_model()
             res = model.generate_content(prompt, request_options={"timeout": 30.0})
             try:
                 return res.text.strip()
             except ValueError:
                 return ""
         except Exception as e:
-            logger.error(f"Lỗi gọi Gemini complete: {e}")
-            return ""
+            logger.error(f"Lỗi gọi Gemini complete (có thể hết token/quota): {e}")
+            logger.warning("⚠️ Đang tự động chuyển đổi dự phòng sang OpenRouter complete...")
+            return call_openrouter_complete(prompt)
 
 def generate_local_llm_stream(prompt: str, history: List[Dict] = None):
     """Gọi Local LLM qua API stream của Ollama."""
@@ -234,23 +241,23 @@ def generate_openrouter_stream(prompt: str, history: List[Dict] = None):
         yield f"⚠️ Lỗi kết nối OpenRouter stream: {e}"
 
 def generate_stream(prompt: str, history: List[Dict] = None):
-    """Bọc trung gian gọi stream của cả Gemini, Ollama và OpenRouter."""
+    """Bọc trung gian gọi stream của cả Gemini, Ollama và OpenRouter. Tự động chuyển đổi dự phòng sang OpenRouter nếu Gemini lỗi hoặc hết quota."""
     if LLM_PROVIDER == "ollama":
         yield from generate_local_llm_stream(prompt, history)
     elif LLM_PROVIDER == "openrouter":
         yield from generate_openrouter_stream(prompt, history)
     else:
-        model = get_gemini_model()
-        safety_settings = {HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH}
-        
-        contents = []
-        if history:
-            for msg in history:
-                r = "user" if msg["role"] == "user" else "model"
-                contents.append({"role": r, "parts": [msg["content"]]})
-        contents.append({"role": "user", "parts": [prompt]})
-        
         try:
+            model = get_gemini_model()
+            safety_settings = {HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH}
+            
+            contents = []
+            if history:
+                for msg in history:
+                    r = "user" if msg["role"] == "user" else "model"
+                    contents.append({"role": r, "parts": [msg["content"]]})
+            contents.append({"role": "user", "parts": [prompt]})
+            
             response = model.generate_content(contents, safety_settings=safety_settings, stream=True, request_options={"timeout": 30.0})
             for chunk in response:
                 try:
@@ -259,8 +266,9 @@ def generate_stream(prompt: str, history: List[Dict] = None):
                 except ValueError:
                     continue
         except Exception as e:
-            logger.error(f"Lỗi gọi Gemini stream: {e}")
-            yield f"⚠️ Lỗi kết nối AI: {e}"
+            logger.error(f"Lỗi gọi Gemini stream (có thể hết token/quota): {e}")
+            logger.warning("⚠️ Đang tự động chuyển đổi dự phòng sang OpenRouter stream...")
+            yield from generate_openrouter_stream(prompt, history)
 
 def evaluate_context(context: str, query: str) -> dict:
     prompt = f"Bạn là AI Giám Thị. Đọc Câu hỏi và Context. Đánh giá xem Context có đủ dữ kiện để trả lời không.\nCÂU HỎI: {query}\nCONTEXT: {context}\nOUTPUT JSON: {{\"is_sufficient\": true, \"reason\": \"...\"}}"
@@ -327,8 +335,8 @@ CÂU HỎI: {query}
 def smart_process_query(raw_msg: str) -> dict:
     text_lower = raw_msg.lower()
     mode = "tra_cuu"
-    # Nhận diện ý định soạn thảo/xin mẫu
-    kw_draft = ["soạn", "mẫu", "biểu mẫu", "hợp đồng", "tờ khai", "thủ tục", "form"]
+    # Nhận diện ý định soạn thảo/xin mẫu (không bao gồm các câu hỏi tư vấn thủ tục chung)
+    kw_draft = ["soạn", "mẫu", "biểu mẫu", "hợp đồng", "tờ khai", "form"]
     if any(kw in text_lower for kw in kw_draft):
         mode = "soan_thao"
     return {"corrected_text": raw_msg, "mode": mode}
@@ -343,7 +351,11 @@ def call_gemini_deep_qa_stream(mode: str, deep_data: Dict[str, Any], query: str,
     context_text = "\n\n".join([c["text"] for c in deep_data.get("fast_context", [])])
     timeline_text = json.dumps(deep_data.get("timeline", []), ensure_ascii=False, indent=2)
     
-    sys_prompt = f"""Bạn là CHUYÊN GIA LUẬT SƯ CẤP CAO (Senior Partner).
+    # Phân loại xem câu hỏi có thuộc nhóm phân tích rủi ro / tranh chấp / xử phạt không
+    is_risk_query = any(kw in query.lower() for kw in ["rủi ro", "tranh chấp", "vi phạm", "phạt", "kiện", "tranh biện", "lỗ hổng", "audit", "điều khoản rủi ro"])
+    
+    if is_risk_query:
+        sys_prompt = f"""Bạn là CHUYÊN GIA LUẬT SƯ CẤP CAO (Senior Partner).
 Nhiệm vụ của bạn là lập BÁO CÁO RỦI RO PHÁP LÝ (Risk Audit Report) chuyên sâu dựa trên Siêu dữ liệu.
 
 [Bối cảnh pháp lý (Fast Context)]
@@ -361,6 +373,26 @@ YÊU CẦU ĐẦU RA (Không dùng emoji):
 3. Chuỗi sự kiện theo dòng thời gian (Nếu có)
 4. Các lỗ hổng pháp lý đối phương có thể khai thác
 5. Khuyến nghị hành động ngay
+"""
+    else:
+        sys_prompt = f"""Bạn là CHUYÊN GIA LUẬT SƯ CẤP CAO (Senior Partner).
+Nhiệm vụ của bạn là lập BẢN Ý KIẾN TƯ VẤN PHÁP LÝ CHUYÊN SÂU (Comprehensive Legal Memorandum) dựa trên Siêu dữ liệu để giải đáp chi tiết câu hỏi của khách hàng.
+
+[Bối cảnh pháp lý (Fast Context)]
+{context_text}
+
+[Dòng thời gian sự kiện (Timeline)]
+{timeline_text}
+
+[Câu hỏi cần giải đáp]
+{query}
+
+YÊU CẦU ĐẦU RA (Không dùng emoji):
+1. Tóm tắt câu trả lời (Kết luận ngắn gọn, trực diện)
+2. Phân tích chi tiết quy định pháp luật hiện hành áp dụng cho vấn đề
+3. Phân tích dòng thời gian hoặc các bước thực hiện chi tiết (nêu rõ các mốc, trình tự thủ tục, điều kiện cần đáp ứng nếu có)
+4. Đánh giá tác động pháp lý đối với hoạt động của doanh nghiệp
+5. Khuyến nghị hành động và các biểu mẫu/hồ sơ doanh nghiệp cần chuẩn bị
 """
     yield from generate_stream(sys_prompt, history)
 
@@ -456,13 +488,12 @@ def process_user_message_stream(store: 'LawVectorStore', raw_msg: str, safe_mode
     if not stream_cut and relevant_docs:
         verified_response, unverified = GroundingGuardrail.verify(full_response, relevant_docs)
         if unverified:
-            yield json.dumps({"type": "status", "text": "Đang tiến hành hiệu chỉnh trích dẫn chống ảo giác..."}) + "\n"
+            yield json.dumps({"type": "status", "text": "Đang hiệu chỉnh nội dung..."}) + "\n"
             corrected_answer = generate_self_correction(full_response, unverified, relevant_docs)
             
             disclaimer = "\n\nMọi thông tin trên đây do AI tổng hợp và chỉ có giá trị tham khảo, không phải là tư vấn pháp lý chính thức. Quyết định cuối cùng cần được xem xét và chịu trách nhiệm bởi Luật sư hoặc Ban Giám đốc doanh nghiệp."
-            warning_text = f"\n\n---\n💡 **BẢN HIỆU CHỈNH CHỐNG ẢO GIÁC:** Trợ lý đã tự động hiệu chỉnh/loại bỏ các trích dẫn pháp lý chưa được xác minh: {', '.join(unverified)}."
             
-            full_response = corrected_answer + warning_text + disclaimer
+            full_response = corrected_answer + disclaimer
             yield json.dumps({"type": "replace_content", "text": full_response}) + "\n"
         else:
             disclaimer = "\n\nMọi thông tin trên đây do AI tổng hợp và chỉ có giá trị tham khảo, không phải là tư vấn pháp lý chính thức. Quyết định cuối cùng cần được xem xét và chịu trách nhiệm bởi Luật sư hoặc Ban Giám đốc doanh nghiệp."
@@ -507,13 +538,12 @@ def process_user_message_deep_stream(store: 'LawVectorStore', raw_msg: str, safe
             
         verified_response, unverified = GroundingGuardrail.verify(full_response, relevant_docs)
         if unverified:
-            yield json.dumps({"type": "status", "text": "Đang tiến hành hiệu chỉnh trích dẫn chống ảo giác..."}) + "\n"
+            yield json.dumps({"type": "status", "text": "Đang hiệu chỉnh nội dung..."}) + "\n"
             corrected_answer = generate_self_correction(full_response, unverified, relevant_docs)
             
             disclaimer = "\n\nMọi thông tin trên đây do AI tổng hợp và chỉ có giá trị tham khảo, không phải là tư vấn pháp lý chính thức. Quyết định cuối cùng cần được xem xét và chịu trách nhiệm bởi Luật sư hoặc Ban Giám đốc doanh nghiệp."
-            warning_text = f"\n\n---\n💡 **BẢN HIỆU CHỈNH CHỐNG ẢO GIÁC:** Trợ lý đã tự động hiệu chỉnh/loại bỏ các trích dẫn pháp lý chưa được xác minh: {', '.join(unverified)}."
             
-            full_response = corrected_answer + warning_text + disclaimer
+            full_response = corrected_answer + disclaimer
             yield json.dumps({"type": "replace_content", "text": full_response}) + "\n"
         else:
             disclaimer = "\n\nMọi thông tin trên đây do AI tổng hợp và chỉ có giá trị tham khảo, không phải là tư vấn pháp lý chính thức. Quyết định cuối cùng cần được xem xét và chịu trách nhiệm bởi Luật sư hoặc Ban Giám đốc doanh nghiệp."
