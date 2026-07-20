@@ -332,6 +332,45 @@ CÂU HỎI: {query}
     logger.info(f"Đã sinh tài liệu giả định HyDE cho: {query[:50]}...")
     return hyde_doc
 
+def check_conversational_query(raw_msg: str) -> str | None:
+    """
+    Nhận diện các câu chào hỏi, cảm ơn, giới thiệu, câu hội thoại thông thường.
+    Trả về câu trả lời trực tiếp (bỏ qua RAG/Reranker) hoặc None nếu là câu hỏi pháp lý.
+    """
+    msg = raw_msg.strip().lower()
+    for char in [".", ",", "!", "?", "~", ":", ";"]:
+        msg = msg.replace(char, "")
+    msg = msg.strip()
+
+    if not msg:
+        return "Chào bạn, tôi là Trợ lý Luật sư AI. Bạn cần tư vấn hay hỗ trợ vấn đề pháp lý gì hôm nay?"
+
+    greetings = [
+        "chào", "hi", "hello", "xin chào", "chào bạn", "chào em", "chào anh", "chào chị",
+        "chào bot", "alo", "chào trợ lý", "good morning", "good afternoon", "hế lô",
+        "chào admin", "helo", "halô"
+    ]
+    if msg in greetings:
+        return "Chào bạn, tôi là Trợ lý Luật sư AI. Tôi có thể giúp gì cho bạn về các vấn đề pháp lý doanh nghiệp hôm nay?"
+
+    identity_queries = [
+        "bạn là ai", "bạn tên gì", "bạn tên là gì", "giới thiệu bản thân", "giới thiệu",
+        "bạn làm được gì", "bạn là cái gì", "ai tạo ra bạn", "bạn có thể làm gì", "trợ lý là ai",
+        "bạn giúp được gì"
+    ]
+    if msg in identity_queries:
+        return "Tôi là Trợ lý AI Pháp lý Doanh nghiệp (AI Legal Assistant). Tôi có thể giúp bạn tra cứu văn bản luật, thẩm định rủi ro hợp đồng, và cung cấp các biểu mẫu pháp lý chuẩn."
+
+    courtesy_queries = [
+        "cảm ơn", "cảm ơn bạn", "cảm ơn nhiều", "thanks", "thank you", "ok cảm ơn",
+        "tốt quá", "tạm biệt", "bye", "bye bye", "tuyệt vời", "ok", "oke", "dạ cảm ơn",
+        "cảm ơn trợ lý"
+    ]
+    if msg in courtesy_queries:
+        return "Rất hân hạnh được hỗ trợ bạn! Nếu bạn cần thêm thông tin hay tư vấn pháp lý nào khác, đừng ngần ngại cho tôi biết nhé."
+
+    return None
+
 def smart_process_query(raw_msg: str) -> dict:
     text_lower = raw_msg.lower()
     mode = "tra_cuu"
@@ -418,14 +457,14 @@ def generate_self_correction(hallucinated_response: str, unverified_citations: L
     prompt = f"""Bạn là một Chuyên gia Kiểm duyệt Pháp lý AI. 
 Nhiệm vụ của bạn là rà soát câu trả lời ban đầu của trợ lý ảo và loại bỏ/sửa đổi tất cả các trích dẫn pháp lý chưa được xác minh (bịa đặt, ảo giác) dựa trên dữ liệu luật nội bộ được cung cấp dưới đây.
 
-[Dữ liệu luật nội bộ]
+ĐOẠN LUẬT NỘI BỘ (DỮ LIỆU GỐC XÁC MINH):
 {context_str}
 
-[Câu trả lời ban đầu chứa trích dẫn sai lệch]
+CÂU TRẢ LỜI BAN ĐẦU CÓ NGHĨA VỤ HIỆU CHỈNH:
 {hallucinated_response}
 
-[Các trích dẫn sai lệch cần điều chỉnh]
-{", ".join(unverified_citations)}
+DANH SÁCH TRÍCH DẪN SAI/BỊA ĐẶT CẦN XÓA BỎ:
+{', '.join(unverified_citations)}
 
 YÊU CẦU:
 1. Bạn PHẢI XÓA BỎ HOÀN TOÀN mọi nội dung, mọi câu chữ đề cập đến các trích dẫn sai lệch này nếu chúng không có trong [Dữ liệu luật nội bộ]. TUYỆT ĐỐI KHÔNG được lách luật bằng cách chỉ thay đổi định dạng chữ (ví dụ: đổi 198/2025/QH15 thành [198-2025-qh15]).
@@ -441,11 +480,10 @@ CÂU TRẢ LỜI ĐÃ HIỆU CHỈNH:"""
 
 def process_user_message_stream(store: 'LawVectorStore', raw_msg: str, safe_mode: bool = True, history: List[Dict] = None, on_complete=None):
     full_response = ""
-    greetings = ["chào", "hi", "hello", "xin chào", "chào bạn", "alo"]
-    if raw_msg.strip().lower() in greetings:
-        full_response = "Chào bạn, tôi là Trợ lý Luật sư AI. Tôi có thể giúp gì cho bạn về các vấn đề pháp lý doanh nghiệp hôm nay?"
-        yield json.dumps({"type": "content", "text": full_response}) + "\n"
-        if on_complete: on_complete(full_response)
+    chitchat_reply = check_conversational_query(raw_msg)
+    if chitchat_reply:
+        yield json.dumps({"type": "content", "text": chitchat_reply}) + "\n"
+        if on_complete: on_complete(chitchat_reply)
         return
         
     yield json.dumps({"type": "status", "text": "Đang chuẩn hóa câu hỏi..."}) + "\n"
@@ -508,6 +546,12 @@ def process_user_message_stream(store: 'LawVectorStore', raw_msg: str, safe_mode
 
 def process_user_message_deep_stream(store: 'LawVectorStore', raw_msg: str, safe_mode: bool = True, history: List[Dict] = None, on_complete=None):
     full_response = ""
+    chitchat_reply = check_conversational_query(raw_msg)
+    if chitchat_reply:
+        yield json.dumps({"type": "content", "text": chitchat_reply}) + "\n"
+        if on_complete: on_complete(chitchat_reply)
+        return
+
     yield json.dumps({"type": "status", "text": "Đang phân tích câu hỏi..."}) + "\n"
     nlp_result = smart_process_query(raw_msg)
     clean_text = nlp_result.get("corrected_text", raw_msg)

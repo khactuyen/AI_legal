@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Legal Assistant - Project Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080B;
+      --surface: #111116;
+      --surface-raised: #18181F;
+      --border: rgba(255,255,255,0.06);
+      --border-accent: rgba(201,168,76,0.25);
+      --gold: #C9A84C;
+      --gold-dim: #9A7A2A;
+      --gold-glow: rgba(201,168,76,0.08);
+      --white: #F0F0F3;
+      --gray: #888894;
+      --dark-gray: #555560;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 30px 60px;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 30px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(40px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    .slide-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .slide-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .slide-subtitle {
+      font-size: 1.15rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #E8D07A, #B8922E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.25s, box-shadow 0.3s;
+    }
+
+    .panel:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .panel-head {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .panel-head::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: var(--gold);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .panel-body {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+
+    .panel-body code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.82rem;
+      color: var(--gold);
+      background: var(--gold-glow);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tab-trigger {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--dark-gray);
+      padding: 12px 28px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .tab-trigger:hover { color: var(--white); border-color: rgba(255,255,255,0.12); }
+
+    .tab-trigger.on {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #0C0C0F;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: tabIn 0.35s ease;
+    }
+
+    .tab-panel.on { display: block; }
+
+    @keyframes tabIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .steps { display: flex; flex-direction: column; gap: 10px; }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      transition: border-color 0.2s;
+    }
+
+    .step:hover { border-color: var(--border-accent); }
+
+    .step-n {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gold-glow);
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-label {
+      flex: 1;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .step-fn {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--gold);
+      background: var(--gold-glow);
+      padding: 4px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .callout {
+      margin-top: 28px;
+      background: var(--gold-glow);
+      border: 1px dashed var(--border-accent);
+      border-radius: 14px;
+      padding: 18px 24px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--gray);
+    }
+
+    .callout strong { color: var(--white); }
+
+    .hero-center { text-align: center; }
+    .hero-center .slide-title { font-size: 3.6rem; margin-bottom: 18px; }
+    .hero-center .slide-subtitle { margin: 0 auto 36px; max-width: 640px; }
+
+    .hero-tags {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .hero-tag {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      background: var(--gold-glow);
+      border: 1px solid var(--border-accent);
+      padding: 8px 20px;
+      border-radius: 100px;
+    }
+
+    footer {
+      padding: 16px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .page-num {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--dark-gray);
+      min-width: 90px;
+    }
+
+    .track {
+      flex: 1;
+      max-width: 360px;
+      height: 3px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 2px;
+      margin: 0 32px;
+    }
+
+    .track-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dim));
+      border-radius: 2px;
+      transition: width 0.35s ease;
+    }
+
+    .nav-btns { display: flex; gap: 10px; }
+
+    .nav-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--gray);
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--border-accent);
+      color: var(--gold);
+      background: var(--gold-glow);
+    }
+
+    .nav-btn svg { width: 16px; height: 16px; fill: currentColor; }
+  </style>
+</head>
+<body>
+
+<div class="viewport">
+
+  <!-- SLIDE 1 -->
+  <div class="slide active" data-idx="0">
+    <div class="hero-center">
+      <div class="slide-label">Tổng Quan Dự Án</div>
+      <h1 class="slide-title"><span class="gold-text">AI Legal Assistant</span></h1>
+      <p class="slide-subtitle">
+        Hệ thống trí tuệ nhân tạo hỗ trợ tra cứu pháp luật và phân tích tài liệu pháp lý chuyên sâu, 
+        tối ưu hóa cho doanh nghiệp nhỏ và vừa tại Việt Nam.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">FastAPI Backend</span>
+        <span class="hero-tag">React Frontend</span>
+        <span class="hero-tag">Hybrid RAG Engine</span>
+        <span class="hero-tag">Gemini AI</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — VẤN ĐỀ & TÍNH NĂNG -->
+  <div class="slide" data-idx="1">
+    <div class="slide-label">Vấn Đề & Giải Pháp</div>
+    <h2 class="slide-title">Tại Sao Cần Hệ Thống Này?</h2>
+    <p class="slide-subtitle">Những thách thức thực tế mà doanh nghiệp nhỏ và vừa đang gặp phải khi tiếp cận pháp luật, và cách hệ thống giải quyết.</p>
+
+    <div class="row-2">
+      <div class="panel">
+        <div class="panel-head">Vấn Đề Hiện Tại</div>
+        <div class="panel-body">
+          <strong>Chi phí tư vấn cao</strong> -- Doanh nghiệp nhỏ khó tiếp cận dịch vụ pháp lý chuyên nghiệp do chi phí thuê luật sư theo giờ quá lớn so với ngân sách.
+          <br><br>
+          <strong>Hệ thống luật đồ sộ, phân tán</strong> -- Hàng nghìn văn bản luật, nghị định, thông tư liên tục cập nhật, sửa đổi, thay thế lẫn nhau, rất khó tra cứu thủ công.
+          <br><br>
+          <strong>Rủi ro sai sót pháp lý</strong> -- Tự tra cứu dễ bỏ sót điều khoản liên quan hoặc áp dụng văn bản đã hết hiệu lực, dẫn đến quyết định sai.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Tính Năng Giải Quyết</div>
+        <div class="panel-body">
+          <strong>Tra cứu pháp luật tức thì</strong> -- Hỏi bằng ngôn ngữ tự nhiên (kể cả teencode, từ lóng), hệ thống tự động chuẩn hóa và tìm đúng điều khoản liên quan.
+          <br><br>
+          <strong>Phân tích chuyên sâu đa chiều</strong> -- Chế độ Deep Thinking kết hợp mở rộng truy vấn, HyDE, Double Reranking để phân tích vấn đề từ nhiều góc độ pháp lý.
+          <br><br>
+          <strong>Tự kiểm chứng và chống ảo giác</strong> -- Mọi trích dẫn điều luật đều được đối chiếu tự động với văn bản gốc, loại bỏ luật hết hiệu lực trước khi trả kết quả.
+          <br><br>
+          <strong>Cung cấp template hợp đồng mẫu</strong> -- Cung cấp nhanh các hợp đồng thương mại, hợp đồng nhân sự phổ biến bằng kho biểu mẫu sẵn có.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide" data-idx="2">
+    <div class="slide-label">Kiến Trúc Truy Xuất</div>
+    <h2 class="slide-title">BookRAG & LightRAG</h2>
+    <p class="slide-subtitle">Kết hợp trục dọc (phân cấp cấu trúc văn bản) và trục ngang (đồ thị tri thức liên kết chéo) để xử lý tài liệu pháp luật đồ sộ.</p>
+
+    <div class="row-2">
+      <div class="panel">
+        <div class="panel-head">Trục Dọc -- BookRAG</div>
+        <div class="panel-body">
+          Văn bản luật có cấu trúc phân cấp nghiêm ngặt (Chương, Điều, Khoản, Điểm). BookRAG lập chỉ mục theo cây mục lục gốc (BookIndex), 
+          đảm bảo AI luôn định vị chính xác vị trí điều khoản đang đọc mà không bị phân mảnh ngữ cảnh cha-con.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Trục Ngang -- LightRAG</div>
+        <div class="panel-body">
+          Xây dựng đồ thị tri thức (Knowledge Graph) kết nối chéo giữa các điều luật khác nhau. 
+          Ví dụ: một điều khoản ở Luật Doanh nghiệp liên kết chéo tới một điều khoản ở Luật Thuế, 
+          hỗ trợ suy luận đa chiều nhanh chóng.
+        </div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Cơ chế phối hợp:</strong> Định vị dọc trước thông qua cấu trúc cây phân cấp của BookRAG, 
+      sau đó truy vết ngang các thực thể và quan hệ thông qua đồ thị tri thức của LightRAG.
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide" data-idx="3">
+    <div class="slide-label">Đồ Thị Tri Thức</div>
+    <h2 class="slide-title">Hyper-Extract</h2>
+    <p class="slide-subtitle">Mô hình Siêu đồ thị (Hypergraph) kết hợp Tuyến trình thời gian (Temporal Event Log) -- riêng biệt của dự án.</p>
+
+    <div class="row-2">
+      <div class="panel">
+        <div class="panel-head">Siêu Đồ Thị (Hypergraph)</div>
+        <div class="panel-body">
+          Dùng <code>HyperExtractor</code> (Bipartite Graph trong NetworkX) để liên kết N thực thể vào một sự kiện pháp lý duy nhất, 
+          chống đứt gãy ngữ cảnh khi nhiều bên cùng tham gia.
+          <br><br>
+          Khác với đồ thị nhị phân chỉ nối 2 thực thể (A &#8594; B), siêu đồ thị cho phép 1 hyperedge bao trùm 
+          toàn bộ các bên liên quan trong cùng một vụ việc.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Tham Chiếu Thời Gian (Temporal Log)</div>
+        <div class="panel-body">
+          Mỗi sự kiện pháp lý được gắn mốc thời gian (<code>event_date</code>) và sắp xếp theo chuỗi tiến trình.
+          <br><br>
+          Khi người dùng hỏi về diễn biến một vụ việc, hệ thống truy vấn timeline để trả về 
+          thứ tự thời gian chính xác: hợp đồng ký khi nào, vi phạm xảy ra khi nào, khởi kiện khi nào.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide" data-idx="4">
+    <div class="slide-label">Kiến Trúc Hệ Thống</div>
+    <h2 class="slide-title">Instant Mode vs Deep Thinking</h2>
+    <p class="slide-subtitle">Pipeline tìm kiếm chung dùng cho cả hai chế độ, và các tính năng nâng cao riêng của từng mode.</p>
+
+    <div class="callout" style="margin-top:0; margin-bottom:24px;">
+      <strong>Pipeline chung (cả 2 mode đều chạy):</strong>
+      Hybrid Search (Qdrant Dense + BM25 Sparse) &#8594; Reciprocal Rank Fusion &#8594; Graph Bonus từ Knowledge Graph &#8594; 
+      Lọc hiệu lực luật qua <code>law_registry.json</code> &#8594; ONNX Cross-Encoder Rerank &#8594; GroundingGuardrail + Self-Correction.
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-trigger on" onclick="openTab(event,'t-instant')">Chế Độ Thường (Instant)</button>
+      <button class="tab-trigger" onclick="openTab(event,'t-deep')">Phân Tích Sâu (Deep Thinking)</button>
+    </div>
+
+    <div class="tab-panel on" id="t-instant">
+      <div class="steps">
+        <div class="step">
+          <span class="step-n">1</span>
+          <span class="step-label">Chuẩn hóa teencode, lọc câu chào hỏi/xã giao để trả lời trực tiếp.</span>
+          <span class="step-fn">check_conversational_query()</span>
+        </div>
+        <div class="step">
+          <span class="step-n">2</span>
+          <span class="step-label">Chạy pipeline chung (không mở rộng truy vấn, không HyDE), lấy Top 5 chunks.</span>
+          <span class="step-fn">store.search(top_k=5)</span>
+        </div>
+        <div class="step">
+          <span class="step-n">3</span>
+          <span class="step-label">Stream phản hồi trực tiếp, chạy hậu kiểm xác thực nguồn trích dẫn song song.</span>
+          <span class="step-fn">GroundingGuardrail.verify()</span>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Đặc điểm:</strong> Tốc độ nhanh, chỉ dùng Cross-Encoder cục bộ (ONNX), không gọi thêm LLM Rerank. 
+        Phù hợp cho câu hỏi tra cứu đơn giản, trả lời tức thì.
+      </div>
+    </div>
+
+    <div class="tab-panel" id="t-deep">
+      <div class="steps">
+        <div class="step">
+          <span class="step-n">1</span>
+          <span class="step-label"><strong>Query Expansion:</strong> Dịch teencode/từ lóng thành từ khóa luật chuẩn, mở rộng đồng nghĩa.</span>
+          <span class="step-fn">generate_search_queries()</span>
+        </div>
+        <div class="step">
+          <span class="step-n">2</span>
+          <span class="step-label"><strong>HyDE:</strong> Sinh tài liệu giả định mang văn phong luật Việt Nam để làm phong phú vector tìm kiếm.</span>
+          <span class="step-fn">generate_hyde_document()</span>
+        </div>
+        <div class="step">
+          <span class="step-n">3</span>
+          <span class="step-label">Chạy pipeline chung + <strong>LLM Rerank bổ sung</strong> (Double Reranking), lấy Top 15 chunks.</span>
+          <span class="step-fn">rerank_with_llm()</span>
+        </div>
+        <div class="step">
+          <span class="step-n">4</span>
+          <span class="step-label">Duyệt siêu đồ thị và timeline, ép output dạng Bản ý kiến tư vấn pháp lý.</span>
+          <span class="step-fn">call_gemini_deep_qa_stream()</span>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Đặc điểm:</strong> Mở rộng truy vấn + HyDE + Double Reranking (ONNX + LLM). 
+        Top 15 chunks, phân tích sâu, output dạng văn bản tư vấn chuyên nghiệp.
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide" data-idx="5">
+    <div class="slide-label">Bảo Mật & Độ Tin Cậy</div>
+    <h2 class="slide-title">Guardrails & Bảo Mật</h2>
+    <p class="slide-subtitle">Đảm bảo tính chính xác và an toàn tuyệt đối cho các quyết định pháp lý của doanh nghiệp.</p>
+
+    <div class="row-2">
+      <div class="panel">
+        <div class="panel-head">Kiểm Duyệt và Bảo Mật</div>
+        <div class="panel-body">
+          <strong>PromptGuardrail</strong> chặn đứng các hành vi prompt injection, bẻ khóa hoặc hỏi ngoài phạm vi pháp luật ngay tại cổng API.
+          <br><br>
+          <strong>Redaction Module</strong> tự động lọc và che giấu thông tin nhạy cảm (tên riêng, số tài khoản, số tiền) trước khi gửi qua API ngoài.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Chống Ảo Giác và Tự Sửa Lỗi</div>
+        <div class="panel-body">
+          <strong>GroundingGuardrail</strong> đối chiếu chéo tự động các số hiệu điều luật trích xuất trong câu trả lời với văn bản luật gốc.
+          <br><br>
+          <strong>Self-Correction Engine</strong> nếu phát hiện trích dẫn sai, chạy một tiến trình LLM ngầm tự sửa lại câu trả lời chính xác trước khi hiển thị.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide" data-idx="6">
+    <div class="slide-label">Đảm Bảo Chất Lượng</div>
+    <h2 class="slide-title">Feedback & Kiểm Duyệt</h2>
+    <p class="slide-subtitle">Cơ chế thu thập đánh giá thực tế từ người dùng và quy trình giám sát chất lượng hệ thống của quản trị viên.</p>
+
+    <div class="row-2">
+      <div class="panel">
+        <div class="panel-head">Implicit Feedback API</div>
+        <div class="panel-body">
+          Tích hợp cơ chế thu thập tương tác trên giao diện chat (Hữu ích, Sai lệch kiến thức, Copy). 
+          Mọi dữ liệu được đẩy về cơ sở dữ liệu SQLite cục bộ để thống kê chất lượng phục vụ doanh nghiệp.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Admin Audit Job</div>
+        <div class="panel-body">
+          Tập lệnh <code>admin_audit_job.py</code> tự động quét cơ sở dữ liệu định kỳ, 
+          truy vết các cuộc hội thoại bị đánh giá thấp (Thumbs down), 
+          trích xuất báo cáo chất lượng dạng Markdown để Luật sư trưởng duyệt và hiệu chỉnh hệ thống.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="page-num" id="pn">1 / 6</span>
+  <div class="track"><div class="track-fill" id="tf"></div></div>
+  <div class="nav-btns">
+    <button class="nav-btn" onclick="go(-1)"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+    <button class="nav-btn" onclick="go(1)"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
+  </div>
+</footer>
+
+<script>
+  let cur = 0;
+  const all = document.querySelectorAll('.slide');
+  const total = all.length;
+
+  function render() {
+    all.forEach((s,i) => { s.classList.toggle('active', i===cur); });
+    document.getElementById('pn').textContent = `${cur+1} / ${total}`;
+    document.getElementById('tf').style.width = `${((cur+1)/total)*100}%`;
+  }
+
+  function go(d) {
+    const n = cur + d;
+    if (n >= 0 && n < total) { cur = n; render(); }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') go(1);
+    else if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  function openTab(e, id) {
+    const slide = e.target.closest('.slide');
+    slide.querySelectorAll('.tab-trigger').forEach(b => b.classList.remove('on'));
+    slide.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('on'));
+    e.target.classList.add('on');
+    slide.querySelector('#'+id).classList.add('on');
+  }
+
+  render();
+</script>
+</body>
+</html>
